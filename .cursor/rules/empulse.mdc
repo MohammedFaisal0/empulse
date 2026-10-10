@@ -10,18 +10,18 @@ EMPULSE is an AI-powered employee performance, wellbeing and innovation platform
 ## Stack (do not change without asking)
 - **Backend:** Python 3.12, Django 5, Django REST Framework, SimpleJWT, drf-spectacular, django-cors-headers. SQLite in development, PostgreSQL in production (config via env vars).
 - **Frontend:** React 18 + TypeScript, Vite, Tailwind CSS, React Router, TanStack Query, Recharts. Fonts via @fontsource (DM Sans, DM Mono). Icons: lucide-react.
-- **ML:** scikit-learn, XGBoost, SHAP, pandas. Models are trained in `ml/` and loaded by the backend with joblib. Do NOT retrain models inside Django requests.
+- **ML:** scikit-learn (HistGradientBoosting + exact Shapley values in `ml/empulse_ml.py`), pandas, joblib. Models are trained in `ml/` and loaded by the backend with joblib. Do NOT retrain models inside Django requests.
 - **Repo layout:** `backend/`, `frontend/`, `ml/`, `data/`, `design/`, `docs/`.
 
 ## Design fidelity (most important rule)
-- The Figma design is final. **Before building any screen, read its spec: `design/specs/<ID>.md`** (every text, size, color, radius, border, shadow, font and layout setting of that screen, extracted from the Figma file; read `design/specs/README.md` once for the format) and its entry in `design/SCREENS.md`. If `design/png/<ID>.png` exists, look at it too. You do NOT need Figma access.
+- The Figma design is final. **Before building any screen, read its spec: `design/specs/<ID>.md`** (every text, size, color, radius, border, shadow, font and layout setting of that screen, extracted from the Figma file; read `design/specs/README.md` once for the format) and its entry in `design/SCREENS.md`. **The screen images exist for all 45 screens: open `design/png/<ID>.jpg` (e.g. `design/png/E01.jpg`, 4320 px wide = 3x the 1440 frame) and compare it with your result.** The spec gives exact numbers; the image gives the overall look. You do NOT need Figma access.
   - Only if something is still unclear, open the Figma file (browsing access is allowed): https://www.figma.com/design/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=0-1&t=J2BMjRY7CI0ljF3B-1
   - Never build a screen from memory or guess its layout.
 - Match layout, spacing, colors, type sizes and copy text as closely as possible. Do not invent features or redesign.
 - Use `design/tokens.json` as the only source for colors, fonts, radii and shadows. Put them in `tailwind.config.ts` as named tokens (`navy`, `teal`, `coral`...). **Never hard-code hex values in components.**
 - Body text is 13px DM Sans. Numbers, IDs and small uppercase labels use DM Mono.
 - The sidebar is NOT the same for every role (see `design/tokens.json` -> `sidebars`): Employee = white, tealLight active item; Manager = white, navy active item with white text; HR = navy 256px, teal active item with navy text.
-- Left-to-right English for now. Keep all UI strings in `frontend/src/i18n/en.ts` so Arabic can be added later.
+- **Bilingual: English (default, LTR) and Arabic (RTL).** All UI strings live in `frontend/src/i18n/en.ts` and `ar.ts` (use react-i18next or a tiny `t()` helper). Never hard-code visible text in components. Use Tailwind logical utilities (`ms-`, `me-`, `ps-`, `pe-`, `text-start`, `start-0`) instead of left/right ones, set `dir` and `lang` on `<html>` from the language switch, mirror directional icons (arrows, chevrons) in RTL, and keep numbers, IDs and charts LTR. Arabic font: Noto Sans Arabic (via @fontsource) next to DM Sans. Data coming from the database (names, team names) is not translated. The English design is the visual reference; Arabic follows the same layout mirrored.
 
 ## Product rules (these are part of the design and must be enforced in code, not just UI)
 1. **No leaderboards.** Never sort or rank people by score. Directories are alphabetical.
