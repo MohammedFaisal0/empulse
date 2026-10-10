@@ -1,0 +1,46 @@
+---
+description: EMPULSE project rules. Always apply.
+alwaysApply: true
+---
+
+# EMPULSE: project rules
+
+EMPULSE is an AI-powered employee performance, wellbeing and innovation platform (graduation project). It predicts burnout early, recommends interventions, tracks innovation, and shows economic impact. Three main user groups: employee, manager, HR/executive.
+
+## Stack (do not change without asking)
+- **Backend:** Python 3.12, Django 5, Django REST Framework, SimpleJWT, drf-spectacular, django-cors-headers. SQLite in development, PostgreSQL in production (config via env vars).
+- **Frontend:** React 18 + TypeScript, Vite, Tailwind CSS, React Router, TanStack Query, Recharts. Fonts via @fontsource (DM Sans, DM Mono). Icons: lucide-react.
+- **ML:** scikit-learn, XGBoost, SHAP, pandas. Models are trained in `ml/` and loaded by the backend with joblib. Do NOT retrain models inside Django requests.
+- **Repo layout:** `backend/`, `frontend/`, `ml/`, `data/`, `design/`, `docs/`.
+
+## Design fidelity (most important rule)
+- The Figma design is final. **Before building any screen, look at it**: read its entry in `design/SCREENS.md`, then open `design/png/<ID>.png` if it exists; otherwise open the Figma design with your browsing / Figma access and go to the screen's node id (you have permission to browse and read the design):
+  - Design: https://www.figma.com/design/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=0-1&t=J2BMjRY7CI0ljF3B-1
+  - Prototype: https://www.figma.com/proto/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=54-1384&p=f&t=8eBViAhCFoY9huNl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=54%3A1384
+  - Never build a screen from memory or guess its layout.
+- Match layout, spacing, colors, type sizes and copy text as closely as possible. Do not invent features or redesign.
+- Use `design/tokens.json` as the only source for colors, fonts, radii and shadows. Put them in `tailwind.config.ts` as named tokens (`navy`, `teal`, `coral`...). **Never hard-code hex values in components.**
+- Body text is 13px DM Sans. Numbers, IDs and small uppercase labels use DM Mono.
+- Left-to-right English for now. Keep all UI strings in `frontend/src/i18n/en.ts` so Arabic can be added later.
+
+## Product rules (these are part of the design and must be enforced in code, not just UI)
+1. **No leaderboards.** Never sort or rank people by score. Directories are alphabetical.
+2. **Wellbeing is never part of the performance score.** It is shown as risk or alert only.
+3. **Privacy by role.** Employee sees only their own data. Manager sees only their direct reports. HR sees individuals only through audited access. Executive sees aggregates only. Enforce in the **API** (permissions + querysets), never only in the UI.
+4. **Groups under 5 people are never shown** in aggregates (return suppressed).
+5. **Human in the loop.** AI proposes, a person approves. No intervention starts automatically.
+6. Burnout risk is decision support, **not a medical or psychological diagnosis.** Keep that wording where the design has it.
+7. Every access to an individual's profile by HR is written to `AuditLog`.
+
+## Code conventions
+- TypeScript strict. No `any`. Components are function components in PascalCase files. One screen = one file in `frontend/src/screens/<role>/<ID>-<Name>.tsx`.
+- Shared UI in `frontend/src/components/ui/` (Card, Badge, Stat, Medallion, Tabs, Table, Button...). Reuse before creating new ones.
+- Data fetching only through TanStack Query hooks in `frontend/src/api/`. No fetch calls inside components.
+- Backend: one Django app per domain (`accounts`, `org`, `pulse`, `innovation`, `interventions`, `analytics`). Serializers and permissions in their own files. Every endpoint documented by drf-spectacular.
+- Never commit secrets. Use `.env` (and keep `.env.example` up to date).
+- Write the smallest change that works. Run the app and tests before saying a step is done.
+
+## Working method
+- Follow `PLAN.md` one step at a time. Do not start the next step until the current step's "Done when" is true.
+- At the end of each step: list files changed, how to run it, and what to check in the browser.
+- If something in the design is unclear or contradicts the data, ask. Do not guess.
