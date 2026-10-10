@@ -1,0 +1,32 @@
+id,name,department_id,head_id,headcount
+1,Platform Reliability,1,286,46
+2,Core Platform,1,450,44
+3,Mobile Apps,1,220,37
+4,Web Experience,1,280,42
+5,Security Engineering,1,99,49
+6,Quality Engineering,1,715,43
+7,Cloud Infrastructure,1,822,38
+8,Supply Chain,2,5,50
+9,Customer Support,2,721,48
+10,Logistics Planning,2,403,46
+11,Facilities & Safety,2,714,45
+12,Procurement,2,42,35
+13,Service Delivery,2,781,45
+14,Enterprise Sales,3,637,41
+15,SMB Sales,3,631,40
+16,Brand & Content,3,610,34
+17,Digital Marketing,3,1068,38
+18,Partnerships,3,1127,37
+19,Sales Operations,3,119,39
+20,Customer Insights,4,778,29
+21,Data Engineering,4,232,28
+22,Analytics Platform,4,1043,33
+23,Applied AI,4,737,33
+24,Business Intelligence,4,1054,26
+25,Financial Planning,5,707,51
+26,Accounting,5,999,36
+27,Treasury & Risk,5,1135,42
+28,Talent Acquisition,6,794,38
+29,Learning & Development,6,960,44
+30,People Operations,6,789,41
+31,Employee Experience,6,797,36

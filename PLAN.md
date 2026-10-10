@@ -63,9 +63,9 @@ When done, tell me exact commands to run both servers.
 Do Step 2 only: design system in code.
 
 1. Read design/tokens.json. Put every color, radius, shadow and font into tailwind.config.ts as named tokens (navy, navy2, teal, tealDark, tealLight, ink, muted, faint, surface, border, coral, amber, violet, tier.gold/silver/bronze/growth, semantic.thriving/burnoutRisk/...). Fonts: sans = DM Sans, mono = DM Mono. Base font size 13px, text color ink, page background surface.
-2. Build shared components in frontend/src/components/ui/, matching the Figma look (open design/png/E01.png, M01.png, H01.png to see them):
+2. Build shared components in frontend/src/components/ui/, matching the Figma look (look at screens E01, M01, H01 in the design to see them):
    Card, Badge (tones: teal, coral, amber, violet, slate), Button (primary navy, secondary outline, accent coral), Stat (label in DM Mono uppercase + big number + delta), Medallion (tier ring with score), Tabs, Table, Avatar (initials), Chip, ProgressBar, SectionHeading.
-3. App shell in frontend/src/layout/: Sidebar (248px wide, navy background, 36px nav items, active item teal), TopBar (breadcrumb in DM Mono, search "Ask PulseAI" with ⌘K, date range, bell), and three sidebar configs (employee, manager, hr) with the exact item names from design/SCREENS.md.
+3. App shell in frontend/src/layout/: Sidebar (three different looks, see design/tokens.json "sidebars": Employee and Manager are white with a light border, 248px; HR is navy, 256px), TopBar (breadcrumb in DM Mono, search "Ask PulseAI" with ⌘K, date range, bell), and three sidebar configs (employee, manager, hr) with the exact item names from design/SCREENS.md.
 4. A /design-preview route that shows every component, so I can compare with Figma.
 No data fetching yet.
 ```
@@ -73,23 +73,25 @@ No data fetching yet.
 
 ---
 
-## Step 3: Data and schema [Claude]
+## Step 3: Data and schema [Claude] ✅ DONE
 I generate (you do nothing but commit):
 - `data/generated/`: 1,240 employees, 6 departments, 31 teams, the named demo people, 12 months of weekly history, interventions, ideas, recognitions, outcomes.
 - `docs/DATA_SCHEMA.md`: every table and column, so Cursor builds models that match.
 - `ml/`: analysis notebook, burnout model, attrition model, SHAP explanations, saved `.pkl` files, accuracy report.
 
-**Done when:** `data/generated/*.csv`, `docs/DATA_SCHEMA.md` and `ml/models/*.pkl` exist.
+**Done when:** `data/generated/*.csv`, `docs/DATA_SCHEMA.md` and `ml/models/*.pkl` exist. (Done. See `ml/README.md` for how to use the models from Django.)
 
 ---
 
 ## Step 4: Database models and import [Cursor]
 ```
-Read docs/DATA_SCHEMA.md and do Step 4 only.
+Read docs/DATA_SCHEMA.md and ml/README.md and do Step 4 only.
 Create Django models for every table in the schema, with migrations, admin registration, and indexes on foreign keys and date columns.
 Write a management command `seed_demo` that loads data/generated/*.csv, and creates 3 demo users (password empulse123):
 layla@horizon.demo (employee, linked to Layla Haddad), yasmin@horizon.demo (manager of Platform Reliability), rana@horizon.demo (hr).
 The command must be idempotent (safe to run twice).
+Also add the exact pinned versions from ml/requirements.txt (scikit-learn, numpy, pandas, joblib) to backend/requirements.txt, because the model pickles only load with those versions.
+Load CSVs with the standard csv module or pandas; weekly_metrics.csv has 64,480 rows, so use bulk_create in batches.
 ```
 **Done when:** `python manage.py seed_demo` runs clean and the Django admin shows 1,240 employees.
 
@@ -113,7 +115,7 @@ Do Step 5 only.
 Screens: **A01 Login, A02 Role Routing, M06 Burnout Early Warning, M04b Team Member Profile.**
 
 ```
-Do Step 6 only. Open design/png/A01.png, A02.png, M06.png and M04b.png and read their rows in design/SCREENS.md.
+Do Step 6 only. Look at screens A01, A02, M06 and M04b in the design (PNG if present, otherwise the Figma link) and read their rows in design/SCREENS.md.
 Build these four screens pixel-faithfully, wired to real data:
 - A01 login and A02 role routing with the JWT endpoints; after login redirect to the role's home.
 - M06: list of at-risk team members from GET /api/manager/burnout/ (risk %, change in 6 weeks, "Explain this risk" panel using the model's top drivers, "Start Intervention" and "Simulate Impact" buttons wired to stubs).
@@ -136,7 +138,7 @@ Use the same prompt pattern as Step 6 with a list of screen IDs.
 Template:
 ```
 Do the following screens only: <IDs>.
-For each: open design/png/<ID>.png and its row in design/SCREENS.md, build it faithfully, reuse components from components/ui, add the API endpoints it needs with the right permissions (see Step 5), and add the route from SCREENS.md.
+For each: look at the screen in the design (PNG if present, otherwise the Figma link) and read its row in design/SCREENS.md, build it faithfully, reuse components from components/ui, add the API endpoints it needs with the right permissions (see Step 5), and add the route from SCREENS.md.
 Do not touch screens outside this list. When finished, list each screen with its route and anything you could not match.
 ```
 

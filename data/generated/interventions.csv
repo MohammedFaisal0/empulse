@@ -1,0 +1,234 @@
+id,employee_id,type,rationale,driver,status,proposed_by,owner_id,approved_by_id,created_at,approved_at,started_at,completed_at,followup_at,expected_risk_reduction_pts,cost_sar,human_approved,baseline_risk_pct,followup_risk_pct,outcome
+1,357,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,737,737.0,2025-10-14,2025-10-15,2025-10-17,2025-12-12,2026-01-09,11,1260,1,79,47.0,worked
+2,506,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,declined,PulseAI,260,,2025-10-20,,,,,9,3910,0,65,,pending
+3,1069,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,286,286.0,2025-10-20,2025-10-24,2025-10-26,2025-12-21,2026-01-18,7,4540,1,87,88.0,no_change
+4,972,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,422,422.0,2025-10-21,2025-10-23,2025-10-25,2025-12-20,2026-01-17,9,3900,1,46,34.0,worked
+5,241,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,929,929.0,2025-10-22,2025-10-24,2025-10-27,2025-12-22,2026-01-19,10,4090,1,66,64.0,no_change
+6,758,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,declined,Manager,1069,,2025-10-23,,,,,10,3130,0,42,,pending
+7,591,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,tenure_years,declined,PulseAI,590,,2025-10-27,,,,,11,3480,0,14,,pending
+8,650,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,721,721.0,2025-10-27,2025-10-31,2025-11-03,2025-12-29,2026-01-26,12,3930,1,25,15.0,worked
+9,728,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,1059,1059.0,2025-10-29,2025-10-31,2025-11-02,2025-12-28,2026-01-25,10,1770,1,63,49.0,worked
+10,1023,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,525,525.0,2025-10-29,2025-11-02,2025-11-03,2025-12-29,2026-01-26,8,4380,1,19,14.0,partial
+11,896,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,declined,PulseAI,433,,2025-10-30,,,,,12,2990,0,33,,pending
+12,495,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,609,609.0,2025-11-03,2025-11-06,2025-11-09,2026-01-04,2026-02-01,8,3280,1,80,83.0,no_change
+13,196,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,cancelled,PulseAI,1059,,2025-11-04,,,,,11,2390,0,71,,pending
+14,303,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,372,372.0,2025-11-04,2025-11-08,2025-11-11,2026-01-06,2026-02-03,6,3610,1,58,32.0,worked
+15,92,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,846,846.0,2025-11-05,2025-11-06,2025-11-07,2026-01-02,2026-01-30,14,2200,1,47,36.0,worked
+16,194,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,752,752.0,2025-11-06,2025-11-10,2025-11-11,2026-01-06,2026-02-03,8,2860,1,61,45.0,worked
+17,884,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,cancelled,PulseAI,953,,2025-11-06,,,,,14,5700,0,12,,pending
+18,622,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,job_level,completed,Manager,641,641.0,2025-11-10,2025-11-11,2025-11-14,2026-01-09,2026-02-06,8,4540,1,14,10.0,partial
+19,858,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,102,102.0,2025-11-12,2025-11-14,2025-11-17,2026-01-12,2026-02-09,12,4340,1,68,47.0,worked
+20,1083,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,832,832.0,2025-11-12,2025-11-15,2025-11-17,2026-01-12,2026-02-09,7,3170,1,55,44.0,worked
+21,1151,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,declined,Manager,526,,2025-11-17,,,,,7,2080,0,29,,pending
+22,956,Recognition plan,Plan visible recognition for recent contributions.,recognition_90d,completed,Manager,961,961.0,2025-11-19,2025-11-20,2025-11-21,2026-01-16,2026-02-13,12,560,1,18,20.0,no_change
+23,1052,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,160,160.0,2025-11-25,2025-11-29,2025-11-30,2026-01-25,2026-02-22,10,3520,1,73,72.0,no_change
+24,509,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,127,127.0,2025-11-26,2025-11-27,2025-11-28,2026-01-23,2026-02-20,12,1890,1,60,58.0,no_change
+25,1010,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,declined,PulseAI,429,,2025-11-26,,,,,5,2890,0,81,,pending
+26,1086,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,754,754.0,2025-11-26,2025-11-30,2025-12-03,2026-01-28,2026-02-25,6,1600,1,71,68.0,partial
+27,658,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,389,389.0,2025-12-02,2025-12-04,2025-12-06,2026-01-31,2026-02-28,6,5760,1,27,20.0,partial
+28,49,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,600,600.0,2025-12-08,2025-12-10,2025-12-12,2026-02-06,2026-03-06,9,2450,1,44,44.0,no_change
+29,534,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,985,985.0,2025-12-08,2025-12-09,2025-12-12,2026-02-06,2026-03-06,12,3260,1,45,31.0,worked
+30,543,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,996,996.0,2025-12-08,2025-12-09,2025-12-11,2026-02-05,2026-03-05,11,4010,1,84,80.0,partial
+31,108,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,40,40.0,2025-12-09,2025-12-13,2025-12-15,2026-02-09,2026-03-09,5,2170,1,66,33.0,worked
+32,160,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,637,637.0,2025-12-09,2025-12-13,2025-12-16,2026-02-10,2026-03-10,10,2420,1,23,34.0,no_change
+33,1111,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,572,572.0,2025-12-10,2025-12-14,2025-12-16,2026-02-10,2026-03-10,11,3570,1,80,82.0,no_change
+34,183,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,42,42.0,2025-12-11,2025-12-15,2025-12-16,2026-02-10,2026-03-10,10,3540,1,77,57.0,worked
+35,782,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1131,1131.0,2025-12-11,2025-12-12,2025-12-15,2026-02-09,2026-03-09,7,3010,1,48,37.0,worked
+36,1224,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,absence_days_annual,completed,PulseAI,572,572.0,2025-12-11,2025-12-13,2025-12-16,2026-02-10,2026-03-10,5,4020,1,14,13.0,no_change
+37,82,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,1030,1030.0,2025-12-16,2025-12-17,2025-12-18,2026-02-12,2026-03-12,8,4050,1,68,57.0,worked
+38,610,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,306,306.0,2025-12-16,2025-12-20,2025-12-22,2026-02-16,2026-03-16,10,3500,1,70,65.0,partial
+39,982,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,601,601.0,2025-12-16,2025-12-18,2025-12-20,2026-02-14,2026-03-14,13,2350,1,39,32.0,partial
+40,998,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,1063,1063.0,2025-12-16,2025-12-18,2025-12-19,2026-02-13,2026-03-13,8,4300,1,90,76.0,worked
+41,1173,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,cancelled,PulseAI,1197,,2025-12-16,,,,,13,2090,0,2,,pending
+42,661,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,cancelled,PulseAI,118,,2025-12-17,,,,,12,2330,0,39,,pending
+43,1106,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,cancelled,PulseAI,1003,,2025-12-18,,,,,10,1400,0,35,,pending
+44,999,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,declined,PulseAI,901,,2025-12-23,,,,,7,3790,0,34,,pending
+45,142,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,cancelled,PulseAI,1220,,2025-12-24,,,,,7,1490,0,78,,pending
+46,1240,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,996,996.0,2025-12-24,2025-12-28,2025-12-29,2026-02-23,2026-03-23,9,3580,1,31,32.0,no_change
+47,392,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,558,558.0,2025-12-30,2025-12-31,2026-01-03,2026-02-28,2026-03-28,17,2100,1,50,40.0,worked
+48,792,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,declined,PulseAI,383,,2025-12-30,,,,,8,1620,0,50,,pending
+49,1009,Recognition plan,Plan visible recognition for recent contributions.,recognition_90d,completed,Manager,861,861.0,2025-12-31,2026-01-04,2026-01-05,2026-03-02,2026-03-30,7,510,1,20,12.0,worked
+50,482,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1041,1041.0,2026-01-01,2026-01-04,2026-01-07,2026-03-04,2026-04-01,9,3570,1,12,11.0,no_change
+51,27,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,652,652.0,2026-01-05,2026-01-09,2026-01-12,2026-03-09,2026-04-06,4,4030,1,46,39.0,partial
+52,590,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,631,631.0,2026-01-05,2026-01-09,2026-01-11,2026-03-08,2026-04-05,17,3010,1,67,57.0,worked
+53,1142,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,declined,PulseAI,881,,2026-01-05,,,,,6,4470,0,34,,pending
+54,18,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,478,478.0,2026-01-07,2026-01-08,2026-01-11,2026-03-08,2026-04-05,10,5050,1,36,25.0,worked
+55,826,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,declined,PulseAI,576,,2026-01-07,,,,,13,2310,0,65,,pending
+56,19,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,declined,PulseAI,1068,,2026-01-08,,,,,7,2370,0,12,,pending
+57,448,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,146,146.0,2026-01-08,2026-01-10,2026-01-11,2026-03-08,2026-04-05,5,7750,1,82,67.0,worked
+58,620,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,cancelled,Manager,846,,2026-01-13,,,,,9,2370,0,2,,pending
+59,536,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,201,201.0,2026-01-15,2026-01-17,2026-01-19,2026-03-16,2026-04-13,2,4400,1,42,33.0,worked
+60,743,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1073,1073.0,2026-01-19,2026-01-23,2026-01-25,2026-03-22,2026-04-19,13,2990,1,72,55.0,worked
+61,1030,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,999,999.0,2026-01-20,2026-01-23,2026-01-26,2026-03-23,2026-04-20,10,4120,1,30,24.0,partial
+62,716,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,cancelled,Manager,953,,2026-01-22,,,,,10,3700,0,53,,pending
+63,796,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,624,624.0,2026-01-26,2026-01-29,2026-01-30,2026-03-27,2026-04-24,6,2320,1,24,21.0,partial
+64,739,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,242,242.0,2026-01-27,2026-01-30,2026-02-02,2026-03-30,2026-04-27,7,2110,1,14,9.0,partial
+65,461,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,cancelled,PulseAI,828,,2026-01-28,,,,,10,4870,0,65,,pending
+66,914,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,357,357.0,2026-01-29,2026-02-01,2026-02-03,2026-03-31,2026-04-28,9,4110,1,76,67.0,worked
+67,675,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,cancelled,Manager,727,,2026-02-02,,,,,8,2450,0,49,,pending
+68,700,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,183,183.0,2026-02-03,2026-02-05,2026-02-08,2026-04-05,2026-05-03,9,3740,1,55,34.0,worked
+69,1139,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,declined,PulseAI,985,,2026-02-04,,,,,12,4890,0,20,,pending
+70,817,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,350,350.0,2026-02-05,2026-02-06,2026-02-08,2026-04-05,2026-05-03,11,3300,1,42,36.0,partial
+71,985,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1127,1127.0,2026-02-05,2026-02-08,2026-02-11,2026-04-08,2026-05-06,10,3030,1,84,84.0,no_change
+72,94,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,declined,Manager,429,,2026-02-09,,,,,9,4020,0,83,,pending
+73,367,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,828,828.0,2026-02-09,2026-02-13,2026-02-16,2026-04-13,2026-05-11,10,1660,1,55,44.0,worked
+74,977,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,220,220.0,2026-02-10,2026-02-11,2026-02-14,2026-04-11,2026-05-09,15,3960,1,86,78.0,worked
+75,1033,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,25,25.0,2026-02-10,2026-02-13,2026-02-14,2026-04-11,2026-05-09,11,4360,1,81,75.0,partial
+76,239,Recognition plan,Plan visible recognition for recent contributions.,recognition_90d,completed,Manager,683,683.0,2026-02-11,2026-02-14,2026-02-16,2026-04-13,2026-05-11,16,600,1,17,9.0,worked
+77,528,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,525,525.0,2026-02-11,2026-02-12,2026-02-15,2026-04-12,2026-05-10,9,1370,1,63,53.0,worked
+78,638,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,job_level,completed,Manager,1141,1141.0,2026-02-12,2026-02-15,2026-02-17,2026-04-14,2026-05-12,14,4140,1,24,14.0,worked
+79,1186,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,1063,1063.0,2026-02-12,2026-02-14,2026-02-15,2026-04-12,2026-05-10,11,2520,1,22,15.0,partial
+80,887,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,754,754.0,2026-02-16,2026-02-19,2026-02-22,2026-04-19,2026-05-17,5,3040,1,79,67.0,worked
+81,3,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,872,872.0,2026-02-17,2026-02-21,2026-02-23,2026-04-20,2026-05-18,6,2530,1,40,24.0,worked
+82,853,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1006,1006.0,2026-02-17,2026-02-18,2026-02-20,2026-04-17,2026-05-15,11,4100,1,49,44.0,partial
+83,1036,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,596,596.0,2026-02-17,2026-02-19,2026-02-21,2026-04-18,2026-05-16,12,3630,1,33,26.0,partial
+84,521,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,214,214.0,2026-02-18,2026-02-20,2026-02-21,2026-04-18,2026-05-16,12,5040,1,60,41.0,worked
+85,1163,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,1073,1073.0,2026-02-19,2026-02-23,2026-02-26,2026-04-23,2026-05-21,13,6010,1,38,31.0,partial
+86,216,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,952,952.0,2026-02-23,2026-02-27,2026-02-28,2026-04-25,2026-05-23,13,1760,1,40,30.0,worked
+87,618,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,76,76.0,2026-02-23,2026-02-24,2026-02-26,2026-04-23,2026-05-21,4,3960,1,79,70.0,worked
+88,750,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,286,286.0,2026-02-23,2026-02-24,2026-02-27,2026-04-24,2026-05-22,8,3770,1,76,71.0,partial
+89,1105,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,985,985.0,2026-02-23,2026-02-25,2026-02-26,2026-04-23,2026-05-21,10,2910,1,58,57.0,no_change
+90,1117,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,717,717.0,2026-02-24,2026-02-26,2026-03-01,2026-04-26,2026-05-24,12,7410,1,17,16.0,no_change
+91,573,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,cancelled,PulseAI,1093,,2026-02-25,,,,,11,4020,0,48,,pending
+92,300,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,845,845.0,2026-03-04,2026-03-06,2026-03-08,2026-05-03,2026-05-31,9,4550,1,81,58.0,worked
+93,951,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,590,590.0,2026-03-04,2026-03-07,2026-03-10,2026-05-05,2026-06-02,13,2950,1,36,29.0,partial
+94,937,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,declined,PulseAI,752,,2026-03-05,,,,,7,3310,0,27,,pending
+95,1045,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,483,483.0,2026-03-05,2026-03-06,2026-03-08,2026-05-03,2026-05-31,6,7340,1,32,28.0,partial
+96,965,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,declined,PulseAI,59,,2026-03-10,,,,,9,3490,0,5,,pending
+97,1193,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,118,118.0,2026-03-10,2026-03-11,2026-03-13,2026-05-08,2026-06-05,9,3550,1,72,44.0,worked
+98,1187,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,624,624.0,2026-03-11,2026-03-12,2026-03-13,2026-05-08,2026-06-05,12,2470,1,76,66.0,worked
+99,471,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,750,750.0,2026-03-12,2026-03-14,2026-03-15,2026-05-10,2026-06-07,7,3930,1,84,79.0,partial
+100,507,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,Manager,931,931.0,2026-03-12,2026-03-15,2026-03-16,2026-05-11,2026-06-08,11,6240,1,20,14.0,partial
+101,548,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,completed,Manager,985,985.0,2026-03-16,2026-03-18,2026-03-21,2026-05-16,2026-06-13,6,3020,1,25,20.0,partial
+102,558,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,cancelled,PulseAI,610,,2026-03-16,,,,,10,1420,0,36,,pending
+103,375,Recognition plan,Plan visible recognition for recent contributions.,recognition_90d,completed,Manager,1006,1006.0,2026-03-17,2026-03-19,2026-03-21,2026-05-16,2026-06-13,11,430,1,7,3.0,partial
+104,863,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,Manager,1143,1143.0,2026-03-17,2026-03-19,2026-03-20,2026-05-15,2026-06-12,17,1200,1,88,71.0,worked
+105,689,Recognition plan,Plan visible recognition for recent contributions.,recognition_90d,completed,PulseAI,752,752.0,2026-03-26,2026-03-28,2026-03-30,2026-05-25,2026-06-22,14,580,1,8,5.0,partial
+106,797,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,completed,Manager,45,45.0,2026-03-30,2026-04-01,2026-04-04,2026-05-30,2026-06-27,9,3730,1,32,20.0,worked
+107,877,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,214,214.0,2026-03-30,2026-04-03,2026-04-05,2026-05-31,2026-06-28,9,5960,1,29,16.0,worked
+108,413,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,169,169.0,2026-03-31,2026-04-03,2026-04-05,2026-05-31,2026-06-28,13,1820,1,76,55.0,worked
+109,37,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1214,1214.0,2026-04-01,2026-04-02,2026-04-05,2026-05-31,2026-06-28,10,4130,1,40,15.0,worked
+110,451,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,completed,PulseAI,19,19.0,2026-04-01,2026-04-02,2026-04-03,2026-05-29,2026-06-26,9,3210,1,58,47.0,worked
+111,948,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,357,357.0,2026-04-06,2026-04-07,2026-04-09,2026-06-04,2026-07-02,9,3170,1,60,58.0,no_change
+112,1119,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,977,977.0,2026-04-08,2026-04-11,2026-04-12,2026-06-07,2026-07-05,11,5180,1,59,28.0,worked
+113,191,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,596,596.0,2026-04-09,2026-04-13,2026-04-14,2026-06-09,2026-07-07,12,2840,1,59,26.0,worked
+114,416,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,977,977.0,2026-04-09,2026-04-11,2026-04-14,2026-06-09,2026-07-07,14,4310,1,62,37.0,worked
+115,1149,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,96,96.0,2026-04-09,2026-04-11,2026-04-13,2026-06-08,2026-07-06,8,3530,1,29,32.0,no_change
+116,145,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,cancelled,Manager,40,,2026-04-13,,,,,13,4300,0,77,,pending
+117,568,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,Manager,558,558.0,2026-04-13,2026-04-14,2026-04-16,2026-06-11,2026-07-09,7,5420,1,18,8.0,worked
+118,1205,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,96,96.0,2026-04-13,2026-04-17,2026-04-18,2026-06-13,2026-07-11,13,7130,1,78,57.0,worked
+119,662,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,160,160.0,2026-04-14,2026-04-18,2026-04-19,2026-06-14,2026-07-12,14,4260,1,87,73.0,worked
+120,531,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,160,160.0,2026-04-15,2026-04-16,2026-04-18,2026-06-13,2026-07-11,13,7090,1,23,19.0,partial
+121,192,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,40,40.0,2026-04-16,2026-04-18,2026-04-21,2026-06-16,2026-07-14,10,3060,1,81,74.0,partial
+122,478,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,403,403.0,2026-04-20,2026-04-22,2026-04-25,2026-06-20,2026-07-18,9,4220,1,55,41.0,worked
+123,168,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,Manager,1130,1130.0,2026-04-21,2026-04-22,2026-04-24,2026-06-19,2026-07-17,9,1430,1,40,38.0,no_change
+124,1134,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,835,835.0,2026-04-21,2026-04-25,2026-04-27,2026-06-22,2026-07-20,11,3320,1,76,52.0,worked
+125,1053,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1069,1069.0,2026-04-23,2026-04-26,2026-04-28,2026-06-23,2026-07-21,13,4130,1,68,65.0,partial
+126,1169,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,76,76.0,2026-04-23,2026-04-25,2026-04-27,2026-06-22,2026-07-20,11,1820,1,68,47.0,worked
+127,218,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,790,790.0,2026-04-27,2026-04-28,2026-04-30,2026-06-25,2026-07-23,12,6090,1,62,33.0,worked
+128,34,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,cancelled,Manager,964,,2026-04-28,,,,,8,2210,0,29,,pending
+129,553,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,76,76.0,2026-04-28,2026-04-30,2026-05-02,2026-06-27,2026-07-25,5,3860,1,84,83.0,no_change
+130,635,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,977,977.0,2026-04-28,2026-05-02,2026-05-04,2026-06-29,2026-07-27,8,4180,1,55,44.0,worked
+131,163,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,705,705.0,2026-04-29,2026-05-01,2026-05-03,2026-06-28,2026-07-26,11,3350,1,80,51.0,worked
+132,1146,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,845,845.0,2026-04-29,2026-05-01,2026-05-03,2026-06-28,2026-07-26,12,3460,1,50,33.0,worked
+133,518,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,260,260.0,2026-04-30,2026-05-04,2026-05-05,2026-06-30,2026-07-28,14,3300,1,57,34.0,worked
+134,759,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,845,845.0,2026-04-30,2026-05-03,2026-05-04,2026-06-29,2026-07-27,8,2490,1,73,75.0,no_change
+135,320,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,cancelled,PulseAI,709,,2026-05-04,,,,,8,3350,0,27,,pending
+136,745,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,completed,PulseAI,1143,1143.0,2026-05-06,2026-05-09,2026-05-12,2026-07-07,2026-08-04,10,2400,1,40,32.0,worked
+137,869,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,Manager,128,128.0,2026-05-07,2026-05-11,2026-05-13,2026-07-08,2026-08-05,11,2850,1,17,18.0,no_change
+138,81,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,102,102.0,2026-05-11,2026-05-15,2026-05-17,2026-07-12,2026-08-09,7,3990,1,55,43.0,worked
+139,370,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1020,1020.0,2026-05-11,2026-05-13,2026-05-15,2026-07-10,2026-08-07,8,4530,1,74,67.0,partial
+140,1221,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,completed,Manager,433,433.0,2026-05-11,2026-05-12,2026-05-14,2026-07-09,2026-08-06,15,3560,1,43,17.0,worked
+141,862,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,727,727.0,2026-05-14,2026-05-17,2026-05-18,2026-07-13,2026-08-10,13,2170,1,72,66.0,partial
+142,986,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,717,717.0,2026-05-18,2026-05-20,2026-05-23,2026-07-18,2026-08-15,11,3390,1,89,90.0,no_change
+143,114,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,40,40.0,2026-05-19,2026-05-20,2026-05-23,2026-07-18,2026-08-15,10,2850,1,52,48.0,partial
+144,1211,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,1065,1065.0,2026-05-19,2026-05-20,2026-05-22,2026-07-17,2026-08-14,10,2050,1,74,74.0,no_change
+145,696,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,707,707.0,2026-05-20,2026-05-22,2026-05-23,2026-07-18,2026-08-15,6,2200,1,59,49.0,worked
+146,857,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,declined,Manager,118,,2026-05-20,,,,,13,2970,0,41,,pending
+147,304,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,cancelled,PulseAI,279,,2026-05-25,,,,,4,4520,0,56,,pending
+148,539,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1112,1112.0,2026-05-25,2026-05-26,2026-05-29,2026-07-24,2026-08-21,8,3720,1,32,19.0,worked
+149,774,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,25,25.0,2026-05-27,2026-05-31,2026-06-01,2026-07-27,2026-08-24,17,3240,1,81,68.0,worked
+150,219,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,839,839.0,2026-06-01,2026-06-02,2026-06-05,2026-07-31,2026-08-28,15,1690,1,59,46.0,worked
+151,231,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,929,929.0,2026-06-02,2026-06-06,2026-06-09,2026-08-04,2026-09-01,12,4420,1,55,30.0,worked
+152,991,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,102,102.0,2026-06-02,2026-06-03,2026-06-06,2026-08-01,2026-08-29,5,1730,1,48,48.0,no_change
+153,753,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,1199,1199.0,2026-06-04,2026-06-05,2026-06-07,2026-08-02,2026-08-30,10,3170,1,10,12.0,no_change
+154,815,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,933,933.0,2026-06-04,2026-06-08,2026-06-09,2026-08-04,2026-09-01,4,1320,1,86,77.0,worked
+155,162,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,96,96.0,2026-06-08,2026-06-10,2026-06-13,2026-08-08,2026-09-05,8,2310,1,60,41.0,worked
+156,345,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,1131,1131.0,2026-06-08,2026-06-10,2026-06-11,2026-08-06,2026-09-03,8,5970,1,77,61.0,worked
+157,851,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,450,450.0,2026-06-08,2026-06-11,2026-06-13,2026-08-08,2026-09-05,11,4360,1,71,62.0,worked
+158,984,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,136,136.0,2026-06-09,2026-06-10,2026-06-11,2026-08-06,2026-09-03,11,3360,1,66,61.0,partial
+159,1058,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,1014,1014.0,2026-06-09,2026-06-12,2026-06-15,2026-08-10,2026-09-07,10,1670,1,31,26.0,partial
+160,936,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,705,705.0,2026-06-10,2026-06-12,2026-06-14,2026-08-09,2026-09-06,6,2810,1,48,41.0,partial
+161,372,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,declined,PulseAI,637,,2026-06-11,,,,,8,1350,0,53,,pending
+162,390,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,119,119.0,2026-06-16,2026-06-20,2026-06-22,2026-08-17,2026-09-14,16,3340,1,63,46.0,worked
+163,39,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,84,84.0,2026-06-30,2026-07-02,2026-07-03,2026-08-28,2026-09-25,8,1810,1,17,14.0,partial
+164,825,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,completed,Manager,137,137.0,2026-06-30,2026-07-01,2026-07-02,2026-08-27,2026-09-24,13,2630,1,21,11.0,worked
+165,363,Recognition plan,Plan visible recognition for recent contributions.,recognition_90d,completed,PulseAI,696,696.0,2026-07-01,2026-07-02,2026-07-04,2026-08-29,2026-09-26,12,420,1,28,5.0,worked
+166,88,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,1059,1059.0,2026-07-02,2026-07-05,2026-07-07,2026-09-01,2026-09-29,3,1510,1,58,40.0,worked
+167,486,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,cancelled,PulseAI,840,,2026-07-02,,,,,6,3830,0,42,,pending
+168,343,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,Manager,652,652.0,2026-07-06,2026-07-09,2026-07-12,2026-09-06,2026-10-04,5,1560,1,69,50.0,worked
+169,1126,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,809,809.0,2026-07-06,2026-07-08,2026-07-09,2026-09-03,2026-10-01,12,3480,1,64,37.0,worked
+170,816,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,977,977.0,2026-07-07,2026-07-09,2026-07-11,2026-09-05,2026-10-03,11,1640,1,28,18.0,worked
+171,831,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1063,1063.0,2026-07-08,2026-07-11,2026-07-14,2026-09-08,2026-10-06,14,3970,1,57,45.0,worked
+172,848,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,declined,PulseAI,183,,2026-07-08,,,,,14,1320,0,39,,pending
+173,619,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,389,389.0,2026-07-09,2026-07-10,2026-07-11,2026-09-05,2026-10-03,10,1820,1,63,53.0,worked
+174,789,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,45,45.0,2026-07-09,2026-07-10,2026-07-12,2026-09-06,2026-10-04,12,3020,1,64,35.0,worked
+175,99,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,647,647.0,2026-07-13,2026-07-14,2026-07-16,2026-09-10,2026-10-08,7,3250,1,33,29.0,partial
+176,717,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,cancelled,PulseAI,280,,2026-07-13,,,,,8,1610,0,44,,pending
+177,1218,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,PulseAI,232,232.0,2026-07-13,2026-07-16,2026-07-18,2026-09-12,2026-10-10,8,5570,1,39,24.0,worked
+178,929,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,286,286.0,2026-07-15,2026-07-17,2026-07-19,2026-09-13,2026-10-11,11,4180,1,30,29.0,no_change
+179,952,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,822,822.0,2026-07-15,2026-07-18,2026-07-20,2026-09-14,2026-10-12,10,2060,1,36,26.0,worked
+180,829,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,478,478.0,2026-07-16,2026-07-20,2026-07-21,2026-09-15,2026-10-13,8,4100,1,83,75.0,worked
+181,402,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,650,650.0,2026-07-20,2026-07-24,2026-07-27,2026-09-21,,6,3520,1,93,,pending
+182,915,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,102,102.0,2026-07-20,2026-07-22,2026-07-23,2026-09-17,,8,3560,1,69,,pending
+183,1189,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,76,76.0,2026-07-20,2026-07-22,2026-07-24,2026-09-18,,14,4340,1,38,,pending
+184,353,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,429,429.0,2026-07-21,2026-07-25,2026-07-28,2026-09-22,,7,3320,1,71,,pending
+185,523,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,350,350.0,2026-07-21,2026-07-25,2026-07-28,2026-09-22,,10,2800,1,71,,pending
+186,847,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,completed,PulseAI,19,19.0,2026-07-22,2026-07-25,2026-07-27,2026-09-21,,8,2340,1,62,,pending
+187,362,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,PulseAI,127,127.0,2026-07-23,2026-07-25,2026-07-27,2026-09-21,,14,1830,1,19,,pending
+188,223,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,completed,Manager,1131,1131.0,2026-07-27,2026-07-30,2026-08-01,2026-09-26,,9,2330,1,41,,pending
+189,1199,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,completed,PulseAI,1043,1043.0,2026-07-27,2026-07-31,2026-08-01,2026-09-26,,13,2890,1,6,,pending
+190,1203,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,completed,Manager,828,828.0,2026-08-03,2026-08-07,2026-08-10,2026-10-05,,9,4810,1,66,,pending
+191,308,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,completed,PulseAI,1131,1131.0,2026-08-05,2026-08-08,2026-08-11,2026-10-06,,9,1310,1,80,,pending
+192,487,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,Manager,872,872.0,2026-08-06,2026-08-08,2026-08-10,2026-10-05,,10,4390,1,75,,pending
+193,546,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,completed,PulseAI,1093,1093.0,2026-08-06,2026-08-10,2026-08-12,2026-10-07,,9,3960,1,42,,pending
+194,770,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,1069,1069.0,2026-08-12,2026-08-16,2026-08-19,,,12,3820,1,67,,pending
+195,425,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,proposed,PulseAI,158,,2026-08-13,,,,,14,1690,0,32,,pending
+196,645,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,931,931.0,2026-08-13,2026-08-15,2026-08-17,,,12,3830,1,51,,pending
+197,872,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,proposed,PulseAI,721,,2026-08-13,,,,,9,7160,0,74,,pending
+198,1029,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,in_progress,PulseAI,1112,1112.0,2026-08-13,2026-08-14,2026-08-15,,,15,5850,1,59,,pending
+199,983,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,Manager,525,525.0,2026-08-17,2026-08-21,2026-08-23,,,8,3780,1,74,,pending
+200,61,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,in_progress,PulseAI,572,572.0,2026-08-18,2026-08-20,2026-08-22,,,3,7490,1,31,,pending
+201,310,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,514,514.0,2026-08-18,2026-08-21,2026-08-23,,,14,3240,1,76,,pending
+202,637,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,in_progress,PulseAI,306,306.0,2026-08-18,2026-08-22,2026-08-23,,,12,2000,1,18,,pending
+203,995,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,in_progress,PulseAI,1112,1112.0,2026-08-18,2026-08-19,2026-08-20,,,12,3850,1,53,,pending
+204,524,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,136,136.0,2026-08-24,2026-08-27,2026-08-28,,,11,3030,1,55,,pending
+205,633,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,in_progress,Manager,137,137.0,2026-08-24,2026-08-25,2026-08-26,,,12,1740,1,21,,pending
+206,996,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,proposed,PulseAI,714,,2026-08-25,,,,,12,1440,0,50,,pending
+207,400,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,in_progress,PulseAI,933,933.0,2026-08-26,2026-08-27,2026-08-28,,,0,1480,1,69,,pending
+208,685,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,952,952.0,2026-08-26,2026-08-30,2026-09-02,,,15,3050,1,33,,pending
+209,1079,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,576,576.0,2026-08-26,2026-08-27,2026-08-28,,,6,3210,1,41,,pending
+210,427,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,proposed,Manager,683,,2026-08-31,,,,,10,4170,0,50,,pending
+211,513,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,119,119.0,2026-09-01,2026-09-04,2026-09-07,,,9,3180,1,33,,pending
+212,577,Flexible schedule,Offer flexible hours or hybrid days to restore work-life balance.,work_life_balance,in_progress,PulseAI,809,809.0,2026-09-02,2026-09-03,2026-09-05,,,16,1740,1,41,,pending
+213,867,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,proposed,PulseAI,40,,2026-09-02,,,,,7,3640,0,46,,pending
+214,8,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,1030,1030.0,2026-09-07,2026-09-08,2026-09-10,,,8,2960,1,48,,pending
+215,214,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,Manager,781,781.0,2026-09-07,2026-09-09,2026-09-11,,,14,4500,1,37,,pending
+216,127,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,approved,PulseAI,450,450.0,2026-09-09,2026-09-12,,,,12,3220,1,9,,pending
+217,23,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,Manager,250,250.0,2026-09-10,2026-09-14,2026-09-17,,,12,3340,1,48,,pending
+218,371,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,705,705.0,2026-09-14,2026-09-17,2026-09-20,,,7,4130,1,53,,pending
+219,456,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,absence_days_annual,in_progress,PulseAI,828,828.0,2026-09-14,2026-09-18,2026-09-19,,,7,3930,1,13,,pending
+220,845,Recognition plan,Plan visible recognition for recent contributions.,recognition_90d,in_progress,PulseAI,631,631.0,2026-09-14,2026-09-15,2026-09-17,,,10,440,1,8,,pending
+221,340,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,961,961.0,2026-09-16,2026-09-19,2026-09-22,,,8,3940,1,15,,pending
+222,720,Career conversation,Hold a career and role-fit conversation with a growth plan.,job_satisfaction,proposed,Manager,422,,2026-09-16,,,,,7,2340,0,12,,pending
+223,975,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,approved,Manager,429,429.0,2026-09-16,2026-09-17,,,,7,3830,1,43,,pending
+224,581,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,approved,PulseAI,383,383.0,2026-09-17,2026-09-18,,,,9,2830,1,57,,pending
+225,1234,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,proposed,Manager,952,,2026-09-17,,,,,11,3750,0,41,,pending
+226,1039,Wellbeing check-in,Confidential wellbeing check-in with optional EAP referral.,mood_score,in_progress,PulseAI,643,643.0,2026-09-28,2026-09-29,2026-09-30,,,6,2580,1,33,,pending
+227,570,Role enrichment,Add a stretch project or ownership area aligned with strengths.,engagement_score,proposed,PulseAI,705,,2026-09-29,,,,,13,2990,0,59,,pending
+228,823,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,proposed,PulseAI,478,,2026-09-30,,,,,9,3900,0,73,,pending
+229,813,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,750,750.0,2026-10-05,2026-10-08,2026-10-09,,,9,3860,1,75,,pending
+230,596,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,proposed,PulseAI,1068,,2026-10-06,,,,,13,3580,0,55,,pending
+231,962,Overtime cap and time off,Cap overtime and schedule recovery days.,overtime_hours_monthly,proposed,Manager,650,,2026-10-06,,,,,10,5670,0,46,,pending
+232,51,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,in_progress,PulseAI,576,576.0,2026-10-07,2026-10-11,2026-10-12,,,18,2800,1,36,,pending
+233,1101,Workload rebalance,Redistribute tasks and defer low-priority work for 6-8 weeks.,workload_index,proposed,PulseAI,596,,2026-10-08,,,,,13,4520,0,34,,pending

@@ -21,6 +21,7 @@ EMPULSE is an AI-powered employee performance, wellbeing and innovation platform
 - Match layout, spacing, colors, type sizes and copy text as closely as possible. Do not invent features or redesign.
 - Use `design/tokens.json` as the only source for colors, fonts, radii and shadows. Put them in `tailwind.config.ts` as named tokens (`navy`, `teal`, `coral`...). **Never hard-code hex values in components.**
 - Body text is 13px DM Sans. Numbers, IDs and small uppercase labels use DM Mono.
+- The sidebar is NOT the same for every role (see `design/tokens.json` -> `sidebars`): Employee = white, tealLight active item; Manager = white, navy active item with white text; HR = navy 256px, teal active item with navy text.
 - Left-to-right English for now. Keep all UI strings in `frontend/src/i18n/en.ts` so Arabic can be added later.
 
 ## Product rules (these are part of the design and must be enforced in code, not just UI)

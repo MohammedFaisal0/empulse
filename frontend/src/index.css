@@ -2,11 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  color: #0f172a;
-  background-color: #f8fafc;
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    @apply m-0 bg-surface font-sans text-body text-ink antialiased;
+  }
 }
+
+/* Role-specific active nav — keeps manager navy vs employee tealLight distinct */
+@layer components {
+  aside[data-sidebar-role='employee'] [aria-current='page'] {
+    @apply bg-teal-light text-teal-dark;
+  }
+
+  aside[data-sidebar-role='manager'] [aria-current='page'] {
+    @apply bg-navy text-white;
+  }
+
+  aside[data-sidebar-role='hr'] [aria-current='page'] {
+    @apply bg-teal text-navy;
+  }
+
+  aside[data-sidebar-role='employee'] [aria-current='page'] .sidebar-nav-label,
+  aside[data-sidebar-role='manager'] [aria-current='page'] .sidebar-nav-label {
+    @apply text-nav-em;
+  }
+
+  aside[data-sidebar-role='hr'] [aria-current='page'] .sidebar-nav-label,
+  aside[data-sidebar-role='hr'] .sidebar-nav-label {
+    @apply text-nav-hr;
+  }
+
+  aside[data-sidebar-role='employee'] .sidebar-nav-label,
+  aside[data-sidebar-role='manager'] .sidebar-nav-label {
+    @apply text-nav-em;
+  }
+}
+
