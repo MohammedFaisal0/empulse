@@ -27,7 +27,7 @@ Design access: Cursor has browsing and access to the Figma design through these 
 - Design file: https://www.figma.com/design/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=0-1&t=J2BMjRY7CI0ljF3B-1
 - Prototype: https://www.figma.com/proto/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=54-1384&p=f&t=8eBViAhCFoY9huNl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=54%3A1384
 
-PNG export into `design/png/` (see `design/README.md`) is optional. If the PNG exists, Cursor uses it; if not, it opens the Figma link.
+Every screen is also available as text in `design/specs/<ID>.md` (extracted from the Figma file), so Cursor does not need Figma access. PNG export into `design/png/` is optional.
 
 **Done when:** `python --version`, `node --version`, `git --version` all print versions, and the Figma links open for Cursor.
 
@@ -115,7 +115,7 @@ Do Step 5 only.
 Screens: **A01 Login, A02 Role Routing, M06 Burnout Early Warning, M04b Team Member Profile.**
 
 ```
-Do Step 6 only. Look at screens A01, A02, M06 and M04b in the design (PNG if present, otherwise the Figma link) and read their rows in design/SCREENS.md.
+Do Step 6 only. Look at screens A01, A02, M06 and M04b in the design (read design/specs/<ID>.md first; PNG only if present) and read their rows in design/SCREENS.md.
 Build these four screens pixel-faithfully, wired to real data:
 - A01 login and A02 role routing with the JWT endpoints; after login redirect to the role's home.
 - M06: list of at-risk team members from GET /api/manager/burnout/ (risk %, change in 6 weeks, "Explain this risk" panel using the model's top drivers, "Start Intervention" and "Simulate Impact" buttons wired to stubs).
@@ -138,7 +138,7 @@ Use the same prompt pattern as Step 6 with a list of screen IDs.
 Template:
 ```
 Do the following screens only: <IDs>.
-For each: look at the screen in the design (PNG if present, otherwise the Figma link) and read its row in design/SCREENS.md, build it faithfully, reuse components from components/ui, add the API endpoints it needs with the right permissions (see Step 5), and add the route from SCREENS.md.
+For each: look at the screen in the design (read design/specs/<ID>.md first; PNG only if present) and read its row in design/SCREENS.md, build it faithfully, reuse components from components/ui, add the API endpoints it needs with the right permissions (see Step 5), and add the route from SCREENS.md.
 Do not touch screens outside this list. When finished, list each screen with its route and anything you could not match.
 ```
 

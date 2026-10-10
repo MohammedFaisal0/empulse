@@ -14,9 +14,8 @@ EMPULSE is an AI-powered employee performance, wellbeing and innovation platform
 - **Repo layout:** `backend/`, `frontend/`, `ml/`, `data/`, `design/`, `docs/`.
 
 ## Design fidelity (most important rule)
-- The Figma design is final. **Before building any screen, look at it**: read its entry in `design/SCREENS.md`, then open `design/png/<ID>.png` if it exists; otherwise open the Figma design with your browsing / Figma access and go to the screen's node id (you have permission to browse and read the design):
-  - Design: https://www.figma.com/design/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=0-1&t=J2BMjRY7CI0ljF3B-1
-  - Prototype: https://www.figma.com/proto/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=54-1384&p=f&t=8eBViAhCFoY9huNl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=54%3A1384
+- The Figma design is final. **Before building any screen, read its spec: `design/specs/<ID>.md`** (every text, size, color, radius, border, shadow, font and layout setting of that screen, extracted from the Figma file; read `design/specs/README.md` once for the format) and its entry in `design/SCREENS.md`. If `design/png/<ID>.png` exists, look at it too. You do NOT need Figma access.
+  - Only if something is still unclear, open the Figma file (browsing access is allowed): https://www.figma.com/design/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=0-1&t=J2BMjRY7CI0ljF3B-1
   - Never build a screen from memory or guess its layout.
 - Match layout, spacing, colors, type sizes and copy text as closely as possible. Do not invent features or redesign.
 - Use `design/tokens.json` as the only source for colors, fonts, radii and shadows. Put them in `tailwind.config.ts` as named tokens (`navy`, `teal`, `coral`...). **Never hard-code hex values in components.**

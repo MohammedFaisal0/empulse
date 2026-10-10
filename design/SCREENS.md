@@ -1,6 +1,6 @@
 # EMPULSE: Screen Index (45 screens)
 
-Source: Figma file `sowTLuN4SOe7KBHfnkBFAm` ("Final design"). The design is the source of truth for look and layout. Use `design/png/<ID>.png` if it exists; otherwise open the Figma file with your browsing access and go to the node id below.
+Source: Figma file `sowTLuN4SOe7KBHfnkBFAm` ("Final design"). The design is the source of truth for look and layout. Read the screen's full spec in `design/specs/<ID>.md` (primary source, no Figma access needed). Use `design/png/<ID>.png` too if it exists. Open the Figma file only if something is still unclear.
 - Design: https://www.figma.com/design/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=0-1&t=J2BMjRY7CI0ljF3B-1
 - Prototype: https://www.figma.com/proto/sowTLuN4SOe7KBHfnkBFAm/Final-design?node-id=54-1384&p=f&t=8eBViAhCFoY9huNl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=54%3A1384
 This file tells you what each screen is, its role, route and Figma node.
