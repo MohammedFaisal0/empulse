@@ -1,8 +1,8 @@
 import { Leaf } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 
 import { Avatar } from '../components/ui'
-import { en } from '../i18n/en'
 import type { AppRole, NavConfig, NavItem } from './navConfigs'
 import { contextCardForRole, type ContextCard } from './shellChrome'
 
@@ -25,7 +25,7 @@ function navLabelClass(role: AppRole): string {
 function navRowClass(active: boolean, role: AppRole): string {
   if (role === 'hr') {
     return [
-      'mx-auto flex h-nav w-sidebar-nav-hr max-w-sidebar-nav-hr items-center gap-2.5 rounded-lg px-2.5 text-left font-medium transition-colors',
+      'mx-auto flex h-nav w-sidebar-nav-hr max-w-sidebar-nav-hr items-center gap-2.5 rounded-lg px-2.5 text-start font-medium transition-colors',
       navLabelClass(role),
       active
         ? 'bg-teal text-navy'
@@ -35,7 +35,7 @@ function navRowClass(active: boolean, role: AppRole): string {
 
   if (role === 'manager') {
     return [
-      'flex h-nav w-full items-center gap-2.5 rounded-md px-2.5 text-left font-medium transition-colors',
+      'flex h-nav w-full items-center gap-2.5 rounded-md px-2.5 text-start font-medium transition-colors',
       navLabelClass(role),
       active
         ? 'bg-navy text-white hover:bg-navy hover:text-white'
@@ -44,14 +44,13 @@ function navRowClass(active: boolean, role: AppRole): string {
   }
 
   return [
-    'flex h-nav w-full items-center gap-2.5 rounded-md px-2.5 text-left font-medium transition-colors',
+    'flex h-nav w-full items-center gap-2.5 rounded-md px-2.5 text-start font-medium transition-colors',
     navLabelClass(role),
     active
       ? 'bg-teal-light text-teal-dark'
       : 'bg-transparent text-ink/80 hover:bg-surface-4 hover:text-ink',
   ].join(' ')
 }
-
 
 function NavRowContent({
   item,
@@ -62,6 +61,7 @@ function NavRowContent({
   active: boolean
   role: AppRole
 }) {
+  const { t } = useTranslation()
   const Icon = item.icon
   const inactiveIcon = role === 'hr' ? 'text-white-78' : 'text-muted'
   const activeDot =
@@ -86,10 +86,10 @@ function NavRowContent({
           navLabelClass(role),
         ].join(' ')}
       >
-        {item.label}
+        {t(item.labelKey)}
       </span>
       {item.badge != null ? (
-        <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-coral px-1.5 font-mono text-[10px] font-medium text-white">
+        <span className="ltr-nums inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-coral px-1.5 font-mono text-[10px] font-medium text-white">
           {item.badge}
         </span>
       ) : null}
@@ -154,11 +154,11 @@ function ContextCardView({ card }: { card: ContextCard }) {
   if (card.kind === 'team') {
     return (
       <div className="mx-3 mb-3 rounded-lg border border-border bg-white px-3 py-2.5 shadow-card">
-        <div className="mb-1.5 flex -space-x-1.5">
+        <div className="mb-1.5 flex -space-x-1.5 rtl:space-x-reverse">
           {card.avatars.map((initials) => (
             <span
               key={initials}
-              className="inline-flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-navy2 font-mono text-[9px] font-medium text-white"
+              className="ltr-nums inline-flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-navy2 font-mono text-[9px] font-medium text-white"
             >
               {initials}
             </span>
@@ -170,7 +170,6 @@ function ContextCardView({ card }: { card: ContextCard }) {
     )
   }
 
-  // HR org card
   return (
     <div className="mx-3 mb-3 rounded-2xl bg-white-6 px-3 py-2.5">
       <p className="text-[12px] font-semibold leading-snug text-white">
@@ -204,6 +203,7 @@ function ProfileBlock({
   config: NavConfig
   preview?: boolean
 }) {
+  const { t } = useTranslation()
   const hr = isHr(config.role)
   const shell = [
     'flex items-center gap-2.5 rounded-md px-2 py-2',
@@ -224,7 +224,7 @@ function ProfileBlock({
       <Avatar name={config.profile.name} size="sm" />
       <div className="min-w-0">
         <p className={nameClass}>{config.profile.name}</p>
-        <p className={roleClass}>{config.profile.roleLabel}</p>
+        <p className={roleClass}>{t(config.profile.roleKey)}</p>
       </div>
     </>
   )
@@ -241,7 +241,8 @@ function ProfileBlock({
 }
 
 export function Sidebar({ config, activePath, preview }: SidebarProps) {
-  const context = contextCardForRole(config.role)
+  const { t } = useTranslation()
+  const context = contextCardForRole(config.role, t)
   const hr = isHr(config.role)
 
   return (
@@ -251,7 +252,7 @@ export function Sidebar({ config, activePath, preview }: SidebarProps) {
         'flex h-screen shrink-0 grow-0 flex-col overflow-x-hidden',
         hr
           ? 'w-sidebar-hr min-w-sidebar-hr max-w-sidebar-hr basis-sidebar-hr bg-navy text-white'
-          : 'w-sidebar min-w-sidebar max-w-sidebar basis-sidebar border-r border-border bg-white text-ink',
+          : 'w-sidebar min-w-sidebar max-w-sidebar basis-sidebar border-e border-border bg-white text-ink',
       ].join(' ')}
     >
       <div className="flex h-topbar items-center px-4">
@@ -276,13 +277,13 @@ export function Sidebar({ config, activePath, preview }: SidebarProps) {
               hr ? 'text-white' : 'text-ink',
             ].join(' ')}
           >
-            {en.brand}
+            {t('brand')}
           </span>
         </div>
       </div>
 
       <div className="px-4 pb-2">
-        <SectionLabel role={config.role} label={config.section} />
+        <SectionLabel role={config.role} label={t(config.sectionKey)} />
       </div>
 
       <ContextCardView card={context} />
@@ -319,10 +320,10 @@ export function Sidebar({ config, activePath, preview }: SidebarProps) {
           </div>
         ) : null}
 
-        {config.privacyNote ? (
+        {config.privacyKey ? (
           <div className="mb-2 rounded-lg bg-teal-lighter/80 px-2.5 py-2">
             <p className="whitespace-normal break-words text-[11px] leading-snug text-mutedText2">
-              {config.privacyNote}
+              {t(config.privacyKey)}
             </p>
           </div>
         ) : null}

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import type { NavConfig } from './navConfigs'
 import { topBarForRole } from './shellChrome'
@@ -18,7 +19,8 @@ export function AppShell({
   activePath,
   preview,
 }: AppShellProps) {
-  const chrome = topBarForRole(config.role)
+  const { t } = useTranslation()
+  const chrome = topBarForRole(config.role, t)
 
   return (
     <div className="flex min-h-screen bg-surface">

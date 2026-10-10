@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 import {
   Avatar,
@@ -13,7 +15,7 @@ import {
   Table,
   Tabs,
 } from '../components/ui'
-import { en } from '../i18n/en'
+import { demoPersona } from '../layout/demoPersona'
 import { AppShell } from '../layout/AppShell'
 import {
   type AppRole,
@@ -28,72 +30,97 @@ const sampleRows = [
 ]
 
 export function DesignPreview() {
+  const { t } = useTranslation()
   const [role, setRole] = useState<AppRole>('employee')
   const [tab, setTab] = useState('who')
   const config = navByRole[role]
   const activePath = shellDemoPaths[role]
+
+  const tabLabel =
+    tab === 'who'
+      ? t('designPreview.tabWho')
+      : tab === 'why'
+        ? t('designPreview.tabWhy')
+        : tab === 'strengths'
+          ? t('designPreview.tabStrengths')
+          : t('designPreview.tabRisks')
 
   return (
     <AppShell config={config} activePath={activePath} preview>
       <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-[28px] font-semibold text-ink">
-            {en.designPreview.title}
+            {t('designPreview.title')}
           </h1>
-          <p className="mt-1 text-muted">{en.designPreview.subtitle}</p>
+          <p className="mt-1 text-muted">{t('designPreview.subtitle')}</p>
+          <p className="mt-2 text-xs text-muted">
+            <Link className="text-teal-dark underline" to="/login">
+              {t('login.title')}
+            </Link>
+          </p>
         </div>
         <div className="flex flex-wrap gap-2">
           {(Object.keys(navByRole) as AppRole[]).map((key) => (
             <Chip key={key} active={role === key} onClick={() => setRole(key)}>
-              {en.roles[key]}
+              {t(`roles.${key}`)}
             </Chip>
           ))}
         </div>
       </div>
 
       <Card className="mb-6">
-        <p className="text-muted">{en.designPreview.placeholder}</p>
+        <p className="text-muted">{t('designPreview.placeholder')}</p>
       </Card>
 
-      <SectionHeading title={en.designPreview.componentsHeading} />
+      <SectionHeading title={t('designPreview.componentsHeading')} />
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
-          <SectionHeading title="Buttons" />
+          <SectionHeading title={t('designPreview.buttons')} />
           <div className="flex flex-wrap gap-2">
-            <Button variant="primary">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="accent">Accent</Button>
+            <Button variant="primary">{t('designPreview.primary')}</Button>
+            <Button variant="secondary">{t('designPreview.secondary')}</Button>
+            <Button variant="accent">{t('designPreview.accent')}</Button>
           </div>
         </Card>
 
         <Card>
-          <SectionHeading title="Badges" />
+          <SectionHeading title={t('designPreview.badges')} />
           <div className="flex flex-wrap gap-2">
-            <Badge tone="teal">Thriving</Badge>
-            <Badge tone="coral">Alert</Badge>
-            <Badge tone="amber">At risk</Badge>
-            <Badge tone="violet">Innovation</Badge>
-            <Badge tone="slate">Neutral</Badge>
+            <Badge tone="teal">{t('designPreview.thriving')}</Badge>
+            <Badge tone="coral">{t('designPreview.alert')}</Badge>
+            <Badge tone="amber">{t('designPreview.atRisk')}</Badge>
+            <Badge tone="violet">{t('designPreview.innovation')}</Badge>
+            <Badge tone="slate">{t('designPreview.neutral')}</Badge>
           </div>
         </Card>
 
         <Card>
-          <SectionHeading title="Stats" />
+          <SectionHeading title={t('designPreview.stats')} />
           <div className="grid grid-cols-3 gap-4">
-            <Stat label="Team size" value={9} delta="+1 this Q" deltaTone="up" />
             <Stat
-              label="Burnout risk"
+              label={t('designPreview.teamSize')}
+              value={9}
+              delta={t('designPreview.deltaUp')}
+              deltaTone="up"
+            />
+            <Stat
+              label={t('designPreview.burnoutRisk')}
               value="72%"
-              delta="+8 pts"
+              delta={t('designPreview.deltaDown')}
               deltaTone="down"
             />
-            <Stat label="Morale" value="7.4" delta="stable" deltaTone="neutral" />
+            <Stat
+              label={t('designPreview.morale')}
+              value="7.4"
+              delta={t('designPreview.deltaStable')}
+              deltaTone="neutral"
+            />
           </div>
         </Card>
 
         <Card>
-          <SectionHeading title="Medallions" />
+          <SectionHeading title={t('designPreview.medallions')} />
           <div className="flex flex-wrap items-end gap-4">
             <Medallion score={91} tier="gold" />
             <Medallion score={87} tier="silver" />
@@ -103,12 +130,12 @@ export function DesignPreview() {
         </Card>
 
         <Card>
-          <SectionHeading title="Avatar + Chip + Progress" />
+          <SectionHeading title={t('designPreview.avatarChipProgress')} />
           <div className="flex flex-wrap items-center gap-3">
-            <Avatar name="Layla Haddad" />
-            <Avatar name="Yasmin Hadi" size="lg" />
-            <Chip active>Pulse</Chip>
-            <Chip>Wellbeing</Chip>
+            <Avatar name={demoPersona.employee.name} />
+            <Avatar name={demoPersona.manager.name} size="lg" />
+            <Chip active>{t('designPreview.pulse')}</Chip>
+            <Chip>{t('designPreview.wellbeing')}</Chip>
           </div>
           <div className="mt-4 space-y-2">
             <ProgressBar value={87} showLabel />
@@ -118,35 +145,42 @@ export function DesignPreview() {
         </Card>
 
         <Card>
-          <SectionHeading title="Tabs" />
+          <SectionHeading title={t('designPreview.tabs')} />
           <Tabs
             items={[
-              { id: 'who', label: 'Who' },
-              { id: 'why', label: 'Why' },
-              { id: 'strengths', label: 'Strengths' },
-              { id: 'risks', label: 'Risks' },
+              { id: 'who', label: t('designPreview.tabWho') },
+              { id: 'why', label: t('designPreview.tabWhy') },
+              { id: 'strengths', label: t('designPreview.tabStrengths') },
+              { id: 'risks', label: t('designPreview.tabRisks') },
             ]}
             value={tab}
             onChange={setTab}
           />
-          <p className="mt-3 text-muted">Selected tab: {tab}</p>
+          <p className="mt-3 text-muted">
+            {t('designPreview.selectedTab', { tab: tabLabel })}
+          </p>
         </Card>
       </div>
 
       <Card className="mt-6">
         <SectionHeading
-          title="Table"
-          subtitle="Directory rows stay alphabetical — never ranked by score."
+          title={t('designPreview.table')}
+          subtitle={t('designPreview.tableSubtitle')}
         />
         <Table
           columns={[
-            { key: 'id', header: 'ID', mono: true, render: (r) => r.id },
-            { key: 'name', header: 'Name', render: (r) => r.name },
+            {
+              key: 'id',
+              header: t('designPreview.colId'),
+              mono: true,
+              render: (r) => <span className="ltr-nums">{r.id}</span>,
+            },
+            { key: 'name', header: t('designPreview.colName'), render: (r) => r.name },
             {
               key: 'risk',
-              header: 'Risk',
+              header: t('designPreview.colRisk'),
               mono: true,
-              render: (r) => r.risk,
+              render: (r) => <span className="ltr-nums">{r.risk}</span>,
             },
           ]}
           rows={sampleRows}

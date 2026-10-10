@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 export type Tier = 'gold' | 'silver' | 'bronze' | 'growth'
 
 const tierRing: Record<Tier, string> = {
@@ -5,13 +7,6 @@ const tierRing: Record<Tier, string> = {
   silver: 'border-tier-silver text-tier-silver',
   bronze: 'border-tier-bronze text-tier-bronze',
   growth: 'border-tier-growth text-tier-growth',
-}
-
-const tierLabel: Record<Tier, string> = {
-  gold: 'Gold',
-  silver: 'Silver',
-  bronze: 'Bronze',
-  growth: 'Growth',
 }
 
 type MedallionProps = {
@@ -33,6 +28,9 @@ export function Medallion({
   size = 'md',
   className = '',
 }: MedallionProps) {
+  const { t } = useTranslation()
+  const label = t(`tiers.${tier}`)
+
   return (
     <div
       className={[
@@ -43,11 +41,11 @@ export function Medallion({
       ]
         .filter(Boolean)
         .join(' ')}
-      title={`${tierLabel[tier]} ${score}`}
+      title={`${label} ${score}`}
     >
-      <span className="font-mono leading-none text-ink">{score}</span>
+      <span className="ltr-nums font-mono leading-none text-ink">{score}</span>
       <span className="mt-0.5 font-mono text-[9px] font-medium uppercase tracking-wide">
-        {tierLabel[tier]}
+        {label}
       </span>
     </div>
   )

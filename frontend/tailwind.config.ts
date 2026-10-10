@@ -63,8 +63,15 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['"DM Sans"', 'sans-serif'],
-        mono: ['"DM Mono"', 'monospace'],
+        sans: [
+          '"DM Sans"',
+          '"Noto Sans Arabic"',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+        ],
+        mono: ['"DM Mono"', 'ui-monospace', 'monospace'],
+        arabic: ['"Noto Sans Arabic"', '"DM Sans"', 'sans-serif'],
       },
       fontSize: {
         body: ['13px', { lineHeight: '1.45' }],

@@ -24,7 +24,10 @@ export function ProgressBar({
   const pct = Math.max(0, Math.min(100, (value / max) * 100))
 
   return (
-    <div className={['flex items-center gap-2', className].filter(Boolean).join(' ')}>
+    <div
+      dir="ltr"
+      className={['flex items-center gap-2', className].filter(Boolean).join(' ')}
+    >
       <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-3">
         <div
           className={['h-full rounded-full transition-all', fillClass[tone]].join(' ')}
@@ -32,7 +35,9 @@ export function ProgressBar({
         />
       </div>
       {showLabel ? (
-        <span className="shrink-0 font-mono text-[11px] text-muted">{Math.round(pct)}%</span>
+        <span className="ltr-nums shrink-0 font-mono text-[11px] text-muted">
+          {Math.round(pct)}%
+        </span>
       ) : null}
     </div>
   )

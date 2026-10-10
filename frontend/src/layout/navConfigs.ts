@@ -26,13 +26,14 @@ import {
   UsersRound,
 } from 'lucide-react'
 
-import { en } from '../i18n/en'
+import { demoPersona } from './demoPersona'
 
 export type AppRole = 'employee' | 'manager' | 'hr'
 
 export type NavItem = {
   id: string
-  label: string
+  /** i18n key under shell.<role>.items / help / settings / pulseai */
+  labelKey: string
   to: string
   icon: LucideIcon
   badge?: number
@@ -40,112 +41,303 @@ export type NavItem = {
 
 export type NavConfig = {
   role: AppRole
-  section: string
+  sectionKey: string
   items: NavItem[]
   footerItems: NavItem[]
   profile: {
     name: string
-    roleLabel: string
+    roleKey: string
     settingsTo?: string
   }
-  privacyNote?: string
+  privacyKey?: string
 }
-
-const e = en.shell.employee
-const m = en.shell.manager
-const h = en.shell.hr
 
 export const employeeNav: NavConfig = {
   role: 'employee',
-  section: e.section,
+  sectionKey: 'shell.employee.section',
   items: [
-    { id: 'overview', label: e.items.overview, to: '/employee/overview', icon: LayoutDashboard },
-    { id: 'performance', label: e.items.performance, to: '/employee/performance', icon: Gauge },
-    { id: 'twin', label: e.items.twin, to: '/employee/twin', icon: Brain },
-    { id: 'innovationDna', label: e.items.innovationDna, to: '/employee/innovation-dna', icon: Dna },
-    { id: 'innovationLab', label: e.items.innovationLab, to: '/employee/innovation-lab', icon: FlaskConical },
-    { id: 'marketplace', label: e.items.marketplace, to: '/employee/marketplace', icon: Store },
-    { id: 'growth', label: e.items.growth, to: '/employee/growth', icon: TrendingUp },
-    { id: 'recognition', label: e.items.recognition, to: '/employee/recognition', icon: HandHeart },
-    { id: 'pulseai', label: e.items.pulseai, to: '/employee/pulseai', icon: Sparkles },
-    { id: 'reports', label: e.items.reports, to: '/employee/reports', icon: FileText },
+    {
+      id: 'overview',
+      labelKey: 'shell.employee.items.overview',
+      to: '/employee/overview',
+      icon: LayoutDashboard,
+    },
+    {
+      id: 'performance',
+      labelKey: 'shell.employee.items.performance',
+      to: '/employee/performance',
+      icon: Gauge,
+    },
+    {
+      id: 'twin',
+      labelKey: 'shell.employee.items.twin',
+      to: '/employee/twin',
+      icon: Brain,
+    },
+    {
+      id: 'innovationDna',
+      labelKey: 'shell.employee.items.innovationDna',
+      to: '/employee/innovation-dna',
+      icon: Dna,
+    },
+    {
+      id: 'innovationLab',
+      labelKey: 'shell.employee.items.innovationLab',
+      to: '/employee/innovation-lab',
+      icon: FlaskConical,
+    },
+    {
+      id: 'marketplace',
+      labelKey: 'shell.employee.items.marketplace',
+      to: '/employee/marketplace',
+      icon: Store,
+    },
+    {
+      id: 'growth',
+      labelKey: 'shell.employee.items.growth',
+      to: '/employee/growth',
+      icon: TrendingUp,
+    },
+    {
+      id: 'recognition',
+      labelKey: 'shell.employee.items.recognition',
+      to: '/employee/recognition',
+      icon: HandHeart,
+    },
+    {
+      id: 'pulseai',
+      labelKey: 'shell.employee.items.pulseai',
+      to: '/employee/pulseai',
+      icon: Sparkles,
+    },
+    {
+      id: 'reports',
+      labelKey: 'shell.employee.items.reports',
+      to: '/employee/reports',
+      icon: FileText,
+    },
   ],
   footerItems: [],
-  privacyNote: e.privacy,
+  privacyKey: 'shell.employee.privacy',
   profile: {
-    name: e.profileName,
-    roleLabel: e.profileRole,
+    name: demoPersona.employee.name,
+    roleKey: 'shell.employee.profileRole',
     settingsTo: '/employee/settings',
   },
 }
 
 export const managerNav: NavConfig = {
   role: 'manager',
-  section: m.section,
+  sectionKey: 'shell.manager.section',
   items: [
-    { id: 'overview', label: m.items.overview, to: '/manager/overview', icon: LayoutDashboard },
-    { id: 'performance', label: m.items.performance, to: '/manager/performance', icon: BarChart3 },
-    { id: 'pulse', label: m.items.pulse, to: '/manager/pulse', icon: Activity },
-    { id: 'members', label: m.items.members, to: '/manager/members', icon: Users },
-    { id: 'matrix', label: m.items.matrix, to: '/manager/matrix', icon: Target },
+    {
+      id: 'overview',
+      labelKey: 'shell.manager.items.overview',
+      to: '/manager/overview',
+      icon: LayoutDashboard,
+    },
+    {
+      id: 'performance',
+      labelKey: 'shell.manager.items.performance',
+      to: '/manager/performance',
+      icon: BarChart3,
+    },
+    {
+      id: 'pulse',
+      labelKey: 'shell.manager.items.pulse',
+      to: '/manager/pulse',
+      icon: Activity,
+    },
+    {
+      id: 'members',
+      labelKey: 'shell.manager.items.members',
+      to: '/manager/members',
+      icon: Users,
+    },
+    {
+      id: 'matrix',
+      labelKey: 'shell.manager.items.matrix',
+      to: '/manager/matrix',
+      icon: Target,
+    },
     {
       id: 'burnout',
-      label: m.items.burnout,
+      labelKey: 'shell.manager.items.burnout',
       to: '/manager/burnout',
       icon: AlertTriangle,
       badge: 3,
     },
-    { id: 'morale', label: m.items.morale, to: '/manager/morale', icon: HandHeart },
-    { id: 'recognition', label: m.items.recognition, to: '/manager/recognition', icon: Sparkles },
-    { id: 'innovation', label: m.items.innovation, to: '/manager/innovation', icon: FlaskConical },
+    {
+      id: 'morale',
+      labelKey: 'shell.manager.items.morale',
+      to: '/manager/morale',
+      icon: HandHeart,
+    },
+    {
+      id: 'recognition',
+      labelKey: 'shell.manager.items.recognition',
+      to: '/manager/recognition',
+      icon: Sparkles,
+    },
+    {
+      id: 'innovation',
+      labelKey: 'shell.manager.items.innovation',
+      to: '/manager/innovation',
+      icon: FlaskConical,
+    },
     {
       id: 'interventions',
-      label: m.items.interventions,
+      labelKey: 'shell.manager.items.interventions',
       to: '/manager/interventions',
       icon: GitBranch,
       badge: 2,
     },
-    { id: 'reports', label: m.items.reports, to: '/manager/reports', icon: FileText },
-    { id: 'pulseai', label: m.items.pulseai, to: '/manager/pulseai', icon: MessageSquare },
+    {
+      id: 'reports',
+      labelKey: 'shell.manager.items.reports',
+      to: '/manager/reports',
+      icon: FileText,
+    },
+    {
+      id: 'pulseai',
+      labelKey: 'shell.manager.items.pulseai',
+      to: '/manager/pulseai',
+      icon: MessageSquare,
+    },
   ],
   footerItems: [
-    { id: 'help', label: m.help, to: '/manager/help', icon: HelpCircle },
-    { id: 'settings', label: m.settings, to: '/manager/settings', icon: Settings },
+    {
+      id: 'help',
+      labelKey: 'shell.manager.help',
+      to: '/manager/help',
+      icon: HelpCircle,
+    },
+    {
+      id: 'settings',
+      labelKey: 'shell.manager.settings',
+      to: '/manager/settings',
+      icon: Settings,
+    },
   ],
   profile: {
-    name: m.profileName,
-    roleLabel: m.profileRole,
+    name: demoPersona.manager.name,
+    roleKey: 'shell.manager.profileRole',
     settingsTo: '/manager/settings',
   },
 }
 
 export const hrNav: NavConfig = {
   role: 'hr',
-  section: h.section,
+  sectionKey: 'shell.hr.section',
   items: [
-    { id: 'executive', label: h.items.executive, to: '/hr/executive', icon: LayoutDashboard },
-    { id: 'organization', label: h.items.organization, to: '/hr/organization', icon: Building2 },
-    { id: 'employees', label: h.items.employees, to: '/hr/employees', icon: Users },
-    { id: 'teams', label: h.items.teams, to: '/hr/teams', icon: UsersRound },
-    { id: 'performance', label: h.items.performance, to: '/hr/performance', icon: LineChart },
-    { id: 'burnout', label: h.items.burnout, to: '/hr/burnout', icon: AlertTriangle },
-    { id: 'morale', label: h.items.morale, to: '/hr/morale', icon: HandHeart },
-    { id: 'innovation', label: h.items.innovation, to: '/hr/innovation', icon: FlaskConical },
-    { id: 'recognition', label: h.items.recognition, to: '/hr/recognition', icon: Sparkles },
-    { id: 'interventions', label: h.items.interventions, to: '/hr/interventions', icon: GitBranch },
-    { id: 'matrix', label: h.items.matrix, to: '/hr/matrix', icon: Target },
-    { id: 'economic', label: h.items.economic, to: '/hr/economic', icon: CircleDollarSign },
-    { id: 'simulator', label: h.items.simulator, to: '/hr/simulator', icon: Gauge },
-    { id: 'reports', label: h.items.reports, to: '/hr/reports', icon: FileText },
-    { id: 'governance', label: h.items.governance, to: '/hr/governance', icon: Scale },
+    {
+      id: 'executive',
+      labelKey: 'shell.hr.items.executive',
+      to: '/hr/executive',
+      icon: LayoutDashboard,
+    },
+    {
+      id: 'organization',
+      labelKey: 'shell.hr.items.organization',
+      to: '/hr/organization',
+      icon: Building2,
+    },
+    {
+      id: 'employees',
+      labelKey: 'shell.hr.items.employees',
+      to: '/hr/employees',
+      icon: Users,
+    },
+    {
+      id: 'teams',
+      labelKey: 'shell.hr.items.teams',
+      to: '/hr/teams',
+      icon: UsersRound,
+    },
+    {
+      id: 'performance',
+      labelKey: 'shell.hr.items.performance',
+      to: '/hr/performance',
+      icon: LineChart,
+    },
+    {
+      id: 'burnout',
+      labelKey: 'shell.hr.items.burnout',
+      to: '/hr/burnout',
+      icon: AlertTriangle,
+    },
+    {
+      id: 'morale',
+      labelKey: 'shell.hr.items.morale',
+      to: '/hr/morale',
+      icon: HandHeart,
+    },
+    {
+      id: 'innovation',
+      labelKey: 'shell.hr.items.innovation',
+      to: '/hr/innovation',
+      icon: FlaskConical,
+    },
+    {
+      id: 'recognition',
+      labelKey: 'shell.hr.items.recognition',
+      to: '/hr/recognition',
+      icon: Sparkles,
+    },
+    {
+      id: 'interventions',
+      labelKey: 'shell.hr.items.interventions',
+      to: '/hr/interventions',
+      icon: GitBranch,
+    },
+    {
+      id: 'matrix',
+      labelKey: 'shell.hr.items.matrix',
+      to: '/hr/matrix',
+      icon: Target,
+    },
+    {
+      id: 'economic',
+      labelKey: 'shell.hr.items.economic',
+      to: '/hr/economic',
+      icon: CircleDollarSign,
+    },
+    {
+      id: 'simulator',
+      labelKey: 'shell.hr.items.simulator',
+      to: '/hr/simulator',
+      icon: Gauge,
+    },
+    {
+      id: 'reports',
+      labelKey: 'shell.hr.items.reports',
+      to: '/hr/reports',
+      icon: FileText,
+    },
+    {
+      id: 'governance',
+      labelKey: 'shell.hr.items.governance',
+      to: '/hr/governance',
+      icon: Scale,
+    },
   ],
   footerItems: [
-    { id: 'pulseai', label: h.pulseai, to: '/hr/pulseai', icon: MessageSquare },
-    { id: 'settings', label: h.settings, to: '/hr/settings', icon: Settings },
+    {
+      id: 'pulseai',
+      labelKey: 'shell.hr.pulseai',
+      to: '/hr/pulseai',
+      icon: MessageSquare,
+    },
+    {
+      id: 'settings',
+      labelKey: 'shell.hr.settings',
+      to: '/hr/settings',
+      icon: Settings,
+    },
   ],
   profile: {
-    name: h.profileName,
-    roleLabel: h.profileRole,
+    name: demoPersona.hr.name,
+    roleKey: 'shell.hr.profileRole',
     settingsTo: '/hr/settings',
   },
 }

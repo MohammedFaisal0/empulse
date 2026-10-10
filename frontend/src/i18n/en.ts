@@ -1,9 +1,31 @@
 export const en = {
   brand: 'EMPULSE',
+  language: {
+    en: 'EN',
+    ar: 'العربية',
+    switchTo: 'Language',
+  },
+  a11y: {
+    breadcrumb: 'Breadcrumb',
+  },
   health: {
     title: 'EMPULSE',
     label: 'API health',
     checking: 'Checking…',
+    failed: 'Request failed',
+    status: 'status',
+    openPreview: 'Open design preview',
+  },
+  login: {
+    title: 'Sign in to EMPULSE',
+    subtitle: 'Employee performance, wellbeing and innovation',
+    email: 'Email',
+    emailPlaceholder: 'you@horizon.demo',
+    password: 'Password',
+    passwordPlaceholder: 'Enter your password',
+    submit: 'Sign in',
+    forgotPassword: 'Forgot password?',
+    demoHint: 'Demo: layla@, yasmin@ or rana@horizon.demo',
   },
   topBar: {
     shortcut: '⌘K',
@@ -14,16 +36,20 @@ export const en = {
     manager: 'Manager',
     hr: 'HR / Executive',
   },
+  tiers: {
+    gold: 'Gold',
+    silver: 'Silver',
+    bronze: 'Bronze',
+    growth: 'Growth',
+  },
   shell: {
     employee: {
       section: 'MY SPACE',
       context: 'How am I doing, and how can I grow?',
       privacy:
         'Your data, your growth. You see only your own data. Check-ins stay private unless you share.',
-      profileName: 'Layla Haddad',
       profileRole: 'Senior Data Analyst',
       topBar: {
-        breadcrumbPrimary: 'Layla Haddad · Customer Insights',
         breadcrumbPage: 'Overview',
         searchPlaceholder: 'Ask PulseAI about your growth…',
         dateRange: 'This quarter',
@@ -44,15 +70,12 @@ export const en = {
     },
     manager: {
       section: 'MANAGER · MY TEAM',
-      contextTeam: 'Platform Reliability',
       contextMeta: '9 direct reports',
-      contextAvatars: ['KM', 'NA', 'MO'] as const,
       help: 'Help',
       settings: 'Settings',
-      profileName: 'Yasmin Hadi',
       profileRole: 'Engineering Manager',
       topBar: {
-        breadcrumbPrimary: 'Platform Reliability · 9 people',
+        breadcrumbPrimaryMeta: '9 people',
         breadcrumbPage: 'Team Overview',
         attentionChip: '3 need attention',
         searchPlaceholder: 'Ask about your team or find a team…',
@@ -75,14 +98,11 @@ export const en = {
     },
     hr: {
       section: 'HR & EXECUTIVE',
-      contextOrg: 'Horizon Group',
       contextMeta: '1,240 people · 6 departments',
       pulseai: 'PulseAI',
       settings: 'Settings',
-      profileName: 'Rana Aziz',
       profileRole: 'Chief People Officer',
       topBar: {
-        breadcrumbPrimary: 'Horizon Group',
         breadcrumbPage: 'Executive Pulse',
         dataFreshness: 'DATA 06:00',
         searchPlaceholder: 'Search people, teams or ask PulseAI…',
@@ -110,11 +130,47 @@ export const en = {
   designPreview: {
     title: 'Design preview',
     subtitle: 'Shared UI and app shells for Figma comparison',
-    shellHeading: 'App shell',
     componentsHeading: 'Components',
     placeholder:
       'Content area placeholder. Screen pages land in later steps.',
+    buttons: 'Buttons',
+    primary: 'Primary',
+    secondary: 'Secondary',
+    accent: 'Accent',
+    badges: 'Badges',
+    thriving: 'Thriving',
+    alert: 'Alert',
+    atRisk: 'At risk',
+    innovation: 'Innovation',
+    neutral: 'Neutral',
+    stats: 'Stats',
+    teamSize: 'Team size',
+    burnoutRisk: 'Burnout risk',
+    morale: 'Morale',
+    deltaUp: '+1 this Q',
+    deltaDown: '+8 pts',
+    deltaStable: 'stable',
+    medallions: 'Medallions',
+    avatarChipProgress: 'Avatar + Chip + Progress',
+    pulse: 'Pulse',
+    wellbeing: 'Wellbeing',
+    tabs: 'Tabs',
+    tabWho: 'Who',
+    tabWhy: 'Why',
+    tabStrengths: 'Strengths',
+    tabRisks: 'Risks',
+    selectedTab: 'Selected tab: {{tab}}',
+    table: 'Table',
+    tableSubtitle:
+      'Directory rows stay alphabetical — never ranked by score.',
+    colId: 'ID',
+    colName: 'Name',
+    colRisk: 'Risk',
   },
 } as const
 
-export type EnStrings = typeof en
+type DeepStringify<T> = {
+  [K in keyof T]: T[K] extends string ? string : DeepStringify<T[K]>
+}
+
+export type EnStrings = DeepStringify<typeof en>

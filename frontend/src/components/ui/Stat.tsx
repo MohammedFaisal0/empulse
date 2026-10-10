@@ -24,7 +24,9 @@ export function Stat({
       <span className="font-mono text-[10px] font-medium uppercase tracking-[0.08em] text-muted">
         {label}
       </span>
-      <span className="text-[28px] font-semibold leading-none text-ink">{value}</span>
+      <span className="ltr-nums text-[28px] font-semibold leading-none text-ink">
+        {value}
+      </span>
       {delta ? (
         <span className={['text-xs font-medium', deltaClass[deltaTone]].join(' ')}>
           {delta}

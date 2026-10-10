@@ -24,7 +24,7 @@ export function Table<T>({ columns, rows, rowKey, className = '' }: TableProps<T
         .filter(Boolean)
         .join(' ')}
     >
-      <table className="w-full border-collapse text-left text-[13px]">
+      <table className="w-full border-collapse text-start text-[13px]">
         <thead>
           <tr className="bg-surface-4">
             {columns.map((col) => (
