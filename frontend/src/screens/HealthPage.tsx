@@ -38,11 +38,11 @@ export function HealthPage() {
           )}
         </div>
         <p className="mt-4 flex flex-wrap gap-3 text-xs text-muted">
+          <Link className="text-teal-dark underline" to="/login">
+            {t('login.welcome')}
+          </Link>
           <Link className="text-teal-dark underline" to="/design-preview">
             {t('health.openPreview')}
-          </Link>
-          <Link className="text-teal-dark underline" to="/login">
-            {t('login.title')}
           </Link>
         </p>
       </Card>

@@ -1,0 +1,124 @@
+{
+  "common": {
+    "notCollected": "لم تُجمع بعد",
+    "loading": "جاري التحميل…",
+    "dash": "—",
+    "error": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+    "projected": "متوقع"
+  },
+  "language": {
+    "en": "EN",
+    "ar": "العربية",
+    "switchTo": "اللغة"
+  },
+  "a11y": {
+    "breadcrumb": "مسار التنقل"
+  },
+  "errors": {
+    "auth": {
+      "invalid_credentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "not_authenticated": "يرجى تسجيل الدخول للمتابعة.",
+      "permission_denied": "ليس لديك صلاحية للقيام بذلك.",
+      "profile_missing": "حسابك يفتقد ملف دور."
+    },
+    "privacy": {
+      "executive_aggregates_only": "حسابات التنفيذيين يمكنها فقط عرض رؤى مجمّعة."
+    },
+    "error": {
+      "not_found": "غير موجود.",
+      "validation": "يرجى مراجعة النموذج والمحاولة مرة أخرى.",
+      "unknown": "حدث خطأ. يرجى المحاولة مرة أخرى."
+    },
+    "interventions": {
+      "stub_accepted": "تم تسجيل الطلب (نموذج مؤقت — سير العمل الكامل في خطوة لاحقة)."
+    }
+  },
+  "health": {
+    "title": "EMPULSE",
+    "label": "حالة الواجهة",
+    "checking": "جاري التحقق…",
+    "failed": "فشل الطلب",
+    "status": "الحالة",
+    "openPreview": "فتح معاينة التصميم"
+  },
+  "login": {
+    "overline": "ذكاء الموظفين ودعم القرار",
+    "headline": "اكتشف الأشخاص وراء الأداء.",
+    "story": "EMPULSE يربط الأداء والرفاهية والابتكار في صورة حية واحدة — لتحمي الناس من الاحتراق، وتنمّي المواهب، وتقيس قيمة كل قرار.",
+    "insightBurnoutTitle": "خطر الاحتراق 68% ← 45%",
+    "insightBurnoutNote": "بعد إعادة توازن عبء العمل · 6 أسابيع",
+    "insightIdeaTitle": "فكرة ← مُنفَّذة",
+    "insightIdeaNote": "مركز Insight ذاتي الخدمة · 180 ألف ر.س/سنة",
+    "insightImpactTitle": "4.2 مليون ر.س أثر متوقع",
+    "insightImpactNote": "2026 · من 212 تدخلاً",
+    "welcome": "مرحباً بعودتك",
+    "workspace": "سجّل الدخول إلى مساحة EMPULSE في مؤسستك.",
+    "sso": "المتابعة عبر SSO الشركة",
+    "orEmail": "أو بالبريد الوظيفي",
+    "email": "البريد الوظيفي",
+    "emailPlaceholder": "name@horizon-group.com",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "••••••••••",
+    "remember": "أبقني مسجلاً على هذا الجهاز",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "submit": "الدخول إلى EMPULSE",
+    "trustTitle": "مبني على الثقة",
+    "trustBody": "EMPULSE لا يقرأ محتوى الرسائل أو ضغطات المفاتيح أو الشاشات. الرؤى من نتائج العمل وإشارات عبء العمل وتسجيلات المتابعة الطوعية — وكل توصية ذكاء اصطناعي يراجعها إنسان.",
+    "security": "مشفّر أثناء النقل والتخزين · وصول حسب الدور · ميثاق الذكاء الاصطناعي المسؤول v2.1",
+    "demoHint": "تجريبي: layla@ أو yasmin@ أو rana@horizon.demo · كلمة المرور empulse123",
+    "signingIn": "جاري تسجيل الدخول…"
+  },
+  "roleRouting": {
+    "back": "العودة لتسجيل الدخول",
+    "overline": "بعد تسجيل الدخول · توجيه الدور",
+    "title": "منصة واحدة. ثلاث تجارب.",
+    "description": "EMPULSE يقرأ دورك من SSO الشركة ويفتح التجربة المبنية له — بملاحة خاصة ونطاق بيانات وقرارات. اختر حساباً تجريبياً لاتباع مساره.",
+    "employeeBadge": "موظف",
+    "managerBadge": "مدير",
+    "hrBadge": "الموارد البشرية والتنفيذي",
+    "employeeTitle": "محلل بيانات أول",
+    "managerTitle": "مدير هندسة · 9 مرؤوسين",
+    "hrTitle": "رئيسة شؤون الأفراد",
+    "employeeQuestion": "«كيف حالي، وكيف يمكنني أن أنمو؟»",
+    "managerQuestion": "«كيف فريقي، من يحتاج دعماً، ماذا أفعل؟»",
+    "hrQuestion": "«كيف المنظمة، وماذا نغيّر؟»",
+    "focus": "التركيز",
+    "dataScope": "نطاق البيانات",
+    "startsAt": "يبدأ عند",
+    "feel": "الإحساس",
+    "employeeFocus": "نفسي",
+    "employeeScope": "بياناتي فقط",
+    "employeeStarts": "نظرة عامة",
+    "employeeFeel": "شخصي · هادئ · محفّز",
+    "managerFocus": "فريقي",
+    "managerScope": "بيانات الفريق المصرّح بها",
+    "managerStarts": "نظرة عامة على الفريق",
+    "managerFeel": "مركّز على الفريق · قابل للتنفيذ · تشغيلي",
+    "hrFocus": "المنظمة",
+    "hrScope": "على مستوى المنظمة، وفق الحوكمة",
+    "hrStarts": "نبض تنفيذي",
+    "hrFeel": "استراتيجي · تحليلي · تنفيذي",
+    "continueAs": "المتابعة كـ {{name}}",
+    "summaryEmployee": "موظف ← افهمني",
+    "summaryManager": "مدير ← ادعم فريقي",
+    "summaryHr": "الموارد البشرية ← حسّن المنظمة"
+  },
+  "topBar": {
+    "shortcut": "⌘K",
+    "notifications": "الإشعارات"
+  },
+  "roles": {
+    "employee": "موظف",
+    "manager": "مدير",
+    "hr": "الموارد البشرية / التنفيذي"
+  },
+  "tiers": {
+    "gold": "ذهبي",
+    "silver": "فضي",
+    "bronze": "برونزي",
+    "growth": "نمو"
+  },
+  "placeholders": {
+    "comingSoon": "هذه الشاشة ستُضاف في دفعة لاحقة."
+  }
+}

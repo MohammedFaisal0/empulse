@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import type { NavConfig } from './navConfigs'
-import { topBarForRole } from './shellChrome'
+import type { AppRole, NavConfig } from './navConfigs'
+import { topBarForRole, type TopBarChrome } from './shellChrome'
 import { Sidebar } from './Sidebar'
 import { TopBar } from './TopBar'
 
@@ -11,6 +11,9 @@ type AppShellProps = {
   children: ReactNode
   activePath?: string
   preview?: boolean
+  /** Override breadcrumb page / attention chip for a specific screen. */
+  chrome?: Partial<TopBarChrome>
+  attentionCount?: number
 }
 
 export function AppShell({
@@ -18,9 +21,12 @@ export function AppShell({
   children,
   activePath,
   preview,
+  chrome: chromeOverride,
+  attentionCount,
 }: AppShellProps) {
   const { t } = useTranslation()
-  const chrome = topBarForRole(config.role, t)
+  const base = topBarForRole(config.role, t, { attentionCount })
+  const chrome = { ...base, ...chromeOverride }
 
   return (
     <div className="flex min-h-screen bg-surface">
@@ -33,4 +39,8 @@ export function AppShell({
       </div>
     </div>
   )
+}
+
+export function roleHomeShell(role: AppRole): AppRole {
+  return role
 }

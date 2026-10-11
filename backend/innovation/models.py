@@ -20,6 +20,8 @@ class Idea(models.Model):
     implemented_at = models.DateField(null=True, blank=True, db_index=True)
     estimated_value_sar = models.FloatField(null=True, blank=True)
     realized_value_sar = models.FloatField(null=True, blank=True)
+    # Marketplace visibility — seed sets True for approved/implemented (CSV has no column).
+    is_public = models.BooleanField(default=False, db_index=True)
 
     class Meta:
         ordering = ["-submitted_at", "id"]
@@ -45,7 +47,7 @@ class Recognition(models.Model):
     type = models.CharField(max_length=64)
     message = models.TextField()
     created_at = models.DateField(db_index=True)
-    is_public = models.BooleanField(default=True)
+    is_public = models.BooleanField(default=True, db_index=True)
 
     class Meta:
         ordering = ["-created_at", "id"]

@@ -1,0 +1,86 @@
+{
+  "shell": {
+    "employee": {
+      "section": "مساحتي",
+      "context": "كيف حالي، وكيف يمكنني أن أنمو؟",
+      "privacy": "بياناتك ونموك. ترى بياناتك فقط. تبقى تسجيلات المتابعة خاصة ما لم تشاركها.",
+      "profileRole": "محلل بيانات أول",
+      "topBar": {
+        "breadcrumbPage": "نظرة عامة",
+        "searchPlaceholder": "اسأل PulseAI عن نموك…",
+        "dateRange": "هذا الربع"
+      },
+      "items": {
+        "overview": "نظرة عامة",
+        "performance": "أدائي",
+        "twin": "التوأم الرقمي",
+        "innovationDna": "حمض الابتكار",
+        "innovationLab": "مختبر الابتكار",
+        "marketplace": "سوق الابتكار",
+        "growth": "مسار نموي",
+        "recognition": "التقدير",
+        "pulseai": "PulseAI",
+        "reports": "تقاريري",
+        "settings": "الإعدادات"
+      }
+    },
+    "manager": {
+      "section": "المدير · فريقي",
+      "contextMeta": "9 مرؤوسين مباشرين",
+      "help": "مساعدة",
+      "settings": "الإعدادات",
+      "profileRole": "مدير هندسة",
+      "topBar": {
+        "breadcrumbPrimaryMeta": "9 أشخاص",
+        "breadcrumbPage": "نظرة عامة على الفريق",
+        "attentionChip": "{{count}} يحتاجون اهتماماً",
+        "searchPlaceholder": "اسأل عن فريقك أو ابحث عن زميل…",
+        "dateRange": "آخر 4 أسابيع"
+      },
+      "items": {
+        "overview": "نظرة عامة على الفريق",
+        "performance": "أداء الفريق",
+        "pulse": "نبض الفريق",
+        "members": "أعضاء الفريق",
+        "matrix": "الأداء والرفاهية",
+        "burnout": "الإنذار المبكر للاحتراق",
+        "morale": "روح الفريق",
+        "recognition": "التقدير",
+        "innovation": "الابتكار",
+        "interventions": "التدخلات",
+        "reports": "تقارير الفريق",
+        "pulseai": "PulseAI"
+      }
+    },
+    "hr": {
+      "section": "الموارد البشرية والتنفيذي",
+      "contextMeta": "1,240 شخصاً · 6 إدارات",
+      "pulseai": "PulseAI",
+      "settings": "الإعدادات",
+      "profileRole": "رئيسة شؤون الأفراد",
+      "topBar": {
+        "breadcrumbPage": "نبض تنفيذي",
+        "dataFreshness": "البيانات 06:00",
+        "searchPlaceholder": "ابحث عن أشخاص أو فرق أو اسأل PulseAI…",
+        "dateRange": "الربع الثالث 2026"
+      },
+      "items": {
+        "executive": "نبض تنفيذي",
+        "organization": "المنظمة",
+        "employees": "الموظفون",
+        "teams": "الفرق والإدارات",
+        "performance": "ذكاء الأداء",
+        "burnout": "ذكاء الاحتراق",
+        "morale": "روح المنظمة",
+        "innovation": "ذكاء الابتكار",
+        "recognition": "تحليلات التقدير",
+        "interventions": "مركز التدخل بالذكاء الاصطناعي",
+        "matrix": "مصفوفة الأداء والرفاهية",
+        "economic": "الأثر الاقتصادي",
+        "simulator": "محاكي ماذا لو",
+        "reports": "التقارير",
+        "governance": "الحوكمة"
+      }
+    }
+  }
+}

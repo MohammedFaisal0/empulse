@@ -27,7 +27,15 @@ export type ContextCard =
       meta: string
     }
 
-export function topBarForRole(role: AppRole, t: TFunction): TopBarChrome {
+type TopBarOptions = {
+  attentionCount?: number
+}
+
+export function topBarForRole(
+  role: AppRole,
+  t: TFunction,
+  options: TopBarOptions = {},
+): TopBarChrome {
   if (role === 'employee') {
     const p = demoPersona.employee
     return {
@@ -40,12 +48,13 @@ export function topBarForRole(role: AppRole, t: TFunction): TopBarChrome {
   }
   if (role === 'manager') {
     const p = demoPersona.manager
+    const count = options.attentionCount ?? 3
     return {
       breadcrumbPrimary: `${p.team} · ${t('shell.manager.topBar.breadcrumbPrimaryMeta')}`,
       breadcrumbPage: t('shell.manager.topBar.breadcrumbPage'),
       searchPlaceholder: t('shell.manager.topBar.searchPlaceholder'),
       dateRange: t('shell.manager.topBar.dateRange'),
-      attentionChip: t('shell.manager.topBar.attentionChip'),
+      attentionChip: t('shell.manager.topBar.attentionChip', { count }),
       showShortcut: false,
     }
   }

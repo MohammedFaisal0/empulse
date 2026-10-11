@@ -340,12 +340,18 @@ class Command(BaseCommand):
                 implemented_at=_date_or_none(r["implemented_at"]),
                 estimated_value_sar=_float_or_none(r["estimated_value_sar"]),
                 realized_value_sar=_float_or_none(r["realized_value_sar"]),
+                # CSV has no is_public; marketplace shows approved/implemented only.
+                is_public=r["status"] in ("approved", "implemented"),
             )
             for r in idea_rows
         ]
         _bulk(Idea, ideas)
 
         recognition_rows = _read_csv("recognitions.csv")
+        if recognition_rows and "is_public" not in recognition_rows[0]:
+            raise SystemExit(
+                "recognitions.csv must include is_public (0/1) — Wall of Impact needs it"
+            )
         recognitions = [
             Recognition(
                 id=_int(r["id"]),
@@ -359,6 +365,10 @@ class Command(BaseCommand):
             for r in recognition_rows
         ]
         _bulk(Recognition, recognitions)
+        public_n = sum(1 for r in recognitions if r.is_public)
+        self.stdout.write(
+            f"  recognitions: {len(recognitions)} rows · {public_n} public (is_public=1)"
+        )
 
         econ_rows = _read_csv("economic_impact_monthly.csv")
         economics = [
