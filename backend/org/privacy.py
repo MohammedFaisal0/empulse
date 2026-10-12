@@ -68,6 +68,16 @@ def maybe_audit_profile_read(request, employee: Employee) -> None:
         )
 
 
+def log_directory_export(*, actor, path: str = "", metadata: dict | None = None) -> AuditLog:
+    return AuditLog.objects.create(
+        actor=actor,
+        action=AuditLog.Action.EXPORT,
+        employee=None,
+        path=path,
+        metadata=metadata or {},
+    )
+
+
 def user_can_access_aggregates(user) -> bool:
     role = get_user_role(user)
     return role in (

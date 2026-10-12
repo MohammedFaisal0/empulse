@@ -1,0 +1,121 @@
+frame ('1440', '1460')
+RA
+Horizon Group / Intervention Center
+Search people, teams or ask PulseAI…
+⌘K
+Where intelligence becomes action — every intervention is planned, owned, followed up and measured against what we expected.
+Playbooks
+New Intervention
+Detected
+last 30 days
+Proposed
+awaiting approval
+Active
+81% on track
+Follow-up due
+this week
+Measured
+this year · 74% improved
+LH
+INT-0392 · Layla Haddad
+success
+Senior Data Analyst · Customer Insights
+Reuse as playbook
+Track Outcome
+30 Jun
+✓
+Risk 68%
+3 Jul
+Planned
+Manager approved
+7 Jul
+Started
+2 reports moved
+21 Jul
+Check-in
+Energy: better
+4 Aug
+Follow-up
+Load 104%
+18 Aug
+Outcome verified
+Problem
+Burnout risk 68% while performance stayed high
+Root cause
+Workload 122% of baseline · 2 recurring reports added 1 Jun
+Intervention
+Reduce workload 10% · reallocate 2 reports · bi-weekly check-in
+Owner
+Omar Saeed (manager) · HRBP Lina Farhat
+2 weeks after start, outcome at 6 weeks
+BURNOUT RISK
+Before
+After
+−23 pts
+  expected −20
+ENGAGEMENT
++14 pts
+  expected +10
+PERFORMANCE
++2 pts
+  expected +1
+Playbook learning
+Workload rebalancing is your most reliable intervention: 19 of 23 cases cut burnout risk by 15+ points within 6 weeks.
+Recognition-only plans worked in 9 of 17 cases — stronger when paired with a workload review.
+Summarize outcomes
+All Interventions
+Every action has an owner, a follow-up date and a measured outcome
+Filter
+Export
+WHO
+PROBLEM · ROOT CAUSE
+INTERVENTION
+EXPECTED
+OWNER
+TIMELINE
+STATUS
+ACTUAL OUTCOME
+KM
+Khalid Mansour
+Burnout risk 72%
+Workload +18%, overtime +12 h/wk
+Reallocate 2 tasks · check-in · 2-wk review
+72% → 49%
+Yasmin Hadi
+0% · follow-up 5 Oct
+—
+CS
+Customer Success · 38
+Recognition gap
+45% not recognised in 60+ days
+Recognition sprint · peer nominations
+Engagement +6
+Lina Farhat
+40% · follow-up 29 Sep
+Recognition +11 so far
+TZ
+Tariq Zaki
+Burnout risk 66%
+On-call load 2× team median
+Rotate on-call · 1 recovery day
+66% → 50%
+25% · follow-up 29 Sep
+Early: overtime −5 h
+FO
+Finance Ops · 12
+Digital adoption stall
+New ERP flows skipped by 60%
+Hands-on training · 2 champions
+Digital +12
+Adel Nasser
+100% · follow-up 14 Sep
+ Measured
+Digital 58 → 71
+Layla Haddad
+Burnout risk 68%
+Workload 122% of baseline
+Workload −10% · 2 reports moved
+68% → 48%
+Omar Saeed
+100% · follow-up 18 Aug
+68% → 45% · Eng 66 → 80

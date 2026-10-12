@@ -1,7 +1,7 @@
 id,name,head_id,headcount
-1,Engineering,647,300
+1,Technology,647,300
 2,Operations,305,270
-3,Sales & Marketing,306,230
-4,Data & Insights,35,150
+3,Sales,306,230
+4,Customer Success,35,150
 5,Finance,901,130
-6,People & Culture,45,160
+6,People,45,160

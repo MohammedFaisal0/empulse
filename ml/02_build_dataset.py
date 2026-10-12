@@ -51,7 +51,7 @@ NAMED_PR = [  # the 9 direct reports of Yasmin Hadi, in the order shown in the d
     dict(first="Maha", last="Al-Otaibi", g="F", title="Staff Engineer", level=4, risk=35, trend=0.0),
 ]
 FIXED = {
-    ("dept_head", "People & Culture"): dict(first="Rana", last="Aziz", g="F", title="Chief People Officer", level=5,
+    ("dept_head", "People"): dict(first="Rana", last="Aziz", g="F", title="Chief People Officer", level=5,
                                             email="rana@horizon.demo", app_role="hr", risk=20),
     ("manager", PR, 0): dict(first="Yasmin", last="Hadi", g="F", title="Engineering Manager", level=4,
                              email="yasmin@horizon.demo", app_role="manager", risk=30),

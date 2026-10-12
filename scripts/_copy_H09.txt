@@ -1,0 +1,48 @@
+frame ('1440', '860')
+RA
+Horizon Group / Recognition Analytics
+Search people, teams or ask PulseAI…
+⌘K
+Is recognition reaching everyone, and is it working? Coverage, equity and its link to engagement.
+Program settings
+Recognition Rate
++7 vs Q2
+Recognitions Q3
+from 142 people
+Linked to Outcomes
+impact threads
+Never Recognized (12 mo)
+people · 7.7%
+Recognition rate
+Share recognized in the last 60 days · org 64%
+People
+Operations
+Finance
+Sales
+Technology
+Customer Success
+Category mix · Q3
+171 recognitions
+Performance Star
+38 · 22%
+Innovation Champion
+24 · 14%
+Collaboration Hero
+41 · 24%
+Digital Pioneer
+17 · 10%
+Team Supporter
+29 · 17%
+Growth Champion
+22 · 13%
+Recognition equity
+Rate ratio between groups · band 0.80–1.25
+Women / Men
+Remote / On-site
+Under 30 / 30–45
+Bronze & Growth / Gold & Silver
+Lower tiers get 29% less recognition — the people who most need encouragement get the least.
+Recognition → engagement
+Teams with recognition rates above 70% have engagement 9 points higher (r = 0.64).
+A recognition program in Customer Success is the single cheapest lever for its engagement gap.
+Simulate program

@@ -1,0 +1,98 @@
+1,240 people · 6 departments
+Settings & Governance
+Trust is a feature. Control who sees what, how the AI behaves, and how people are evaluated — with every rule visible to employees.
+Audit log
+Publish changes
+Profile
+Roles & permissions
+Data privacy
+AI governance
+Evaluation criteria
+Notifications
+System
+● Active
+Human in the loop
+100% of interventions approved by a person
+Explainable
+Every insight shows its data and reasoning
+Fair
+Parity 0.97 · last audit 1 Sep 2026
+Minimal data
+No content, keystrokes or health data
+Data transparency
+Shown to every employee in their own settings
+EMPULSE USES
+✓
+Work outcomes: goals, deliverables, peer reviews
+Workload: task counts, hours logged, on-call rota
+Calendar load (meeting hours, not content)
+Voluntary check-ins — as trends, only if the employee opts in
+Learning, recognition and idea activity
+EMPULSE NEVER USES
+✕
+Email, chat or document content
+Keystrokes, screenshots or webcam
+Location tracking
+Health, medical or family data
+Wellbeing data in performance ratings
+Fairness monitor
+Burnout-risk flag rate ratio between groups · acceptable band 0.80–1.25
+Women / Men
+0.97
+Under 30 / 30–45
+1.06
+45+ / 30–45
+0.94
+Remote / On-site
+1.11
+Saudi / Expat
+0.99
+Audited monthly by People Analytics & Legal · all groups within band Full audit →
+DR = direct reports only · individual wellbeing is never visible above the line manager
+Edit roles
+ROLE
+SEE OWN DIGITAL TWIN
+SEE TEAM SIGNALS
+SEE INDIVIDUAL TWINS
+START INTERVENTIONS
+ORGANISATION PULSE
+ECONOMIC MODEL
+CONFIGURE AI
+Employee
+People manager
+DR
+HR business partner
+Executive
+People Analytics admin
+EMPULSE Score & tiers
+Published weights · total 100% · Gold 90+ · Silver 80–89 · Bronze 70–79 · Growth Needed <70
+Task Completion
+25%
+Attendance & Discipline
+10%
+Professional Behavior
+Innovation & Creativity
+15%
+Teamwork & Collaboration
+Technology Adoption
+Job Engagement
+Wellbeing
+0%
+Wellbeing is locked at 0%. It is always shown beside the score and raises its own alerts, but never lowers a tier or a rating — a rule only the Ethics Board can change.
+AI model card
+Burnout early-warning model v3.2
+Last retrained
+1 Sep 2026
+Precision at 3-week horizon
+0.78
+Manager override rate
+12%
+Signals used
+14 (listed)
+Owner
+People Analytics
+Notification preferences
+Early-warning alerts for my team
+Weekly Pulse digest
+Intervention follow-up reminders
+Innovation matches for my skills

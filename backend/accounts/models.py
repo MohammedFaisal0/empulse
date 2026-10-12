@@ -36,6 +36,10 @@ class AuditLog(models.Model):
 
     class Action(models.TextChoices):
         EMPLOYEE_PROFILE_READ = "employee.profile.read", "Employee profile read"
+        EXPORT = "export", "Export"
+        INTERVENTION_APPROVE = "intervention.approve", "Intervention approve"
+        SIMULATE = "simulate", "What-if simulate"
+        PULSEAI_QUERY = "pulseai.query", "PulseAI query"
 
     actor = models.ForeignKey(
         settings.AUTH_USER_MODEL,

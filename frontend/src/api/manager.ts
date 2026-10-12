@@ -424,12 +424,36 @@ export type ManagerReportsResponse = {
 }
 
 export type PulseAIStubResponse = {
-  stub: boolean
+  stub?: boolean
   question: string
-  data_used: Array<{ label: string; value: number | null; n: number }>
+  language?: string
+  refused?: boolean
+  refusal_reason?: string
+  headline?: string
+  data_used: Array<{
+    label: string
+    value: number | string | null
+    tool?: string
+    n?: number
+  }>
   findings: string[]
-  recommendation: { summary: string; actions: string[] }
+  recommendation: {
+    summary: string
+    actions: string[]
+    propose_intervention?: {
+      type: string
+      driver: string
+      rationale: string
+      requires_confirmation?: boolean
+    } | null
+  }
+  disclaimer?: string
   never_sees: string[]
+  tools_called?: string[]
+  engine?: string
+  awaiting_confirmation?: boolean
+  proposed_intervention?: { id: number; status: string } | null
+  individuals_included?: boolean
 }
 
 export function useManagerMorale() {
@@ -526,10 +550,14 @@ export function useManagerReports() {
 
 export function usePulseAIStub() {
   return useMutation({
-    mutationFn: (question: string) =>
+    mutationFn: (body: {
+      question: string
+      confirm_intervention?: boolean
+      intervention?: Record<string, unknown>
+    }) =>
       apiFetch<PulseAIStubResponse>('/api/manager/pulseai/', {
         method: 'POST',
-        body: JSON.stringify({ question }),
+        body: JSON.stringify(body),
       }),
   })
 }

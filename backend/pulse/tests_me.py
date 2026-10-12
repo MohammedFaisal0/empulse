@@ -243,8 +243,9 @@ class MeEndpointsPrivacyTests(PrivacyFixturesMixin, TestCase):
             format="json",
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertTrue(response.data.get("stub"))
+        self.assertFalse(response.data.get("stub"))
         self.assertTrue(response.data.get("own_data_only"))
         self.assertIn("data_used", response.data)
         self.assertIn("findings", response.data)
         self.assertIn("recommendation", response.data)
+        self.assertIn("disclaimer", response.data)

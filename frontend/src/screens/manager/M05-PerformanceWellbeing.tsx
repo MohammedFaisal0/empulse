@@ -66,7 +66,9 @@ export function M05PerformanceWellbeing() {
         </div>
         <div className="flex flex-wrap gap-2">
           <Button variant="secondary">{t('m05.whoFirst')}</Button>
-          <Button variant="primary">{t('m05.simulate')}</Button>
+          <Link to="/hr/simulator?scope=team">
+            <Button variant="primary">{t('m05.simulate')}</Button>
+          </Link>
         </div>
       </div>
 

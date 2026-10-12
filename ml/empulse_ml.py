@@ -89,14 +89,23 @@ def load_bundle(name: str) -> dict:
 
 
 def predict_proba(bundle: dict, df: pd.DataFrame) -> np.ndarray:
-    """Calibrated probability (0..1) for each row of df."""
-    X = df[bundle["features"]].to_numpy(dtype=float)
+    """Calibrated probability (0..1) for each row of df.
+
+    Passes a DataFrame with the training feature names so sklearn does not warn
+    about missing feature names when the HistGradientBoosting model was fitted
+    on a named frame.
+    """
+    feats = bundle["features"]
+    X = df.loc[:, feats].astype(float)
     f = bundle["model"].decision_function(X)
     return sigmoid(bundle["a"] * f + bundle["b"])
 
 
 def _predict_matrix(bundle: dict, X: np.ndarray) -> np.ndarray:
-    f = bundle["model"].decision_function(X)
+    """decision_function on a matrix, preserving training feature names."""
+    feats = bundle["features"]
+    X_df = pd.DataFrame(X, columns=feats)
+    f = bundle["model"].decision_function(X_df)
     return sigmoid(bundle["a"] * f + bundle["b"])
 
 

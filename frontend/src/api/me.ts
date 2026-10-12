@@ -298,13 +298,36 @@ export type MeRecognitionWall = {
 }
 
 export type MePulseAIStub = {
-  stub: boolean
-  own_data_only: boolean
+  stub?: boolean
+  own_data_only?: boolean
   question: string
-  data_used: Array<{ label: string; value: number | null }>
+  language?: string
+  refused?: boolean
+  refusal_reason?: string
+  headline?: string
+  data_used: Array<{
+    label: string
+    value: number | string | null
+    tool?: string
+    tables?: string[]
+  }>
   findings: string[]
-  recommendation: { summary: string; actions: string[] }
+  recommendation: {
+    summary: string
+    actions: string[]
+    propose_intervention?: {
+      type: string
+      driver: string
+      rationale: string
+      requires_confirmation?: boolean
+    } | null
+  }
+  disclaimer?: string
   never_sees: string[]
+  tools_called?: string[]
+  engine?: string
+  awaiting_confirmation?: boolean
+  proposed_intervention?: { id: number; status: string } | null
 }
 
 export type MeReports = {
@@ -448,10 +471,16 @@ export function useSendRecognition() {
 
 export function useMePulseAIStub() {
   return useMutation({
-    mutationFn: (question: string) =>
+    mutationFn: (body: {
+      question: string
+      confirm_intervention?: boolean
+      intervention?: Record<string, unknown>
+    }) =>
       apiFetch<MePulseAIStub>('/api/me/pulseai/', {
         method: 'POST',
-        body: JSON.stringify({ question }),
+        body: JSON.stringify(
+          typeof body === 'string' ? { question: body } : body,
+        ),
       }),
   })
 }

@@ -13,6 +13,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / ".env")
 
+# ML package (empulse_ml.py + models/*.pkl). Backend imports from here — never retrain in requests.
+ML_DIR = Path(os.getenv("ML_DIR", str(BASE_DIR.parent / "ml"))).resolve()
+
+# Managers can run a limited team simulation only when HR grants this (default off).
+ALLOW_MANAGER_TEAM_SIMULATE = os.getenv(
+    "ALLOW_MANAGER_TEAM_SIMULATE", "False"
+).lower() in ("1", "true", "yes")
+
+# Optional Gemini (free tier). When unset or call fails, PulseAI uses rule-based answers.
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip()
+
 SECRET_KEY = os.getenv(
     "SECRET_KEY",
     "django-insecure-dev-only-change-me-empulse",
@@ -41,7 +53,7 @@ INSTALLED_APPS = [
     # Local apps
     "accounts",
     "org",
-    "pulse",
+    "pulse.apps.PulseConfig",
     "innovation",
     "interventions",
     "analytics",

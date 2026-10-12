@@ -1,0 +1,51 @@
+1,240 people · 6 departments
+PulseAI · Organization
+Organization intelligence for HR and executives — systemic patterns, policy options and their expected impact.
+History
++
+New question
+What are the systemic burnout drivers across the organization?
+RECENT
+What are the systemic burnout drivers?
+Where is recognition not reaching people?
+What would a Technology rollout return?
+Question
+Relevant data
+Key findings
+Recommendation
+Burnout is concentrated, not widespread: three teams hold 42% of elevated cases, and workload above baseline is the dominant driver in 41% of them.
+RELEVANT DATA USED
+Burnout risk 1,240 people
+Workload index 31 teams
+Headcount plan 14 open roles
+Recognition log 171 Q3
+Intervention outcomes 212
+Aggregated · groups under 5 are suppressed · no private check-in content
+KEY FINDINGS
+1
+Three hotspots, one pattern
+Platform Reliability, IT Services and CS · Enterprise: open roles plus sustained workload above 115%.
+2
+Workload relief works; recognition alone doesn't
+Rebalancing cut risk 15+ pts in 19 of 23 cases; recognition-only plans in 9 of 17.
+3
+Gold-tier people are not immune
+9 of 38 elevated cases are Gold — high output masks the risk.
+RECOMMENDATION
+Approve backfill for the 5 open roles in the hotspots, extend the rebalancing playbook to Technology (est. SAR 0.6–0.8M / yr) and set an on-call cap policy.
+EXECUTIVE ACTION
+Simulate policy
+Add to exec report
+Ask PulseAI...
+SCOPE & GOVERNANCE
+✓
+Organization-wide, aggregated
+Every query logged for audit
+✗
+No private check-in text
+No groups under 5 people
+TRY ASKING
+Which departments need support first?
+Model a 4-day on-call cap
+Summarize intervention ROI for the board
+Where do ideas stall?

@@ -31,6 +31,24 @@ import { E08Recognition } from './screens/employee/E08-Recognition'
 import { E09PulseAI } from './screens/employee/E09-PulseAI'
 import { E10MyReports } from './screens/employee/E10-MyReports'
 import { E11Settings } from './screens/employee/E11-Settings'
+import { H01ExecutivePulse } from './screens/hr/H01-ExecutivePulse'
+import { H02Organization } from './screens/hr/H02-Organization'
+import { H03Employees } from './screens/hr/H03-Employees'
+import { H03bEmployeeProfile } from './screens/hr/H03b-EmployeeProfile'
+import { H04TeamsDepartments } from './screens/hr/H04-TeamsDepartments'
+import { H05PerformanceIntelligence } from './screens/hr/H05-PerformanceIntelligence'
+import { H06BurnoutIntelligence } from './screens/hr/H06-BurnoutIntelligence'
+import { H07OrganizationMorale } from './screens/hr/H07-OrganizationMorale'
+import { H08InnovationIntelligence } from './screens/hr/H08-InnovationIntelligence'
+import { H09RecognitionAnalytics } from './screens/hr/H09-RecognitionAnalytics'
+import { H10AIInterventionCenter } from './screens/hr/H10-AIInterventionCenter'
+import { H11PerformanceWellbeingMatrix } from './screens/hr/H11-PerformanceWellbeingMatrix'
+import { H02bProfessionalCapability } from './screens/hr/H02b-ProfessionalCapability'
+import { H12EconomicImpact } from './screens/hr/H12-EconomicImpact'
+import { H14ExecutiveReports } from './screens/hr/H14-ExecutiveReports'
+import { H15Governance } from './screens/hr/H15-Governance'
+import { H16PulseAIOrganization } from './screens/hr/H16-PulseAIOrganization'
+import { H13WhatIfSimulator } from './screens/hr/H13-WhatIfSimulator'
 import { PlaceholderScreen } from './screens/PlaceholderScreen'
 
 const managerRoles = ['manager', 'hr', 'admin'] as const
@@ -249,10 +267,154 @@ function App() {
           path="/hr/executive"
           element={
             <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H01ExecutivePulse />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/organization"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H02Organization />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/employees"
+          element={
+            <RequireAuth roles={['hr', 'admin']}>
+              <H03Employees />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/employees/:id"
+          element={
+            <RequireAuth roles={['hr', 'admin']}>
+              <H03bEmployeeProfile />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/organization/capability"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H02bProfessionalCapability />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/teams"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H04TeamsDepartments />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/performance"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H05PerformanceIntelligence />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/burnout"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H06BurnoutIntelligence />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/morale"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H07OrganizationMorale />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/innovation"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H08InnovationIntelligence />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/recognition"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H09RecognitionAnalytics />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/interventions"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H10AIInterventionCenter />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/matrix"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H11PerformanceWellbeingMatrix />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/economic"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H12EconomicImpact />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/reports"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H14ExecutiveReports />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/governance"
+          element={
+            <RequireAuth roles={['hr', 'admin']}>
+              <H15Governance />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/pulseai"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
+              <H16PulseAIOrganization />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/simulator"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin', 'manager']}>
+              <H13WhatIfSimulator />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/hr/settings"
+          element={
+            <RequireAuth roles={['hr', 'executive', 'admin']}>
               <PlaceholderScreen
                 role="hr"
-                path="/hr/executive"
-                titleKey="shell.hr.items.executive"
+                path="/hr/settings"
+                titleKey="shell.hr.settings"
               />
             </RequireAuth>
           }

@@ -19,22 +19,45 @@ const PRESETS = [
   'm12.q5',
 ] as const
 
+type Turn = { question: string; answer: PulseAIStubResponse }
+
 export function M12PulseAI() {
   const { t } = useTranslation()
   const team = useManagerTeam()
   const ask = usePulseAIStub()
   const [question, setQuestion] = useState('')
-  const [answer, setAnswer] = useState<PulseAIStubResponse | null>(null)
+  const [history, setHistory] = useState<Turn[]>([])
+  const [error, setError] = useState<string | null>(null)
+  const answer = history[0]?.answer ?? null
 
   async function run(q: string) {
     const text = q.trim()
     if (!text) return
     setQuestion(text)
+    setError(null)
     try {
-      const res = await ask.mutateAsync(text)
-      setAnswer(res)
+      const res = await ask.mutateAsync({ question: text })
+      setHistory((h) => [{ question: text, answer: res }, ...h].slice(0, 8))
     } catch {
-      setAnswer(null)
+      setError(t('common.error'))
+    }
+  }
+
+  async function confirmIntervention() {
+    const draft = answer?.recommendation?.propose_intervention
+    if (!draft) return
+    try {
+      const res = await ask.mutateAsync({
+        question: question || answer?.question || '',
+        confirm_intervention: true,
+        intervention: draft as unknown as Record<string, unknown>,
+      })
+      setHistory((h) => [
+        { question: t('m12.confirmQuestion'), answer: res },
+        ...h,
+      ].slice(0, 8))
+    } catch {
+      setError(t('common.error'))
     }
   }
 
@@ -60,8 +83,8 @@ export function M12PulseAI() {
             variant="primary"
             className="mb-4 w-full"
             onClick={() => {
-              setAnswer(null)
               setQuestion('')
+              setError(null)
             }}
           >
             {t('m12.newQuestion')}
@@ -70,6 +93,17 @@ export function M12PulseAI() {
             {t('m12.recent')}
           </p>
           <ul className="space-y-1">
+            {history.map((turn) => (
+              <li key={turn.question}>
+                <button
+                  type="button"
+                  onClick={() => setQuestion(turn.question)}
+                  className="w-full rounded-[10px] px-3 py-2.5 text-start text-[13px] font-medium text-ink hover:bg-white"
+                >
+                  {turn.question}
+                </button>
+              </li>
+            ))}
             {PRESETS.map((key) => (
               <li key={key}>
                 <button
@@ -106,8 +140,8 @@ export function M12PulseAI() {
           {ask.isPending ? (
             <p className="text-sm text-muted">{t('m12.thinking')}</p>
           ) : null}
-          {ask.isError ? (
-            <p className="text-sm text-coral-dark">{t('common.error')}</p>
+          {error ? (
+            <p className="text-sm text-coral-dark">{error}</p>
           ) : null}
 
           {answer ? (
@@ -130,14 +164,14 @@ export function M12PulseAI() {
                 </span>
               </div>
 
-              {answer.stub ? (
-                <p className="mb-3 text-[11px] font-mono text-amber-dark">
-                  {t('m12.stubBanner')}
+              {answer.refused ? (
+                <p className="mb-3 text-[11px] font-mono text-coral-dark">
+                  {t('m12.refused')}
                 </p>
               ) : null}
 
               <p className="text-base font-semibold leading-snug">
-                {answer.recommendation.summary}
+                {answer.headline || answer.recommendation.summary}
               </p>
 
               <p className="mt-6 font-mono text-[11px] tracking-wide text-muted">
@@ -146,13 +180,12 @@ export function M12PulseAI() {
               <ul className="mt-2 flex flex-wrap gap-2">
                 {answer.data_used.map((d) => (
                   <li
-                    key={d.label}
+                    key={`${d.label}-${d.value}`}
                     className="rounded-lg border border-border bg-white px-3 py-1.5 text-[12px]"
                   >
                     {d.label}
                     <span className="ms-2 font-mono text-muted ltr-nums">
                       {d.value == null ? '—' : d.value}
-                      {` · n=${d.n}`}
                     </span>
                   </li>
                 ))}
@@ -183,6 +216,30 @@ export function M12PulseAI() {
                   <li key={a}>{a}</li>
                 ))}
               </ol>
+
+              {answer.awaiting_confirmation &&
+              answer.recommendation.propose_intervention ? (
+                <Button
+                  className="mt-4"
+                  variant="primary"
+                  onClick={() => void confirmIntervention()}
+                  disabled={ask.isPending}
+                >
+                  {t('m12.confirmPropose')}
+                </Button>
+              ) : null}
+
+              {answer.proposed_intervention ? (
+                <p className="mt-3 text-[12px] text-teal-dark ltr-nums">
+                  {t('m12.proposedCreated', {
+                    id: answer.proposed_intervention.id,
+                  })}
+                </p>
+              ) : null}
+
+              <p className="mt-4 text-[12px] text-muted">
+                {answer.disclaimer ?? t('m12.disclaimer')}
+              </p>
 
               <p className="mt-6 font-mono text-[11px] tracking-wide text-coral-dark">
                 {t('m12.neverSees')}

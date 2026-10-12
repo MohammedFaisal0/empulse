@@ -17,7 +17,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 16,HZ0016,Haya,Al-Zahrani,Haya Al-Zahrani,haya.alzahrani@horizon.demo,F,36,Senior SRE,3,1,6.0,2019-04-08,7.5,12200,0.87,0.8,Madinah,Remote,employee,0,0,504
 17,HZ0017,Marwa,Al-Mutairi,Marwa Al-Mutairi,marwa.almutairi@horizon.demo,F,30,Operations Analyst,2,2,9.0,2021-10-06,5.0,8050,0.894,4.2,Riyadh,Hybrid,employee,0,0,1214
 18,HZ0018,Kamal,Zaki,Kamal Zaki,kamal.zaki@horizon.demo,M,42,Procurement Lead,3,2,10.0,2013-07-27,13.2,11300,0.806,1.0,Riyadh,Hybrid,employee,0,0,478
-19,HZ0019,Tala,Naser,Tala Naser,tala.naser@horizon.demo,F,33,Sales & Marketing Manager,3,3,17.0,2021-12-18,4.8,15350,1.098,0.6,Dammam,Remote,manager,1,0,1068
+19,HZ0019,Tala,Naser,Tala Naser,tala.naser@horizon.demo,F,33,Sales Manager,3,3,17.0,2021-12-18,4.8,15350,1.098,0.6,Dammam,Remote,manager,1,0,1068
 20,HZ0020,Qasim,Idris,Qasim Idris,qasim.idris@horizon.demo,M,35,Security Engineer,3,1,5.0,2018-04-08,8.5,19100,1.363,0.9,Jeddah,On-site,employee,0,0,643
 21,HZ0021,Adel,Mahmoud,Adel Mahmoud,adel.mahmoud@horizon.demo,M,40,Staff Engineer,4,1,2.0,2017-12-19,8.8,18150,0.865,0.9,Riyadh,Hybrid,employee,0,0,483
 22,HZ0022,Yazan,Al-Harbi,Yazan Al-Harbi,yazan.alharbi@horizon.demo,M,31,Engineering Manager,3,1,5.0,2021-01-24,5.7,12500,0.893,0.6,Riyadh,Hybrid,manager,1,0,99
@@ -33,7 +33,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 32,HZ0032,Suha,Al-Qahtani,Suha Al-Qahtani,suha.alqahtani@horizon.demo,F,36,Senior Software Engineer,3,1,1.0,2019-05-14,7.4,14450,1.033,1.3,Riyadh,On-site,employee,0,0,1069
 33,HZ0033,Hessa,Mansour,Hessa Mansour,hessa.mansour@horizon.demo,F,45,Marketing Assistant,1,3,14.0,2011-03-04,15.6,5550,0.928,0.9,Jeddah,Hybrid,employee,0,0,160
 34,HZ0034,Hassan,Dajani,Hassan Dajani,hassan.dajani@horizon.demo,M,29,Junior Data Analyst,1,4,20.0,2023-03-01,3.6,5950,0.995,1.3,Jeddah,Hybrid,employee,0,0,964
-35,HZ0035,Lubna,Labib,Lubna Labib,lubna.labib@horizon.demo,F,37,VP Data & Insights,5,4,,2022-11-12,3.9,31600,0.987,1.6,Riyadh,Hybrid,manager,1,0,
+35,HZ0035,Lubna,Labib,Lubna Labib,lubna.labib@horizon.demo,F,37,VP Customer Success,5,4,,2022-11-12,3.9,31600,0.987,1.6,Riyadh,Hybrid,manager,1,0,
 36,HZ0036,Laith,Al-Otaibi,Laith Al-Otaibi,laith.alotaibi@horizon.demo,M,24,HR Assistant,1,6,31.0,2023-10-06,3.0,5100,0.854,1.7,Jeddah,Hybrid,employee,0,0,1201
 37,HZ0037,Amal,Idris,Amal Idris,amal.idris@horizon.demo,F,33,Operations Coordinator,1,2,9.0,2022-04-07,4.5,5650,0.938,2.2,Riyadh,On-site,employee,0,0,1214
 38,HZ0038,Lubna,Saeed,Lubna Saeed,lubna.saeed@horizon.demo,F,25,Junior Data Analyst,1,4,20.0,2025-01-23,1.7,5950,0.988,0.8,Riyadh,Hybrid,employee,0,0,931
@@ -82,7 +82,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 81,HZ0081,Bandar,Al-Jabri,Bandar Al-Jabri,bandar.aljabri@horizon.demo,M,34,Senior Account Executive,3,3,14.0,2018-06-20,8.3,15450,1.105,3.1,Jeddah,Remote,employee,0,0,102
 82,HZ0082,Fahad,Barakat,Fahad Barakat,fahad.barakat@horizon.demo,M,37,Financial Analyst,2,5,26.0,2019-05-14,7.4,7750,0.862,1.3,Riyadh,Hybrid,employee,0,0,1030
 83,HZ0083,Ola,Dajani,Ola Dajani,ola.dajani@horizon.demo,F,35,Principal Account Executive,4,3,14.0,2022-03-02,4.6,18400,0.877,4.6,Jeddah,Remote,employee,0,0,1112
-84,HZ0084,Sara,Habib,Sara Habib,sara.habib@horizon.demo,F,33,Sales & Marketing Manager,3,3,19.0,2024-01-24,2.7,17150,1.226,0.2,Dammam,On-site,manager,1,0,119
+84,HZ0084,Sara,Habib,Sara Habib,sara.habib@horizon.demo,F,33,Sales Manager,3,3,19.0,2024-01-24,2.7,17150,1.226,0.2,Dammam,On-site,manager,1,0,119
 85,HZ0085,Osama,Haddad,Osama Haddad,osama.haddad@horizon.demo,M,42,Senior Data Engineer,3,4,21.0,2017-05-14,9.4,13950,0.998,3.5,Jeddah,Remote,employee,0,0,1197
 86,HZ0086,Samar,Idris,Samar Idris,samar.idris@horizon.demo,F,26,Sales Associate,1,3,19.0,2025-10-05,1.0,3950,0.655,0.7,Riyadh,On-site,employee,0,0,84
 87,HZ0087,Hassan,Al-Qahtani,Hassan Al-Qahtani,hassan.alqahtani@horizon.demo,M,28,Security Engineer,3,1,5.0,2021-01-24,5.7,13750,0.982,2.4,Jeddah,Hybrid,employee,0,0,1237
@@ -100,7 +100,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 99,HZ0099,Fahad,Kanaan,Fahad Kanaan,fahad.kanaan@horizon.demo,M,38,Head of Security Engineering,4,1,5.0,2019-03-02,7.6,18650,0.888,1.3,Riyadh,Hybrid,manager,1,0,647
 100,HZ0100,Nasser,Farhat,Nasser Farhat,nasser.farhat@horizon.demo,M,30,Operations Coordinator,1,2,12.0,2022-12-18,3.8,5650,0.94,3.8,Dammam,On-site,employee,0,0,572
 101,HZ0101,Firas,Issa,Firas Issa,firas.issa@horizon.demo,M,28,HR Assistant,1,6,30.0,2020-11-12,5.9,5600,0.937,1.0,Dammam,Hybrid,employee,0,0,472
-102,HZ0102,Jihad,Ghanem,Jihad Ghanem,jihad.ghanem@horizon.demo,M,38,Sales & Marketing Manager,3,3,14.0,2018-12-19,7.8,17350,1.24,1.2,Riyadh,Hybrid,manager,1,0,637
+102,HZ0102,Jihad,Ghanem,Jihad Ghanem,jihad.ghanem@horizon.demo,M,38,Sales Manager,3,3,14.0,2018-12-19,7.8,17350,1.24,1.2,Riyadh,Hybrid,manager,1,0,637
 103,HZ0103,Manal,Darwish,Manal Darwish,manal.darwish@horizon.demo,F,30,Junior Data Analyst,1,4,20.0,2023-01-24,3.7,5300,0.882,3.7,Riyadh,Hybrid,employee,0,0,756
 104,HZ0104,Ayman,Mahmoud,Ayman Mahmoud,ayman.mahmoud@horizon.demo,M,36,QA Analyst,1,1,7.0,2023-03-01,3.6,4050,0.677,0.9,Jeddah,On-site,employee,0,0,201
 105,HZ0105,Jihad,Naser,Jihad Naser,jihad.naser@horizon.demo,M,38,Marketing Lead,4,3,14.0,2016-10-07,10.0,22600,1.077,2.1,Jeddah,Remote,employee,0,0,102
@@ -144,7 +144,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 143,HZ0143,Dalia,Al-Kuwari,Dalia Al-Kuwari,dalia.alkuwari@horizon.demo,F,31,Software Engineer,2,1,5.0,2021-12-18,4.8,8300,0.923,3.1,Jeddah,Hybrid,employee,0,0,809
 144,HZ0144,Karim,Youssef,Karim Youssef,karim.youssef@horizon.demo,M,27,QA Analyst,1,1,5.0,2024-01-24,2.7,6350,1.062,2.2,Riyadh,On-site,employee,0,0,809
 145,HZ0145,Mohammed,Youssef,Mohammed Youssef,mohammed.youssef@horizon.demo,M,41,Operations Architect,4,2,10.0,2019-10-07,7.0,19350,0.922,1.0,Dammam,On-site,employee,0,0,40
-146,HZ0146,Haitham,Haddad,Haitham Haddad,haitham.haddad@horizon.demo,M,31,Sales & Marketing Manager,3,3,18.0,2019-07-26,7.2,15000,1.071,2.5,Madinah,Hybrid,manager,1,0,1127
+146,HZ0146,Haitham,Haddad,Haitham Haddad,haitham.haddad@horizon.demo,M,31,Sales Manager,3,3,18.0,2019-07-26,7.2,15000,1.071,2.5,Madinah,Hybrid,manager,1,0,1127
 147,HZ0147,Ali,Nasser,Ali Nasser,ali.nasser@horizon.demo,M,34,Senior Operations Analyst,3,2,8.0,2021-11-12,4.9,14150,1.01,1.1,Riyadh,Hybrid,employee,0,0,242
 148,HZ0148,Najla,Qadri,Najla Qadri,najla.qadri@horizon.demo,F,40,Financial Analyst,2,5,27.0,2016-07-27,10.2,10350,1.151,0.4,Jeddah,Hybrid,employee,0,0,846
 149,HZ0149,Jamal,Zayed,Jamal Zayed,jamal.zayed@horizon.demo,M,28,QA Analyst,1,1,4.0,2026-04-06,0.5,6050,1.012,0.3,Riyadh,Hybrid,employee,0,0,576
@@ -158,7 +158,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 157,HZ0157,Jihad,Nasser,Jihad Nasser,jihad.nasser@horizon.demo,M,39,QA Engineer,2,1,6.0,2014-01-26,12.7,9650,1.072,2.0,Riyadh,On-site,employee,0,0,624
 158,HZ0158,Jood,Naser,Jood Naser,jood.naser@horizon.demo,F,33,Operations Manager,3,2,12.0,2022-05-13,4.4,12050,0.86,0.4,Dammam,On-site,manager,1,0,42
 159,HZ0159,Badr,Ghanem,Badr Ghanem,badr.ghanem@horizon.demo,M,36,Marketing Specialist,2,3,19.0,2021-06-19,5.3,9650,1.073,0.9,Riyadh,Hybrid,employee,0,0,84
-160,HZ0160,Nizar,Odeh,Nizar Odeh,nizar.odeh@horizon.demo,M,35,Sales & Marketing Manager,3,3,14.0,2021-08-31,5.1,11850,0.848,2.2,Jeddah,Remote,manager,1,0,637
+160,HZ0160,Nizar,Odeh,Nizar Odeh,nizar.odeh@horizon.demo,M,35,Sales Manager,3,3,14.0,2021-08-31,5.1,11850,0.848,2.2,Jeddah,Remote,manager,1,0,637
 161,HZ0161,Turki,Mahmoud,Turki Mahmoud,turki.mahmoud@horizon.demo,M,37,Operations Analyst,2,2,9.0,2018-11-13,7.9,11900,1.322,6.2,Riyadh,Hybrid,employee,0,0,872
 162,HZ0162,Emad,Rafi,Emad Rafi,emad.rafi@horizon.demo,M,33,Procurement Lead,3,2,13.0,2020-12-18,5.8,10650,0.761,1.6,Jeddah,Hybrid,employee,0,0,96
 163,HZ0163,Rami,Khoury,Rami Khoury,rami.khoury@horizon.demo,M,31,DevOps Engineer,2,1,1.0,2021-05-13,5.4,11450,1.271,3.4,Riyadh,Hybrid,employee,0,1,705
@@ -304,7 +304,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 303,HZ0303,Yahya,Najjar,Yahya Najjar,yahya.najjar@horizon.demo,M,40,Senior Account Executive,3,3,14.0,2014-10-08,12.0,15500,1.106,0.8,Riyadh,Hybrid,employee,0,0,372
 304,HZ0304,Hessa,Al-Shehri,Hessa Al-Shehri,hessa.alshehri@horizon.demo,F,41,Junior Software Engineer,1,1,4.0,2014-09-02,12.1,6150,1.027,4.7,Riyadh,Hybrid,employee,0,0,279
 305,HZ0305,Hind,Zaki,Hind Zaki,hind.zaki@horizon.demo,F,39,VP Operations,5,2,,2023-11-12,2.9,28850,0.901,2.0,Jeddah,Hybrid,manager,1,0,
-306,HZ0306,Emad,Ghanem,Emad Ghanem,emad.ghanem@horizon.demo,M,38,VP Sales & Marketing,5,3,,2019-01-25,7.7,36900,1.153,1.1,Dammam,Hybrid,manager,1,0,
+306,HZ0306,Emad,Ghanem,Emad Ghanem,emad.ghanem@horizon.demo,M,38,VP Sales,5,3,,2019-01-25,7.7,36900,1.153,1.1,Dammam,Hybrid,manager,1,0,
 307,HZ0307,Reem,Abboud,Reem Abboud,reem.abboud@horizon.demo,F,31,Junior Software Engineer,1,1,1.0,2017-04-08,9.5,6400,1.064,1.1,Jeddah,Hybrid,employee,0,0,1020
 308,HZ0308,Lujain,Zaki,Lujain Zaki,lujain.zaki@horizon.demo,F,28,Junior Software Engineer,1,1,6.0,2024-11-11,1.9,3650,0.612,0.9,Jeddah,Hybrid,employee,0,0,1131
 309,HZ0309,Haitham,Issa,Haitham Issa,haitham.issa@horizon.demo,M,26,HR Specialist,2,6,31.0,2025-02-28,1.6,7650,0.849,1.3,Riyadh,On-site,employee,0,0,1201
@@ -313,7 +313,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 312,HZ0312,Ihsan,Zahran,Ihsan Zahran,ihsan.zahran@horizon.demo,F,35,Senior Marketing Strategist,3,3,17.0,2018-07-27,8.2,11650,0.831,1.9,Jeddah,Remote,employee,0,0,19
 313,HZ0313,Nasser,Naser,Nasser Naser,nasser.naser@horizon.demo,M,26,Finance Assistant,1,5,25.0,2024-05-12,2.4,5500,0.919,0.8,Madinah,Hybrid,employee,0,0,621
 314,HZ0314,Majed,Darwish,Majed Darwish,majed.darwish@horizon.demo,M,34,Senior Data Analyst,3,4,22.0,2019-10-07,7.0,15700,1.12,5.8,Riyadh,Remote,employee,0,0,835
-315,HZ0315,Yahya,Haddad,Yahya Haddad,yahya.haddad@horizon.demo,M,37,Sales & Marketing Manager,3,3,17.0,2019-03-02,7.6,14650,1.047,2.2,Riyadh,Hybrid,manager,1,0,1068
+315,HZ0315,Yahya,Haddad,Yahya Haddad,yahya.haddad@horizon.demo,M,37,Sales Manager,3,3,17.0,2019-03-02,7.6,14650,1.047,2.2,Riyadh,Hybrid,manager,1,0,1068
 316,HZ0316,Yazan,Al-Kuwari,Yazan Al-Kuwari,yazan.alkuwari@horizon.demo,M,38,Marketing Assistant,1,3,19.0,2014-11-14,11.9,6600,1.101,0.8,Jeddah,Hybrid,employee,0,0,84
 317,HZ0317,Manal,Barakat,Manal Barakat,manal.barakat@horizon.demo,F,40,Senior Software Engineer,3,1,6.0,2017-05-14,9.4,13950,0.997,3.2,Riyadh,Hybrid,employee,0,0,1041
 318,HZ0318,Ghazi,Bashir,Ghazi Bashir,ghazi.bashir@horizon.demo,M,32,Senior Software Engineer,3,1,6.0,2019-12-19,6.8,13600,0.973,0.7,Riyadh,Hybrid,employee,0,0,1131
@@ -370,7 +370,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 369,HZ0369,Sultan,Barakat,Sultan Barakat,sultan.barakat@horizon.demo,M,43,Principal Account Executive,4,3,15.0,2016-10-07,10.0,19700,0.938,0.9,Dammam,Hybrid,employee,0,0,590
 370,HZ0370,Basma,Mahmoud,Basma Mahmoud,basma.mahmoud@horizon.demo,F,34,Senior SRE,3,1,1.0,2018-07-27,8.2,16000,1.143,1.3,Madinah,Hybrid,employee,0,0,1020
 371,HZ0371,Tariq,Zaki,Tariq Zaki,tariq.zaki@horizon.demo,M,44,Site Reliability Engineer,3,1,1.0,2018-01-25,8.7,12800,0.915,2.5,Riyadh,Hybrid,employee,0,1,705
-372,HZ0372,Nada,Bashir,Nada Bashir,nada.bashir@horizon.demo,F,31,Sales & Marketing Manager,3,3,14.0,2023-07-25,3.2,10200,0.728,3.2,Jeddah,On-site,manager,1,0,637
+372,HZ0372,Nada,Bashir,Nada Bashir,nada.bashir@horizon.demo,F,31,Sales Manager,3,3,14.0,2023-07-25,3.2,10200,0.728,3.2,Jeddah,On-site,manager,1,0,637
 373,HZ0373,Nasser,Fakhri,Nasser Fakhri,nasser.fakhri@horizon.demo,M,24,Operations Coordinator,1,2,12.0,2024-12-17,1.8,6500,1.084,1.8,Riyadh,Remote,employee,0,0,158
 374,HZ0374,Jood,Hamdan,Jood Hamdan,jood.hamdan@horizon.demo,F,33,Operations Coordinator,1,2,11.0,2021-08-31,5.1,7250,1.21,5.1,Dammam,On-site,employee,0,0,118
 375,HZ0375,Talal,Al-Amri,Talal Al-Amri,talal.alamri@horizon.demo,M,35,HR Assistant,1,6,28.0,2016-07-27,10.2,5950,0.994,1.1,Riyadh,On-site,employee,0,0,1006
@@ -388,7 +388,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 387,HZ0387,Hatem,Odeh,Hatem Odeh,hatem.odeh@horizon.demo,M,31,Junior Data Analyst,1,4,23.0,2017-09-01,9.1,5950,0.989,1.9,Dammam,Hybrid,employee,0,0,357
 388,HZ0388,Abeer,Barakat,Abeer Barakat,abeer.barakat@horizon.demo,F,33,Marketing Assistant,1,3,17.0,2020-11-12,5.9,7700,1.286,0.5,Riyadh,On-site,employee,0,0,315
 389,HZ0389,Ihsan,Zaki,Ihsan Zaki,ihsan.zaki@horizon.demo,F,44,Operations Manager,3,2,11.0,2012-11-14,13.9,11000,0.784,0.6,Riyadh,On-site,manager,1,0,714
-390,HZ0390,Saleh,Hadi,Saleh Hadi,saleh.hadi@horizon.demo,M,37,Sales & Marketing Manager,4,3,19.0,2019-01-25,7.7,12600,0.6,0.8,Dammam,Hybrid,manager,1,0,119
+390,HZ0390,Saleh,Hadi,Saleh Hadi,saleh.hadi@horizon.demo,M,37,Sales Manager,4,3,19.0,2019-01-25,7.7,12600,0.6,0.8,Dammam,Hybrid,manager,1,0,119
 391,HZ0391,Aisha,Salem,Aisha Salem,aisha.salem@horizon.demo,F,28,Operations Analyst,2,2,11.0,2024-08-30,2.1,9550,1.06,0.8,Riyadh,Hybrid,employee,0,0,118
 392,HZ0392,Fahad,Najjar,Fahad Najjar,fahad.najjar@horizon.demo,M,28,Marketing Specialist,2,3,16.0,2023-03-01,3.6,9050,1.003,0.3,Riyadh,Hybrid,employee,0,0,558
 393,HZ0393,Khadija,Saeed,Khadija Saeed,khadija.saeed@horizon.demo,F,29,Finance Assistant,1,5,26.0,2023-04-07,3.5,6400,1.065,1.6,Jeddah,On-site,employee,0,0,790
@@ -511,7 +511,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 510,HZ0510,Adel,Abboud,Adel Abboud,adel.abboud@horizon.demo,M,30,Marketing Specialist,2,3,16.0,2024-10-05,2.0,7000,0.78,0.6,Riyadh,Hybrid,employee,0,0,1143
 511,HZ0511,Dima,Esmail,Dima Esmail,dima.esmail@horizon.demo,F,45,Security Engineer,3,1,5.0,2015-09-02,11.1,15300,1.094,1.4,Riyadh,Hybrid,employee,0,0,643
 512,HZ0512,Hatem,Tamimi,Hatem Tamimi,hatem.tamimi@horizon.demo,M,34,Procurement Lead,3,2,9.0,2020-07-25,6.2,10950,0.782,1.8,Jeddah,Hybrid,employee,0,0,840
-513,HZ0513,Ibrahim,Kanaan,Ibrahim Kanaan,ibrahim.kanaan@horizon.demo,M,37,Sales & Marketing Manager,3,3,19.0,2020-03-01,6.6,12500,0.893,0.9,Riyadh,Hybrid,manager,1,0,119
+513,HZ0513,Ibrahim,Kanaan,Ibrahim Kanaan,ibrahim.kanaan@horizon.demo,M,37,Sales Manager,3,3,19.0,2020-03-01,6.6,12500,0.893,0.9,Riyadh,Hybrid,manager,1,0,119
 514,HZ0514,Asma,Sabbagh,Asma Sabbagh,asma.sabbagh@horizon.demo,F,39,Operations Manager,3,2,11.0,2019-10-07,7.0,15550,1.109,0.3,Riyadh,Hybrid,manager,1,0,714
 515,HZ0515,Mohammed,Jaber,Mohammed Jaber,mohammed.jaber@horizon.demo,M,31,Marketing Specialist,2,3,19.0,2024-01-24,2.7,10350,1.148,1.2,Dammam,On-site,employee,0,0,390
 516,HZ0516,Rasha,Al-Otaibi,Rasha Al-Otaibi,rasha.alotaibi@horizon.demo,F,27,HR Assistant,1,6,28.0,2023-03-01,3.6,5750,0.956,0.4,Jeddah,Hybrid,employee,0,0,426
@@ -524,7 +524,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 523,HZ0523,Rawan,Issa,Rawan Issa,rawan.issa@horizon.demo,F,36,Operations Analyst,2,2,8.0,2023-11-12,2.9,9050,1.008,0.3,Riyadh,Hybrid,employee,0,0,350
 524,HZ0524,Rasha,Al-Rashid,Rasha Al-Rashid,rasha.alrashid@horizon.demo,F,32,Recruiter,2,6,29.0,2024-02-29,2.6,9100,1.009,1.0,Jeddah,Hybrid,employee,0,0,136
 525,HZ0525,Jihad,Yassin,Jihad Yassin,jihad.yassin@horizon.demo,M,45,Operations Manager,3,2,12.0,2020-08-31,6.1,10500,0.75,0.8,Jeddah,Hybrid,manager,1,0,42
-526,HZ0526,Maysa,Fakhri,Maysa Fakhri,maysa.fakhri@horizon.demo,F,30,Sales & Marketing Manager,3,3,17.0,2021-04-07,5.5,12300,0.877,1.2,Riyadh,On-site,manager,1,0,1068
+526,HZ0526,Maysa,Fakhri,Maysa Fakhri,maysa.fakhri@horizon.demo,F,30,Sales Manager,3,3,17.0,2021-04-07,5.5,12300,0.877,1.2,Riyadh,On-site,manager,1,0,1068
 527,HZ0527,Ibrahim,Al-Rashid,Ibrahim Al-Rashid,ibrahim.alrashid@horizon.demo,M,28,Junior Software Engineer,1,1,4.0,2022-01-24,4.7,5850,0.971,3.3,Riyadh,Hybrid,employee,0,0,576
 528,HZ0528,Rania,Kanaan,Rania Kanaan,rania.kanaan@horizon.demo,F,39,Procurement Lead,3,2,12.0,2018-09-01,8.1,14100,1.008,2.0,Riyadh,Hybrid,employee,0,0,525
 529,HZ0529,Mariam,Al-Jabri,Mariam Al-Jabri,mariam.aljabri@horizon.demo,F,34,Logistics Specialist,2,2,8.0,2024-01-24,2.7,7000,0.778,0.7,Riyadh,Hybrid,employee,0,0,709
@@ -556,7 +556,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 555,HZ0555,Talal,Khoury,Talal Khoury,talal.khoury@horizon.demo,M,31,QA Analyst,1,1,5.0,2022-03-02,4.6,4700,0.784,2.3,Dammam,Hybrid,employee,0,0,1066
 556,HZ0556,Anas,Zayed,Anas Zayed,anas.zayed@horizon.demo,M,38,Senior Marketing Strategist,3,3,18.0,2018-04-08,8.5,15200,1.087,3.3,Jeddah,Hybrid,employee,0,0,985
 557,HZ0557,Amira,Salem,Amira Salem,amira.salem@horizon.demo,F,35,Staff Engineer,4,1,3.0,2020-04-07,6.5,23800,1.133,2.4,Madinah,Remote,employee,0,0,76
-558,HZ0558,Hatem,Youssef,Hatem Youssef,hatem.youssef@horizon.demo,M,32,Sales & Marketing Manager,3,3,16.0,2022-03-02,4.6,15750,1.124,4.4,Dammam,Hybrid,manager,1,0,610
+558,HZ0558,Hatem,Youssef,Hatem Youssef,hatem.youssef@horizon.demo,M,32,Sales Manager,3,3,16.0,2022-03-02,4.6,15750,1.124,4.4,Dammam,Hybrid,manager,1,0,610
 559,HZ0559,Shahd,Mansour,Shahd Mansour,shahd.mansour@horizon.demo,F,34,Accountant,2,5,25.0,2019-12-19,6.8,6550,0.727,4.5,Riyadh,Hybrid,employee,0,0,1014
 560,HZ0560,Mohammed,Al-Hashimi,Mohammed Al-Hashimi,mohammed.alhashimi@horizon.demo,M,22,Operations Coordinator,1,2,10.0,2023-08-31,3.1,5100,0.851,3.1,Riyadh,On-site,employee,0,0,1003
 561,HZ0561,Jood,Zahran,Jood Zahran,jood.zahran@horizon.demo,F,26,QA Engineer,2,1,3.0,2022-01-24,4.7,10550,1.171,4.7,Jeddah,On-site,employee,0,0,881
@@ -588,13 +588,13 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 587,HZ0587,Emad,Masri,Emad Masri,emad.masri@horizon.demo,M,29,Security Engineer,3,1,3.0,2022-01-24,4.7,12250,0.875,0.9,Riyadh,Hybrid,employee,0,0,429
 588,HZ0588,Mohammed,Al-Balushi,Mohammed Al-Balushi,mohammed.albalushi@horizon.demo,M,32,Finance Assistant,1,5,25.0,2019-04-08,7.5,5950,0.992,4.3,Riyadh,On-site,employee,0,0,699
 589,HZ0589,Suha,Hijazi,Suha Hijazi,suha.hijazi@horizon.demo,F,31,Senior Marketing Strategist,3,3,19.0,2022-10-06,4.0,13300,0.951,0.1,Riyadh,On-site,employee,0,0,84
-590,HZ0590,Lubna,Rizk,Lubna Rizk,lubna.rizk@horizon.demo,F,43,Sales & Marketing Manager,3,3,15.0,2014-03-03,12.6,15650,1.119,0.1,Riyadh,On-site,manager,1,0,631
+590,HZ0590,Lubna,Rizk,Lubna Rizk,lubna.rizk@horizon.demo,F,43,Sales Manager,3,3,15.0,2014-03-03,12.6,15650,1.119,0.1,Riyadh,On-site,manager,1,0,631
 591,HZ0591,Karim,Al-Saud,Karim Al-Saud,karim.alsaud@horizon.demo,M,38,Principal Account Executive,4,3,15.0,2015-12-20,10.8,19800,0.942,1.2,Dammam,Hybrid,employee,0,0,590
 592,HZ0592,Emad,Qadri,Emad Qadri,emad.qadri@horizon.demo,M,29,Support Agent,1,2,10.0,2024-11-11,1.9,4950,0.826,1.9,Riyadh,Hybrid,employee,0,0,600
 593,HZ0593,Rayan,Lahham,Rayan Lahham,rayan.lahham@horizon.demo,M,24,HR Assistant,1,6,31.0,2026-01-23,0.7,3600,0.6,0.7,Riyadh,Hybrid,employee,0,0,1170
 594,HZ0594,Rasha,Esmail,Rasha Esmail,rasha.esmail@horizon.demo,F,28,Junior Data Analyst,1,4,22.0,2024-08-30,2.1,6250,1.045,0.6,Riyadh,Hybrid,employee,0,0,835
 595,HZ0595,Zaid,Al-Dosari,Zaid Al-Dosari,zaid.aldosari@horizon.demo,M,29,HR Specialist,2,6,30.0,2024-08-30,2.1,10400,1.156,2.0,Riyadh,Hybrid,employee,0,0,128
-596,HZ0596,Reem,Zahran,Reem Zahran,reem.zahran@horizon.demo,F,39,Sales & Marketing Manager,4,3,17.0,2018-01-25,8.7,25050,1.192,0.9,Jeddah,On-site,manager,1,0,1068
+596,HZ0596,Reem,Zahran,Reem Zahran,reem.zahran@horizon.demo,F,39,Sales Manager,4,3,17.0,2018-01-25,8.7,25050,1.192,0.9,Jeddah,On-site,manager,1,0,1068
 597,HZ0597,Nasser,Saeed,Nasser Saeed,nasser.saeed@horizon.demo,M,32,Principal Planner,4,2,8.0,2022-04-07,4.5,24950,1.189,1.7,Jeddah,Hybrid,employee,0,0,709
 598,HZ0598,Jood,Odeh,Jood Odeh,jood.odeh@horizon.demo,F,35,Learning Partner,3,6,29.0,2019-07-26,7.2,15800,1.127,1.9,Riyadh,Hybrid,employee,0,0,874
 599,HZ0599,Tala,Fares,Tala Fares,tala.fares@horizon.demo,F,37,Senior Accountant,3,5,25.0,2016-06-20,10.3,13550,0.967,2.7,Dammam,Hybrid,employee,0,0,621
@@ -645,12 +645,12 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 644,HZ0644,Yahya,Hijazi,Yahya Hijazi,yahya.hijazi@horizon.demo,M,37,Senior SRE,3,1,2.0,2020-10-06,6.0,13900,0.993,0.7,Riyadh,On-site,employee,0,0,953
 645,HZ0645,Nada,Mahmoud,Nada Mahmoud,nada.mahmoud@horizon.demo,F,32,Data Analyst,2,4,20.0,2020-01-25,6.7,9250,1.03,0.9,Riyadh,Hybrid,employee,0,0,931
 646,HZ0646,Alia,Salem,Alia Salem,alia.salem@horizon.demo,F,40,Security Engineer,3,1,4.0,2012-11-14,13.9,15350,1.095,1.2,Riyadh,On-site,employee,0,0,279
-647,HZ0647,Tala,Jaber,Tala Jaber,tala.jaber@horizon.demo,F,36,VP Engineering,5,1,,2021-01-24,5.7,34550,1.079,0.2,Riyadh,On-site,manager,1,0,
+647,HZ0647,Tala,Jaber,Tala Jaber,tala.jaber@horizon.demo,F,36,VP Technology,5,1,,2021-01-24,5.7,34550,1.079,0.2,Riyadh,On-site,manager,1,0,
 648,HZ0648,Suha,Qureshi,Suha Qureshi,suha.qureshi@horizon.demo,F,22,Marketing Assistant,1,3,14.0,2026-06-18,0.3,5450,0.91,0.3,Jeddah,On-site,employee,0,0,1112
 649,HZ0649,Ihsan,Salem,Ihsan Salem,ihsan.salem@horizon.demo,F,29,Marketing Assistant,1,3,19.0,2022-06-19,4.3,5200,0.864,2.8,Madinah,On-site,employee,0,0,513
 650,HZ0650,Waleed,Al-Otaibi,Waleed Al-Otaibi,waleed.alotaibi@horizon.demo,M,39,Operations Manager,3,2,9.0,2016-11-13,9.9,13200,0.943,1.1,Riyadh,On-site,manager,1,0,721
 651,HZ0651,Bandar,Masri,Bandar Masri,bandar.masri@horizon.demo,M,31,Operations Analyst,2,2,11.0,2024-02-29,2.6,5400,0.6,0.3,Riyadh,On-site,employee,0,0,514
-652,HZ0652,Ziad,Qureshi,Ziad Qureshi,ziad.qureshi@horizon.demo,M,35,Sales & Marketing Manager,3,3,15.0,2017-11-13,8.9,12650,0.904,1.1,Riyadh,Hybrid,manager,1,0,631
+652,HZ0652,Ziad,Qureshi,Ziad Qureshi,ziad.qureshi@horizon.demo,M,35,Sales Manager,3,3,15.0,2017-11-13,8.9,12650,0.904,1.1,Riyadh,Hybrid,manager,1,0,631
 653,HZ0653,Mohammed,Bakr,Mohammed Bakr,mohammed.bakr@horizon.demo,M,32,Operations Analyst,2,2,11.0,2024-07-24,2.2,10250,1.138,0.3,Dammam,On-site,employee,0,0,118
 654,HZ0654,Ghada,Khoury,Ghada Khoury,ghada.khoury@horizon.demo,F,41,Marketing Assistant,1,3,18.0,2018-04-08,8.5,6000,0.996,1.6,Riyadh,Hybrid,employee,0,0,146
 655,HZ0655,Rayan,Abboud,Rayan Abboud,rayan.abboud@horizon.demo,M,38,Logistics Specialist,2,2,9.0,2021-11-12,4.9,10800,1.202,4.0,Riyadh,Hybrid,employee,0,0,840
@@ -750,7 +750,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 749,HZ0749,Lujain,Lahham,Lujain Lahham,lujain.lahham@horizon.demo,F,33,DevOps Engineer,2,1,5.0,2020-07-25,6.2,8050,0.896,1.2,Madinah,On-site,employee,0,0,1066
 750,HZ0750,Walid,Al-Hashimi,Walid Al-Hashimi,walid.alhashimi@horizon.demo,M,36,Engineering Manager,3,1,1.0,2018-05-14,8.4,10800,0.772,0.4,Riyadh,Hybrid,manager,1,0,286
 751,HZ0751,Amira,Zahran,Amira Zahran,amira.zahran@horizon.demo,F,39,Procurement Lead,3,2,10.0,2020-03-01,6.6,12050,0.859,4.3,Madinah,Hybrid,employee,0,0,600
-752,HZ0752,Turki,Bakr,Turki Bakr,turki.bakr@horizon.demo,M,37,Sales & Marketing Manager,3,3,15.0,2021-06-19,5.3,15050,1.074,1.9,Madinah,On-site,manager,1,0,631
+752,HZ0752,Turki,Bakr,Turki Bakr,turki.bakr@horizon.demo,M,37,Sales Manager,3,3,15.0,2021-06-19,5.3,15050,1.074,1.9,Madinah,On-site,manager,1,0,631
 753,HZ0753,Ola,Al-Qahtani,Ola Al-Qahtani,ola.alqahtani@horizon.demo,F,38,ML Engineer,3,4,22.0,2018-10-07,8.0,17250,1.231,3.6,Riyadh,On-site,employee,0,0,1199
 754,HZ0754,Nour,Bakr,Nour Bakr,nour.bakr@horizon.demo,F,37,Operations Manager,3,2,13.0,2019-01-25,7.7,11750,0.838,0.1,Jeddah,On-site,manager,1,0,781
 755,HZ0755,Rawan,Wehbe,Rawan Wehbe,rawan.wehbe@horizon.demo,F,42,Marketing Assistant,1,3,15.0,2011-03-04,15.6,5200,0.87,0.7,Madinah,On-site,employee,0,0,752
@@ -843,7 +843,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 842,HZ0842,Dana,Farouk,Dana Farouk,dana.farouk@horizon.demo,F,31,Platform Engineer,2,1,1.0,2024-01-24,2.7,7450,0.828,0.4,Jeddah,Hybrid,employee,0,1,705
 843,HZ0843,Imad,Al-Dosari,Imad Al-Dosari,imad.aldosari@horizon.demo,M,35,Marketing Assistant,1,3,15.0,2020-10-06,6.0,6050,1.005,2.1,Jeddah,Hybrid,employee,0,0,652
 844,HZ0844,Shahd,Jaber,Shahd Jaber,shahd.jaber@horizon.demo,F,40,Staff Engineer,4,1,6.0,2019-12-19,6.8,21000,1.0,0.4,Riyadh,Hybrid,employee,0,0,504
-845,HZ0845,Reem,Farouk,Reem Farouk,reem.farouk@horizon.demo,F,30,Sales & Marketing Manager,3,3,15.0,2021-01-24,5.7,14350,1.026,0.8,Riyadh,Hybrid,manager,1,0,631
+845,HZ0845,Reem,Farouk,Reem Farouk,reem.farouk@horizon.demo,F,30,Sales Manager,3,3,15.0,2021-01-24,5.7,14350,1.026,0.8,Riyadh,Hybrid,manager,1,0,631
 846,HZ0846,Sahar,Kassem,Sahar Kassem,sahar.kassem@horizon.demo,F,33,Finance Manager,3,5,27.0,2022-03-02,4.6,14350,1.024,1.9,Madinah,On-site,manager,1,0,1135
 847,HZ0847,Dalia,Habib,Dalia Habib,dalia.habib@horizon.demo,F,27,Marketing Specialist,2,3,17.0,2022-05-13,4.4,9400,1.044,1.3,Dammam,Remote,employee,0,0,19
 848,HZ0848,Mohammed,Al-Qahtani,Mohammed Al-Qahtani,mohammed.alqahtani@horizon.demo,M,28,Support Agent,1,2,12.0,2022-12-18,3.8,7800,1.296,1.0,Riyadh,On-site,employee,0,0,183
@@ -983,7 +983,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 982,HZ0982,Yousef,Dajani,Yousef Dajani,yousef.dajani@horizon.demo,M,32,Learning Partner,3,6,28.0,2021-07-25,5.2,12100,0.865,1.2,Riyadh,On-site,employee,0,0,601
 983,HZ0983,Zainab,Al-Zahrani,Zainab Al-Zahrani,zainab.alzahrani@horizon.demo,F,28,Support Agent,1,2,12.0,2022-04-07,4.5,5900,0.981,2.3,Riyadh,Hybrid,employee,0,0,525
 984,HZ0984,Talal,Zahran,Talal Zahran,talal.zahran@horizon.demo,M,35,Senior HR Specialist,3,6,29.0,2018-11-13,7.9,16050,1.148,0.1,Jeddah,Hybrid,employee,0,0,136
-985,HZ0985,Amal,Fakhri,Amal Fakhri,amal.fakhri@horizon.demo,F,33,Sales & Marketing Manager,3,3,18.0,2022-11-12,3.9,16000,1.143,0.5,Jeddah,On-site,manager,1,0,1127
+985,HZ0985,Amal,Fakhri,Amal Fakhri,amal.fakhri@horizon.demo,F,33,Sales Manager,3,3,18.0,2022-11-12,3.9,16000,1.143,0.5,Jeddah,On-site,manager,1,0,1127
 986,HZ0986,Joury,Nasser,Joury Nasser,joury.nasser@horizon.demo,F,32,Staff Engineer,4,1,4.0,2020-10-06,6.0,24400,1.162,1.2,Dammam,Remote,employee,0,0,717
 987,HZ0987,Wael,Al-Saud,Wael Al-Saud,wael.alsaud@horizon.demo,M,27,Operations Analyst,2,2,8.0,2025-05-13,1.4,9700,1.075,1.2,Jeddah,On-site,employee,0,0,137
 988,HZ0988,Yousef,Youssef,Yousef Youssef,yousef.youssef@horizon.demo,M,31,QA Engineer,2,1,4.0,2022-08-31,4.1,7050,0.782,1.7,Jeddah,Hybrid,employee,0,0,717
@@ -991,7 +991,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 990,HZ0990,Haya,Sabbagh,Haya Sabbagh,haya.sabbagh@horizon.demo,F,36,Data Engineer,2,4,22.0,2017-05-14,9.4,11300,1.253,4.0,Riyadh,Hybrid,employee,0,0,1073
 991,HZ0991,Walid,Salem,Walid Salem,walid.salem@horizon.demo,M,34,Account Executive,2,3,14.0,2021-11-12,4.9,10400,1.158,1.9,Riyadh,Hybrid,employee,0,0,102
 992,HZ0992,Fatima,Al-Harbi,Fatima Al-Harbi,fatima.alharbi@horizon.demo,F,38,Senior Accountant,3,5,27.0,2017-11-13,8.9,12350,0.883,2.1,Dammam,Hybrid,employee,0,0,846
-993,HZ0993,Haitham,Fakhri,Haitham Fakhri,haitham.fakhri@horizon.demo,M,37,Sales & Marketing Manager,3,3,18.0,2018-03-02,8.6,14250,1.017,2.8,Riyadh,Hybrid,manager,1,0,1127
+993,HZ0993,Haitham,Fakhri,Haitham Fakhri,haitham.fakhri@horizon.demo,M,37,Sales Manager,3,3,18.0,2018-03-02,8.6,14250,1.017,2.8,Riyadh,Hybrid,manager,1,0,1127
 994,HZ0994,Bandar,Al-Amri,Bandar Al-Amri,bandar.alamri@horizon.demo,M,33,Learning Partner,3,6,31.0,2022-06-19,4.3,13700,0.98,1.4,Riyadh,On-site,employee,0,0,1141
 995,HZ0995,Mazen,Al-Hashimi,Mazen Al-Hashimi,mazen.alhashimi@horizon.demo,M,30,Senior Marketing Strategist,3,3,14.0,2020-12-18,5.8,15900,1.135,0.7,Riyadh,Hybrid,employee,0,0,1112
 996,HZ0996,Ola,Jabr,Ola Jabr,ola.jabr@horizon.demo,F,31,Operations Manager,3,2,11.0,2018-05-14,8.4,11750,0.84,1.3,Dammam,Hybrid,manager,1,0,714
@@ -1057,13 +1057,13 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 1056,HZ1056,Ibrahim,Jaber,Ibrahim Jaber,ibrahim.jaber@horizon.demo,M,34,Junior Data Analyst,1,4,22.0,2023-07-25,3.2,6450,1.079,1.8,Dammam,Hybrid,employee,0,0,1073
 1057,HZ1057,Suha,Khoury,Suha Khoury,suha.khoury@horizon.demo,F,34,Senior Financial Analyst,3,5,26.0,2019-05-14,7.4,14700,1.051,0.4,Riyadh,On-site,employee,0,0,832
 1058,HZ1058,Mohammed,Yassin,Mohammed Yassin,mohammed.yassin@horizon.demo,M,25,Finance Assistant,1,5,25.0,2026-04-06,0.5,6150,1.024,0.5,Riyadh,Hybrid,employee,0,0,1014
-1059,HZ1059,Jihad,Darwish,Jihad Darwish,jihad.darwish@horizon.demo,M,35,Sales & Marketing Manager,3,3,18.0,2018-05-14,8.4,15200,1.085,0.4,Riyadh,Hybrid,manager,1,0,1127
+1059,HZ1059,Jihad,Darwish,Jihad Darwish,jihad.darwish@horizon.demo,M,35,Sales Manager,3,3,18.0,2018-05-14,8.4,15200,1.085,0.4,Riyadh,Hybrid,manager,1,0,1127
 1060,HZ1060,Osama,Habib,Osama Habib,osama.habib@horizon.demo,M,35,Security Engineer,3,1,4.0,2022-06-19,4.3,14500,1.035,1.5,Jeddah,On-site,employee,0,0,279
 1061,HZ1061,Joury,Masri,Joury Masri,joury.masri@horizon.demo,F,36,HR Specialist,2,6,29.0,2021-08-31,5.1,8950,0.997,1.5,Riyadh,Hybrid,employee,0,0,874
 1062,HZ1062,Walid,Fares,Walid Fares,walid.fares@horizon.demo,M,36,Data Analyst,2,4,24.0,2019-10-07,7.0,10050,1.114,0.6,Dammam,Hybrid,employee,0,0,383
 1063,HZ1063,Mohammed,Al-Harbi,Mohammed Al-Harbi,mohammed.alharbi@horizon.demo,M,37,People Manager,4,6,29.0,2020-06-19,6.3,21450,1.022,2.6,Dammam,Remote,manager,1,0,960
 1064,HZ1064,Nasser,Najjar,Nasser Najjar,nasser.najjar@horizon.demo,M,26,Accountant,2,5,25.0,2024-04-06,2.5,7100,0.789,2.5,Riyadh,Hybrid,employee,0,0,1014
-1065,HZ1065,Saud,Habib,Saud Habib,saud.habib@horizon.demo,M,34,Sales & Marketing Manager,3,3,19.0,2020-04-07,6.5,14700,1.049,1.7,Riyadh,On-site,manager,1,0,119
+1065,HZ1065,Saud,Habib,Saud Habib,saud.habib@horizon.demo,M,34,Sales Manager,3,3,19.0,2020-04-07,6.5,14700,1.049,1.7,Riyadh,On-site,manager,1,0,119
 1066,HZ1066,Hanan,Aziz,Hanan Aziz,hanan.aziz@horizon.demo,F,38,Engineering Manager,3,1,5.0,2017-12-19,8.8,16500,1.18,0.6,Riyadh,Hybrid,manager,1,0,99
 1067,HZ1067,Saud,Zaki,Saud Zaki,saud.zaki@horizon.demo,M,36,Sales Associate,1,3,15.0,2024-12-17,1.8,5500,0.913,1.0,Jeddah,On-site,employee,0,0,590
 1068,HZ1068,Amira,Habib,Amira Habib,amira.habib@horizon.demo,F,34,Head of Digital Marketing,4,3,17.0,2020-08-31,6.1,24300,1.157,4.9,Jeddah,Hybrid,manager,1,0,306
@@ -1110,7 +1110,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 1109,HZ1109,Najla,Al-Balushi,Najla Al-Balushi,najla.albalushi@horizon.demo,F,26,Junior Data Analyst,1,4,23.0,2026-02-28,0.6,7100,1.185,0.6,Riyadh,Hybrid,employee,0,0,727
 1110,HZ1110,Waleed,Farhat,Waleed Farhat,waleed.farhat@horizon.demo,M,33,Marketing Assistant,1,3,16.0,2024-07-24,2.2,6650,1.111,2.2,Jeddah,Hybrid,employee,0,0,1143
 1111,HZ1111,Manal,Naser,Manal Naser,manal.naser@horizon.demo,F,35,Procurement Lead,3,2,12.0,2022-04-07,4.5,12450,0.888,0.5,Madinah,Hybrid,employee,0,0,572
-1112,HZ1112,Osama,Rizk,Osama Rizk,osama.rizk@horizon.demo,M,50,Sales & Marketing Manager,4,3,14.0,2010-03-04,16.6,12600,0.6,1.9,Jeddah,On-site,manager,1,0,637
+1112,HZ1112,Osama,Rizk,Osama Rizk,osama.rizk@horizon.demo,M,50,Sales Manager,4,3,14.0,2010-03-04,16.6,12600,0.6,1.9,Jeddah,On-site,manager,1,0,637
 1113,HZ1113,Salman,Aziz,Salman Aziz,salman.aziz@horizon.demo,M,27,QA Analyst,1,1,7.0,2023-01-24,3.7,6350,1.055,0.1,Riyadh,Hybrid,employee,0,0,952
 1114,HZ1114,Samar,Rizk,Samar Rizk,samar.rizk@horizon.demo,F,28,Recruiter,2,6,30.0,2025-08-30,1.1,10100,1.12,1.1,Riyadh,Hybrid,employee,0,0,472
 1115,HZ1115,Hessa,Saeed,Hessa Saeed,hessa.saeed@horizon.demo,F,28,Logistics Specialist,2,2,12.0,2021-01-24,5.7,10000,1.113,3.9,Riyadh,Hybrid,employee,0,0,572
@@ -1128,7 +1128,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 1127,HZ1127,Yousef,Tamimi,Yousef Tamimi,yousef.tamimi@horizon.demo,M,40,Head of Partnerships,4,3,18.0,2016-03-02,10.6,22400,1.066,4.1,Riyadh,On-site,manager,1,0,306
 1128,HZ1128,Hanan,Fakhri,Hanan Fakhri,hanan.fakhri@horizon.demo,F,34,Senior Data Analyst,3,4,22.0,2019-01-25,7.7,13000,0.93,0.1,Riyadh,On-site,employee,0,0,1073
 1129,HZ1129,Hassan,Al-Shehri,Hassan Al-Shehri,hassan.alshehri@horizon.demo,M,27,Marketing Specialist,2,3,16.0,2024-12-17,1.8,9600,1.065,1.8,Riyadh,Remote,employee,0,0,1143
-1130,HZ1130,Amal,Al-Kuwari,Amal Al-Kuwari,amal.alkuwari@horizon.demo,F,33,Sales & Marketing Manager,3,3,16.0,2018-03-02,8.6,13800,0.984,1.1,Riyadh,Hybrid,manager,1,0,610
+1130,HZ1130,Amal,Al-Kuwari,Amal Al-Kuwari,amal.alkuwari@horizon.demo,F,33,Sales Manager,3,3,16.0,2018-03-02,8.6,13800,0.984,1.1,Riyadh,Hybrid,manager,1,0,610
 1131,HZ1131,Tamer,Masri,Tamer Masri,tamer.masri@horizon.demo,M,33,Engineering Manager,3,1,6.0,2021-06-19,5.3,15450,1.103,0.1,Riyadh,Remote,manager,1,0,715
 1132,HZ1132,Badr,Mansour,Badr Mansour,badr.mansour@horizon.demo,M,32,Recruiter,2,6,31.0,2020-04-07,6.5,9300,1.036,0.3,Dammam,Hybrid,employee,0,0,1170
 1133,HZ1133,Haitham,Abboud,Haitham Abboud,haitham.abboud@horizon.demo,M,34,Senior Account Executive,3,3,18.0,2019-03-02,7.6,18750,1.339,0.6,Dammam,Hybrid,employee,0,0,146
@@ -1141,7 +1141,7 @@ id,employee_code,first_name,last_name,full_name,email,gender,age,job_title,job_l
 1140,HZ1140,Joury,Wehbe,Joury Wehbe,joury.wehbe@horizon.demo,F,35,Support Agent,1,2,11.0,2023-11-12,2.9,5050,0.844,2.9,Riyadh,On-site,employee,0,0,389
 1141,HZ1141,Nasser,Mahmoud,Nasser Mahmoud,nasser.mahmoud@horizon.demo,M,35,People Manager,3,6,31.0,2021-01-24,5.7,17900,1.277,1.2,Riyadh,On-site,manager,1,0,797
 1142,HZ1142,Shahd,Ghanem,Shahd Ghanem,shahd.ghanem@horizon.demo,F,32,QA Analyst,1,1,3.0,2024-01-24,2.7,6400,1.069,1.1,Dammam,Hybrid,employee,0,0,881
-1143,HZ1143,Anas,Hamdan,Anas Hamdan,anas.hamdan@horizon.demo,M,36,Sales & Marketing Manager,3,3,16.0,2017-07-27,9.2,16600,1.185,2.6,Riyadh,Hybrid,manager,1,0,610
+1143,HZ1143,Anas,Hamdan,Anas Hamdan,anas.hamdan@horizon.demo,M,36,Sales Manager,3,3,16.0,2017-07-27,9.2,16600,1.185,2.6,Riyadh,Hybrid,manager,1,0,610
 1144,HZ1144,Dima,Naser,Dima Naser,dima.naser@horizon.demo,F,25,Finance Assistant,1,5,25.0,2021-05-13,5.4,5850,0.973,4.3,Riyadh,Hybrid,employee,0,0,699
 1145,HZ1145,Mazen,Odeh,Mazen Odeh,mazen.odeh@horizon.demo,M,36,Security Engineer,3,1,2.0,2017-11-13,8.9,9200,0.656,0.8,Riyadh,On-site,employee,0,0,260
 1146,HZ1146,Abdullah,Al-Harbi,Abdullah Al-Harbi,abdullah.alharbi@horizon.demo,M,32,Account Executive,2,3,15.0,2019-11-13,6.9,9300,1.034,1.1,Riyadh,On-site,employee,0,0,845

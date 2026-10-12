@@ -1,0 +1,49 @@
+frame ('1440', '1080')
+RA
+Horizon Group / Innovation Intelligence
+Search people, teams or ask PulseAI…
+⌘K
+How the organization innovates — where ideas come from, where they stall and what value they create.
+Innovation Council pack
+IDEAS THIS YEAR
+APPROVAL RATE
+Q3
+TIME TO IMPACT
+19 wks
+median
+INNOVATION ROI
+3.4×
+savings + build cost
+Innovation funnel · Q3
+From idea to verified value
+Submitted
+AI-reviewed
+Approved
+In build
+Implemented
+Verified impact
+SAR 520K / yr verified savings
+Participation by department
+Share of people involved in any idea this year · org 39%
+Technology
+Operations
+People
+Sales
+Customer Success
+Finance
+Organization Innovation DNA
+Median across 1,240 people
+Idea\nGeneration
+Problem\nSolving
+Experimen-\ntation
+Collaboration
+Digital\nInnovation
+Implementa-\ntion
+Business\nImpact
+Systemic barriers
+Time to build
+Approved ideas wait 5 weeks for people
+Implementation skill
+Org median implementation 60 vs idea generation 61 — ideas die after approval
+Data access
+3 ideas blocked by data owners in Q2

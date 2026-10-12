@@ -1,0 +1,51 @@
+frame ('1440', '1100')
+RA
+Horizon Group / Performance-Wellbeing
+Search people, teams or ask PulseAI…
+⌘K
+Performance–Wellbeing Matrix
+High performance is only sustainable with wellbeing. See who is thriving, who is quietly at risk, and what each group needs next.
+Who needs support first?
+Simulate Scenario
+People plotted
+2 teams
+Moved quadrant this quarter
+4 up · 2 down
+Dotted arcs show where people were last quarter. Click a quadrant or a person to focus. Positions use the last 4 weeks of signals.
+Customer Insights + Platform Reliability
+Thriving
+Burnout risk
+Development opportunity
+Critical support
+PERFORMANCE →
+LOW
+WELLBEING →
+HIGH
+High performance · low wellbeing
+High performance · high wellbeing
+Lower performance · low wellbeing
+Lower performance · high wellbeing
+KM
+JUL → SEP
+TZ
+LAYLA
+JUN → SEP
+MO
+NA
+FR
+DF
+RK
+SY
+HN
+5 people
+Khalid Mansour
+Platform Reliability
+P 95 · W 30
+Tariq Zaki
+P 79 · W 34
+Huda Nasser
+P 81 · W 37
+Suggested playbook
+Workload relief + recognition
+Reduce overtime exposure, activate peer recognition and check role clarity within 2 weeks.
+Simulate relief plan

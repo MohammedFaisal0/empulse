@@ -13,7 +13,7 @@ export function TopBar({ chrome }: TopBarProps) {
   const { t } = useTranslation()
 
   return (
-    <header className="flex h-topbar min-h-topbar items-center gap-3 border-b border-border bg-white px-content">
+    <header className="flex h-topbar min-h-topbar shrink-0 items-center gap-3 border-b border-border bg-white px-content">
       <div className="flex min-w-0 flex-1 items-center gap-2 overflow-hidden">
         <nav
           aria-label={t('a11y.breadcrumb')}

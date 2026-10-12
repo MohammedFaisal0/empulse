@@ -249,46 +249,49 @@ export function Sidebar({ config, activePath, preview }: SidebarProps) {
     <aside
       data-sidebar-role={config.role}
       className={[
-        'flex h-screen shrink-0 grow-0 flex-col overflow-x-hidden',
+        // Sticky + h-screen: stays put while main scrolls; works LTR (start) and RTL (end).
+        'sticky top-0 flex h-screen shrink-0 grow-0 flex-col overflow-hidden',
         hr
           ? 'w-sidebar-hr min-w-sidebar-hr max-w-sidebar-hr basis-sidebar-hr bg-navy text-white'
           : 'w-sidebar min-w-sidebar max-w-sidebar basis-sidebar border-e border-border bg-white text-ink',
       ].join(' ')}
     >
-      <div className="flex h-topbar items-center px-4">
-        <div className="flex items-center gap-2">
-          <span
-            className={[
-              'flex h-7 w-7 items-center justify-center rounded-md',
-              hr ? 'bg-teal' : 'bg-navy',
-            ].join(' ')}
-          >
+      <div className="shrink-0">
+        <div className="flex h-topbar items-center px-4">
+          <div className="flex items-center gap-2">
             <span
               className={[
-                'h-2 w-3 rounded-sm',
-                hr ? 'bg-navy' : 'bg-teal',
+                'flex h-7 w-7 items-center justify-center rounded-md',
+                hr ? 'bg-teal' : 'bg-navy',
               ].join(' ')}
-              aria-hidden
-            />
-          </span>
-          <span
-            className={[
-              'text-sm font-semibold tracking-wide',
-              hr ? 'text-white' : 'text-ink',
-            ].join(' ')}
-          >
-            {t('brand')}
-          </span>
+            >
+              <span
+                className={[
+                  'h-2 w-3 rounded-sm',
+                  hr ? 'bg-navy' : 'bg-teal',
+                ].join(' ')}
+                aria-hidden
+              />
+            </span>
+            <span
+              className={[
+                'text-sm font-semibold tracking-wide',
+                hr ? 'text-white' : 'text-ink',
+              ].join(' ')}
+            >
+              {t('brand')}
+            </span>
+          </div>
         </div>
+
+        <div className="px-4 pb-2">
+          <SectionLabel role={config.role} label={t(config.sectionKey)} />
+        </div>
+
+        <ContextCardView card={context} />
       </div>
 
-      <div className="px-4 pb-2">
-        <SectionLabel role={config.role} label={t(config.sectionKey)} />
-      </div>
-
-      <ContextCardView card={context} />
-
-      <nav className="flex-1 space-y-0.5 overflow-y-auto px-3 pb-3">
+      <nav className="min-h-0 flex-1 space-y-0.5 overflow-y-auto overscroll-contain px-3 pb-3">
         {config.items.map((item) => (
           <NavRow
             key={item.id}
@@ -302,7 +305,7 @@ export function Sidebar({ config, activePath, preview }: SidebarProps) {
 
       <div
         className={[
-          'mt-auto px-3 py-3',
+          'shrink-0 px-3 py-3',
           hr ? 'border-t border-white-6' : 'border-t border-border',
         ].join(' ')}
       >

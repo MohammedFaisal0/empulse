@@ -29,11 +29,11 @@ export function AppShell({
   const chrome = { ...base, ...chromeOverride }
 
   return (
-    <div className="flex min-h-screen bg-surface">
+    <div className="flex h-screen overflow-hidden bg-surface">
       <Sidebar config={config} activePath={activePath} preview={preview} />
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
         <TopBar chrome={chrome} />
-        <main className="flex-1 overflow-auto px-content py-6">
+        <main className="min-h-0 flex-1 overflow-y-auto px-content py-6">
           <div className="mx-auto w-full max-w-content">{children}</div>
         </main>
       </div>
