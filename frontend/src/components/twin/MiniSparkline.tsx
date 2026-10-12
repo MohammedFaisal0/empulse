@@ -23,7 +23,7 @@ export function MiniSparkline({
         height={height}
         className={className}
         aria-hidden
-        dir="ltr"
+        style={{ direction: 'ltr' }}
       />
     )
   }
@@ -47,7 +47,7 @@ export function MiniSparkline({
       height={height}
       className={className}
       aria-hidden
-      dir="ltr"
+      style={{ direction: 'ltr' }}
     >
       <polyline
         fill="none"

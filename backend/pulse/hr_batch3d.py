@@ -25,6 +25,7 @@ from innovation.models import Idea, Recognition
 from interventions.models import Intervention
 from org.models import Department, Employee, Team
 from org.privacy import assert_not_executive_individual
+from pulse.agg_cache import cached_aggregate
 from pulse.models import EmployeeCurrent, WeeklyMetric
 
 AS_OF = date(2026, 10, 6)
@@ -373,7 +374,14 @@ class HrEconomicImpactView(APIView):
     @extend_schema(tags=["hr"])
     def get(self, request):
         role = _require_hr_org_viewer(request.user)
+        return Response(
+            cached_aggregate(
+                f"hr:economic:{role}",
+                lambda: self._build_payload(role),
+            )
+        )
 
+    def _build_payload(self, role: str) -> dict[str, Any]:
         fy_rows = EconomicImpactMonthly.objects.filter(
             month__gte=FY_START, month__lte=AS_OF
         ).select_related("department")
@@ -518,41 +526,39 @@ class HrEconomicImpactView(APIView):
             if role in (UserProfile.Role.HR, UserProfile.Role.ADMIN):
                 story["employee_name"] = feat.employee.full_name
 
-        return Response(
-            {
-                "as_of": AS_OF.isoformat(),
-                "period": {"start": FY_START.isoformat(), "label": "FY2026 YTD"},
-                "kpis": {
-                    "expected_annual_impact_sar": round(gross),
-                    "net_impact_sar": round(net),
-                    "program_cost_sar": round(cost),
-                    "roi_multiple": roi_multiple,
-                    "realized_so_far_sar": round(net),
-                    "realized_pct_of_gross": realized_pct,
-                    "people_helped": people_helped,
-                    "improved_pct": improved_pct,
-                    "exits_avoided": round(float(totals["exits_avoided"] or 0), 2),
-                    "estimated": True,
-                },
-                "breakdown": {
-                    "retention_savings_sar": round(retention),
-                    "productivity_gain_sar": round(productivity),
-                    "innovation_value_sar": round(innovation),
-                    "program_cost_sar": round(cost),
-                    "gross_sar": round(gross),
-                    "net_sar": round(net),
-                    "estimated": True,
-                },
-                "sources": sources,
-                "monthly": monthly,
-                "by_department": by_dept,
-                "assumptions": ASSUMPTIONS,
-                "impact_story": story,
-                "suppression_min": MIN_GROUP_SIZE,
-                "no_people_ranking": True,
-                "values_estimated": True,
-            }
-        )
+        return {
+            "as_of": AS_OF.isoformat(),
+            "period": {"start": FY_START.isoformat(), "label": "FY2026 YTD"},
+            "kpis": {
+                "expected_annual_impact_sar": round(gross),
+                "net_impact_sar": round(net),
+                "program_cost_sar": round(cost),
+                "roi_multiple": roi_multiple,
+                "realized_so_far_sar": round(net),
+                "realized_pct_of_gross": realized_pct,
+                "people_helped": people_helped,
+                "improved_pct": improved_pct,
+                "exits_avoided": round(float(totals["exits_avoided"] or 0), 2),
+                "estimated": True,
+            },
+            "breakdown": {
+                "retention_savings_sar": round(retention),
+                "productivity_gain_sar": round(productivity),
+                "innovation_value_sar": round(innovation),
+                "program_cost_sar": round(cost),
+                "gross_sar": round(gross),
+                "net_sar": round(net),
+                "estimated": True,
+            },
+            "sources": sources,
+            "monthly": monthly,
+            "by_department": by_dept,
+            "assumptions": ASSUMPTIONS,
+            "impact_story": story,
+            "suppression_min": MIN_GROUP_SIZE,
+            "no_people_ranking": True,
+            "values_estimated": True,
+        }
 
 
 # ---------------------------------------------------------------------------

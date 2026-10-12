@@ -28,6 +28,7 @@ from org.privacy import (
     log_directory_export,
     maybe_audit_profile_read,
 )
+from pulse.agg_cache import cached_aggregate
 from pulse.hr_executive import build_executive_pulse
 from pulse.models import EmployeeCurrent
 from pulse.profile_payload import member_profile_payload
@@ -333,6 +334,94 @@ class HrEmployeeProfileView(APIView):
         return Response(payload)
 
 
+def build_organization_payload() -> dict:
+    """H02 dept/team pulse map aggregates."""
+    currents = list(
+        EmployeeCurrent.objects.select_related(
+            "employee", "employee__department", "employee__team"
+        ).all()
+    )
+
+    depts = []
+    for dept in Department.objects.order_by("name"):
+        rows = [r for r in currents if r.employee.department_id == dept.id]
+        agg = aggregate_or_suppress(
+            rows,
+            lambda rs: {
+                "performance": _avg([float(x.performance_score) for x in rs]),
+                "engagement": _avg([float(x.engagement_score) for x in rs]),
+                "wellbeing": _avg([float(x.wellbeing_score) for x in rs]),
+                "burnout_risk_pct": _avg(
+                    [float(x.burnout_risk_pct) for x in rs]
+                ),
+                "innovation": _avg([float(x.innovation_score) for x in rs]),
+            },
+        )
+        teams_out = []
+        for team in Team.objects.filter(department=dept).order_by("name"):
+            trows = [r for r in rows if r.employee.team_id == team.id]
+            tagg = aggregate_or_suppress(
+                trows,
+                lambda rs: {
+                    "performance": _avg(
+                        [float(x.performance_score) for x in rs]
+                    ),
+                    "engagement": _avg(
+                        [float(x.engagement_score) for x in rs]
+                    ),
+                    "wellbeing": _avg([float(x.wellbeing_score) for x in rs]),
+                    "burnout_risk_pct": _avg(
+                        [float(x.burnout_risk_pct) for x in rs]
+                    ),
+                },
+            )
+            teams_out.append(
+                {
+                    "id": team.id,
+                    "name": team.name,
+                    "headcount": team.headcount,
+                    **tagg,
+                }
+            )
+        depts.append(
+            {
+                "id": dept.id,
+                "name": dept.name,
+                "headcount": dept.headcount,
+                **agg,
+                "teams": teams_out,
+            }
+        )
+
+    needing_support = [
+        {
+            "id": d["id"],
+            "name": d["name"],
+            "burnout_risk_pct": d.get("burnout_risk_pct"),
+            "n": d.get("n"),
+        }
+        for d in depts
+        if not d.get("suppressed") and (d.get("burnout_risk_pct") or 0) >= 45
+    ]
+    needing_support.sort(key=lambda d: (-(d["burnout_risk_pct"] or 0), d["name"]))
+
+    return {
+        "departments": depts,
+        "needing_support": needing_support,
+        "counts": {
+            "departments": Department.objects.count(),
+            "teams": Team.objects.count(),
+            "employees": Employee.objects.count(),
+            "public_ideas": Idea.objects.filter(is_public=True).count(),
+            "public_recognitions": Recognition.objects.filter(
+                is_public=True
+            ).count(),
+        },
+        "no_people_ranking": True,
+        "suppression_min": 5,
+    }
+
+
 class HrExecutivePulseView(APIView):
     """GET /api/hr/executive-pulse/ — H01 org aggregates (executive allowed)."""
 
@@ -342,7 +431,9 @@ class HrExecutivePulseView(APIView):
     @extend_schema(tags=["hr"])
     def get(self, request):
         _require_hr_org_viewer(request.user)
-        return Response(build_executive_pulse())
+        return Response(
+            cached_aggregate("hr:executive-pulse", build_executive_pulse)
+        )
 
 
 class HrOrganizationView(APIView):
@@ -354,90 +445,6 @@ class HrOrganizationView(APIView):
     @extend_schema(tags=["hr"])
     def get(self, request):
         _require_hr_org_viewer(request.user)
-
-        currents = list(
-            EmployeeCurrent.objects.select_related(
-                "employee", "employee__department", "employee__team"
-            ).all()
-        )
-
-        depts = []
-        for dept in Department.objects.order_by("name"):
-            rows = [r for r in currents if r.employee.department_id == dept.id]
-            agg = aggregate_or_suppress(
-                rows,
-                lambda rs: {
-                    "performance": _avg([float(x.performance_score) for x in rs]),
-                    "engagement": _avg([float(x.engagement_score) for x in rs]),
-                    "wellbeing": _avg([float(x.wellbeing_score) for x in rs]),
-                    "burnout_risk_pct": _avg(
-                        [float(x.burnout_risk_pct) for x in rs]
-                    ),
-                    "innovation": _avg([float(x.innovation_score) for x in rs]),
-                },
-            )
-            teams_out = []
-            for team in Team.objects.filter(department=dept).order_by("name"):
-                trows = [r for r in rows if r.employee.team_id == team.id]
-                tagg = aggregate_or_suppress(
-                    trows,
-                    lambda rs: {
-                        "performance": _avg(
-                            [float(x.performance_score) for x in rs]
-                        ),
-                        "engagement": _avg(
-                            [float(x.engagement_score) for x in rs]
-                        ),
-                        "wellbeing": _avg([float(x.wellbeing_score) for x in rs]),
-                        "burnout_risk_pct": _avg(
-                            [float(x.burnout_risk_pct) for x in rs]
-                        ),
-                    },
-                )
-                teams_out.append(
-                    {
-                        "id": team.id,
-                        "name": team.name,
-                        "headcount": team.headcount,
-                        **tagg,
-                    }
-                )
-            depts.append(
-                {
-                    "id": dept.id,
-                    "name": dept.name,
-                    "headcount": dept.headcount,
-                    **agg,
-                    "teams": teams_out,
-                }
-            )
-
-        needing_support = [
-            {
-                "id": d["id"],
-                "name": d["name"],
-                "burnout_risk_pct": d.get("burnout_risk_pct"),
-                "n": d.get("n"),
-            }
-            for d in depts
-            if not d.get("suppressed") and (d.get("burnout_risk_pct") or 0) >= 45
-        ]
-        needing_support.sort(key=lambda d: (-(d["burnout_risk_pct"] or 0), d["name"]))
-
         return Response(
-            {
-                "departments": depts,
-                "needing_support": needing_support,
-                "counts": {
-                    "departments": Department.objects.count(),
-                    "teams": Team.objects.count(),
-                    "employees": Employee.objects.count(),
-                    "public_ideas": Idea.objects.filter(is_public=True).count(),
-                    "public_recognitions": Recognition.objects.filter(
-                        is_public=True
-                    ).count(),
-                },
-                "no_people_ranking": True,
-                "suppression_min": 5,
-            }
+            cached_aggregate("hr:organization", build_organization_payload)
         )

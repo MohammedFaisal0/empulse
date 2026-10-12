@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 
+import { homePathForRole } from '../api/auth'
 import { useAuth } from './AuthContext'
 
 export function RequireAuth({
@@ -10,7 +11,7 @@ export function RequireAuth({
   children: ReactNode
   roles?: Array<'employee' | 'manager' | 'hr' | 'executive' | 'admin'>
 }) {
-  const { isAuthenticated, isLoading, user } = useAuth()
+  const { isAuthenticated, isLoading, user, sessionExitTo } = useAuth()
   const location = useLocation()
 
   if (isLoading) {
@@ -22,11 +23,13 @@ export function RequireAuth({
   }
 
   if (!isAuthenticated || !user) {
-    return <Navigate to="/login" replace state={{ from: location }} />
+    return (
+      <Navigate to={sessionExitTo} replace state={{ from: location }} />
+    )
   }
 
   if (roles && !roles.includes(user.role)) {
-    return <Navigate to="/role" replace />
+    return <Navigate to={homePathForRole(user.role)} replace />
   }
 
   return children

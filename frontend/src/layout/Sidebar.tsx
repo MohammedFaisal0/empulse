@@ -2,8 +2,8 @@ import { Leaf } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 
-import { Avatar } from '../components/ui'
 import type { AppRole, NavConfig, NavItem } from './navConfigs'
+import { ProfileMenu } from './ProfileMenu'
 import { contextCardForRole, type ContextCard } from './shellChrome'
 
 type SidebarProps = {
@@ -196,50 +196,6 @@ function SectionLabel({ role, label }: { role: AppRole; label: string }) {
   )
 }
 
-function ProfileBlock({
-  config,
-  preview,
-}: {
-  config: NavConfig
-  preview?: boolean
-}) {
-  const { t } = useTranslation()
-  const hr = isHr(config.role)
-  const shell = [
-    'flex items-center gap-2.5 rounded-md px-2 py-2',
-    hr ? 'hover:bg-white-6' : 'hover:bg-surface-4',
-  ].join(' ')
-
-  const nameClass = [
-    'truncate text-[13px] font-medium',
-    hr ? 'text-white' : 'text-ink',
-  ].join(' ')
-  const roleClass = [
-    'truncate font-mono text-[10px]',
-    hr ? 'text-white-78' : 'text-muted',
-  ].join(' ')
-
-  const body = (
-    <>
-      <Avatar name={config.profile.name} size="sm" />
-      <div className="min-w-0">
-        <p className={nameClass}>{config.profile.name}</p>
-        <p className={roleClass}>{t(config.profile.roleKey)}</p>
-      </div>
-    </>
-  )
-
-  if (preview || !config.profile.settingsTo) {
-    return <div className={shell}>{body}</div>
-  }
-
-  return (
-    <NavLink to={config.profile.settingsTo} className={shell}>
-      {body}
-    </NavLink>
-  )
-}
-
 export function Sidebar({ config, activePath, preview }: SidebarProps) {
   const { t } = useTranslation()
   const context = contextCardForRole(config.role, t)
@@ -331,7 +287,7 @@ export function Sidebar({ config, activePath, preview }: SidebarProps) {
           </div>
         ) : null}
 
-        <ProfileBlock config={config} preview={preview} />
+        <ProfileMenu config={config} preview={preview} />
       </div>
     </aside>
   )

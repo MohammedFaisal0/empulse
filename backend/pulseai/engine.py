@@ -113,6 +113,9 @@ def _refusal_answer(question: str, language: str, reason: str) -> dict[str, Any]
         "engine": "rules",
         "proposed_intervention": None,
         "awaiting_confirmation": False,
+        "stub": False,
+        "no_people_ranking": True,
+        "individuals_included": False,
     }
 
 
@@ -651,6 +654,7 @@ def ask(
         "engine": engine,
         "own_data_only": role == UserProfile.Role.EMPLOYEE,
         "individuals_included": False,
+        "no_people_ranking": True,
         "executive_aggregates_only": role == UserProfile.Role.EXECUTIVE,
         "proposed_intervention": None,
         "awaiting_confirmation": bool(

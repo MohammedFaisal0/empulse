@@ -73,13 +73,15 @@ export function ScoreFormulaBlock({
             <div
               key={row.id}
               className="grid grid-cols-[1fr_48px_40px_52px_44px_72px] items-center gap-1 border-b border-surface-2 py-2.5"
-              title={row.todo ? 'TODO: design placeholder — not in API' : undefined}
             >
               <div>
                 <p className="text-[13px] text-ink">
                   {row.label}
                   {row.todo ? (
-                    <span className="ms-1 font-mono text-[9px] text-faint">TODO</span>
+                    <span className="ms-1 font-mono text-[9px] text-faint">
+                      {/* measured series missing — not collected yet */}
+                      not collected yet
+                    </span>
                   ) : null}
                 </p>
                 {row.sublabel ? (

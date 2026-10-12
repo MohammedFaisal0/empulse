@@ -127,6 +127,12 @@ export const en = {
     growth: 'Growth',
   },
   shell: {
+    account: {
+      menu: 'Account menu',
+      signOut: 'Sign out',
+      switchAccount: 'Switch account',
+      language: 'Language',
+    },
     employee: {
       section: 'MY SPACE',
       context: 'How am I doing, and how can I grow?',
@@ -477,7 +483,8 @@ export const en = {
     morale: 'MORALE',
     innovation: 'INNOVATION',
     burnoutRisk: 'BURNOUT RISK',
-    moraleTodo: 'Morale uses engagement as a proxy until a dedicated morale field exists (TODO).',
+    moraleTodo:
+      'Morale uses engagement as a proxy until a dedicated morale field exists.',
     pulseMap: 'Team Pulse Map',
     pulseMapSub:
       'Closer to the centre = needs you sooner · node size = urgency · ring colour = professional tier.',
@@ -1951,7 +1958,7 @@ export const en = {
       innovation_council: 'Innovation Council',
       aggregated_only: 'aggregated only',
     },
-    customTodo: 'Custom report builder — TODO / not in this batch.',
+    customTodo: 'Custom report builder — not collected yet / not in this batch.',
     confidential: 'Confidential · executive',
     peopleImpact: 'People Impact Report',
     lead: 'Snapshot · {{report}} · aggregates only.',

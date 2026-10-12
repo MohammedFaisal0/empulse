@@ -14,9 +14,45 @@ type RiskGaugeProps = {
 }
 
 const H = 180
+/** Minimum vertical gap between marker label centers (px). */
+const MIN_GAP = 16
 
 function yFor(pct: number): number {
   return H - (Math.max(0, Math.min(100, pct)) / 100) * H
+}
+
+/**
+ * Spread marker Y positions so labels never overlap while staying close to
+ * their true risk values (priority: Now > In 3 wks > weeks ago).
+ */
+function separateYs(raw: number[]): number[] {
+  const order = [0, 1, 2] // ago, now, proj — we'll sort by y then nudge
+  const items = raw.map((y, i) => ({ y, i }))
+  items.sort((a, b) => a.y - b.y)
+  for (let n = 0; n < 8; n++) {
+    for (let k = 1; k < items.length; k++) {
+      if (items[k].y - items[k - 1].y < MIN_GAP) {
+        const mid = (items[k].y + items[k - 1].y) / 2
+        items[k - 1].y = mid - MIN_GAP / 2
+        items[k].y = mid + MIN_GAP / 2
+      }
+    }
+  }
+  // Clamp into gauge band with padding for label height
+  for (const it of items) {
+    it.y = Math.max(8, Math.min(H - 8, it.y))
+  }
+  // Second pass after clamp
+  items.sort((a, b) => a.y - b.y)
+  for (let k = 1; k < items.length; k++) {
+    if (items[k].y - items[k - 1].y < MIN_GAP) {
+      items[k].y = Math.min(H - 8, items[k - 1].y + MIN_GAP)
+    }
+  }
+  const out = [...raw]
+  for (const it of items) out[it.i] = it.y
+  void order
+  return out
 }
 
 /** Vertical burnout risk gauge (M06 column 1). Bands: high≥60 / watch 45–59 / healthy&lt;45. */
@@ -30,6 +66,7 @@ export function RiskGauge({
   const agoY = yFor(agoPct)
   const projY = yFor(projectedPct)
   const fillH = H - nowY
+  const [agoLabelY, nowLabelY, projLabelY] = separateYs([agoY, nowY, projY])
 
   return (
     <div className="relative mt-4 flex gap-2" dir="ltr" style={{ height: H + 8 }}>
@@ -71,15 +108,28 @@ export function RiskGauge({
             style={{ height: fillH }}
           />
         </div>
+        {/* Tick marks at true risk positions */}
+        <span
+          className="absolute start-0 end-0 border-t border-faint"
+          style={{ top: agoY }}
+        />
+        <span
+          className="absolute start-0 end-0 border-t-2 border-coral-dark"
+          style={{ top: nowY }}
+        />
+        <span
+          className="absolute start-0 end-0 border-t border-coral"
+          style={{ top: projY }}
+        />
       </div>
-      <div className="relative flex-1 text-[12px]">
-        <Marker y={agoY} color="text-faint" line="border-faint" bold={false}>
+      <div className="relative min-w-0 flex-1 text-[11px] leading-tight">
+        <Marker y={agoLabelY} color="text-faint" line="border-faint" bold={false}>
           {labels.weeksAgo}
         </Marker>
-        <Marker y={nowY} color="text-coral-dark" line="border-coral-dark" bold>
+        <Marker y={nowLabelY} color="text-coral-dark" line="border-coral-dark" bold>
           {labels.now}
         </Marker>
-        <Marker y={projY} color="text-coral-dark" line="border-coral" bold={false}>
+        <Marker y={projLabelY} color="text-coral-dark" line="border-coral" bold={false}>
           {labels.inThreeWeeks}
         </Marker>
       </div>
@@ -102,11 +152,17 @@ function Marker({
 }) {
   return (
     <div
-      className="absolute start-0 flex items-center gap-1.5"
+      className="absolute start-0 flex max-w-full items-center gap-1"
       style={{ top: y, transform: 'translateY(-50%)' }}
     >
-      <span className={`block w-4 border-t-2 ${line}`} />
-      <span className={[color, bold ? 'font-bold' : 'font-medium'].join(' ')}>
+      <span className={`block w-3 shrink-0 border-t-2 ${line}`} />
+      <span
+        className={[
+          'truncate',
+          color,
+          bold ? 'font-bold' : 'font-medium',
+        ].join(' ')}
+      >
         {children}
       </span>
     </div>

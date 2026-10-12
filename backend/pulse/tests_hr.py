@@ -443,7 +443,10 @@ class HrEndpointsPrivacyTests(PrivacyFixturesMixin, TestCase):
             format="json",
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertTrue(response.data.get("stub"))
+        self.assertFalse(response.data.get("stub"))
         self.assertTrue(response.data.get("no_people_ranking"))
-        self.assertTrue(response.data["scope"].get("aggregated"))
-        self.assertEqual(response.data["scope"].get("suppression_min"), 5)
+        self.assertTrue(response.data.get("executive_aggregates_only"))
+        self.assertFalse(response.data.get("individuals_included"))
+        self.assertIn("data_used", response.data)
+        self.assertIn("findings", response.data)
+        self.assertIn("disclaimer", response.data)

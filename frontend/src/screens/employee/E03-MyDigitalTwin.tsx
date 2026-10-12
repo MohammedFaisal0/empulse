@@ -49,7 +49,7 @@ export function E03MyDigitalTwin() {
         r.id === 'engagement' && past
           ? Math.round(past.engagement_score)
           : r.id === 'wellbeing' && past
-            ? Math.round(past.wellbeing_score)
+            ? Math.round(past.wellbeing_score ?? 0)
             : r.value != null
               ? Math.round(r.value)
               : 0

@@ -1,3 +1,5 @@
+import { notifyUnauthorized } from './session'
+
 const TOKEN_KEY = 'empulse.access'
 const REFRESH_KEY = 'empulse.refresh'
 
@@ -35,6 +37,10 @@ export function clearTokens(): void {
   localStorage.removeItem(REFRESH_KEY)
 }
 
+function isLoginPath(path: string): boolean {
+  return path.includes('/auth/login')
+}
+
 export async function apiFetch<T>(
   path: string,
   init: RequestInit = {},
@@ -48,6 +54,11 @@ export async function apiFetch<T>(
 
   const response = await fetch(path, { ...init, headers })
   if (!response.ok) {
+    // Expired / revoked session: clear client auth and redirect via AuthProvider.
+    if (response.status === 401 && token && !isLoginPath(path)) {
+      clearTokens()
+      notifyUnauthorized()
+    }
     let code = 'error.unknown'
     try {
       const body = (await response.json()) as ApiErrorBody

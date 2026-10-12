@@ -122,6 +122,12 @@ export const ar: EnStrings = {
     growth: "نمو",
   },
   shell: {
+    account: {
+      menu: "قائمة الحساب",
+      signOut: "تسجيل الخروج",
+      switchAccount: "تبديل الحساب",
+      language: "اللغة",
+    },
     employee: {
       section: "مساحتي",
       context: "كيف حالي، وكيف يمكنني أن أنمو؟",
@@ -450,7 +456,8 @@ export const ar: EnStrings = {
     morale: "الروح المعنوية",
     innovation: "الابتكار",
     burnoutRisk: "خطر الاحتراق",
-    moraleTodo: "الروح المعنوية تستخدم المشاركة كوكيل حتى يتوفر حقل مخصص (TODO).",
+    moraleTodo:
+      "الروح المعنوية تستخدم المشاركة كوكيل حتى يتوفر حقل مخصص.",
     pulseMap: "خريطة نبض الفريق",
     pulseMapSub: "أقرب للمركز = يحتاجك أسرع · حجم العقدة = الإلحاح · لون الحلقة = المستوى المهني.",
     bandAtRisk: "معرّض للخطر",

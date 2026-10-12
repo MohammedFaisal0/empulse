@@ -575,13 +575,17 @@ function EvidenceSpark({
   stroke: string
   todo?: boolean
 }) {
+  const { t } = useTranslation()
   return (
     <div className="flex items-center justify-between gap-2 border-b border-surface-2 py-2.5">
       <div className="min-w-0">
         <p className="text-ink">
           {label}
           {todo ? (
-            <span className="ms-1 font-mono text-[9px] text-faint">TODO</span>
+            <span className="ms-1 font-mono text-[9px] text-faint">
+              {/* open-tasks series missing from API */}
+              {t('common.projected')}
+            </span>
           ) : null}
         </p>
         <p className="ltr-nums flex items-center gap-1 font-mono text-[11.5px] text-muted">

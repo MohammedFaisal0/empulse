@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { useNavigate } from 'react-router-dom'
 
 import {
   fetchMe,
@@ -17,13 +18,21 @@ import {
   type MeResponse,
 } from '../api/auth'
 import { getAccessToken } from '../api/client'
+import { setUnauthorizedHandler } from '../api/session'
+
+export type LogoutOptions = {
+  /** Destination after clearing session. Default `/login`. */
+  redirectTo?: '/login' | '/role'
+}
 
 type AuthContextValue = {
   user: MeResponse | null
   isLoading: boolean
   isAuthenticated: boolean
   login: (email: string, password: string) => Promise<MeResponse>
-  logout: () => void
+  logout: (options?: LogoutOptions) => void
+  /** Where RequireAuth sends an unauthenticated user (avoids race with logout). */
+  sessionExitTo: '/login' | '/role'
   homePath: string
 }
 
@@ -31,7 +40,11 @@ const AuthContext = createContext<AuthContextValue | null>(null)
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const queryClient = useQueryClient()
+  const navigate = useNavigate()
   const [hasToken, setHasToken] = useState(() => Boolean(getAccessToken()))
+  const [sessionExitTo, setSessionExitTo] = useState<'/login' | '/role'>(
+    '/login',
+  )
 
   const meQuery = useQuery({
     queryKey: ['me'],
@@ -40,28 +53,50 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     retry: false,
   })
 
-  useEffect(() => {
-    if (meQuery.isError) {
+  const clearSession = useCallback(
+    (redirectTo: '/login' | '/role') => {
+      setSessionExitTo(redirectTo)
       logoutLocal()
       setHasToken(false)
+      queryClient.clear()
+      navigate(redirectTo, { replace: true })
+    },
+    [navigate, queryClient],
+  )
+
+  const logout = useCallback(
+    (options?: LogoutOptions) => {
+      clearSession(options?.redirectTo ?? '/login')
+    },
+    [clearSession],
+  )
+
+  useEffect(() => {
+    if (meQuery.isError) {
+      clearSession('/login')
     }
-  }, [meQuery.isError])
+  }, [meQuery.isError, clearSession])
+
+  useEffect(() => {
+    setUnauthorizedHandler(() => {
+      clearSession('/login')
+    })
+    return () => setUnauthorizedHandler(null)
+  }, [clearSession])
 
   const login = useCallback(
     async (email: string, password: string) => {
+      setSessionExitTo('/login')
       await loginRequest(email, password)
       setHasToken(true)
-      const me = await queryClient.fetchQuery({ queryKey: ['me'], queryFn: fetchMe })
+      const me = await queryClient.fetchQuery({
+        queryKey: ['me'],
+        queryFn: fetchMe,
+      })
       return me
     },
     [queryClient],
   )
-
-  const logout = useCallback(() => {
-    logoutLocal()
-    setHasToken(false)
-    queryClient.clear()
-  }, [queryClient])
 
   const user = hasToken && meQuery.data ? meQuery.data : null
   const value = useMemo<AuthContextValue>(
@@ -71,9 +106,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       isAuthenticated: Boolean(user),
       login,
       logout,
+      sessionExitTo,
       homePath: user ? homePathForRole(user.role) : '/login',
     }),
-    [user, hasToken, meQuery.isLoading, login, logout],
+    [user, hasToken, meQuery.isLoading, login, logout, sessionExitTo],
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

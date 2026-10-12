@@ -448,7 +448,7 @@
     "morale": "MORALE",
     "innovation": "INNOVATION",
     "burnoutRisk": "BURNOUT RISK",
-    "moraleTodo": "Morale uses engagement as a proxy until a dedicated morale field exists (TODO).",
+    "moraleTodo": "Morale uses engagement as a proxy until a dedicated morale field exists.",
     "pulseMap": "Team Pulse Map",
     "pulseMapSub": "Closer to the centre = needs you sooner · node size = urgency · ring colour = professional tier.",
     "bandAtRisk": "At risk",

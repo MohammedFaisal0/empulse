@@ -16,6 +16,7 @@ from accounts.models import AuditLog, UserProfile
 from accounts.permissions import get_user_employee, get_user_role
 from analytics.aggregates import MIN_GROUP_SIZE
 from org.models import Department, Employee, Team
+from pulse.agg_cache import cached_aggregate
 from pulse.ml_runtime import get_bundles, get_empulse_ml
 from pulse.models import EmployeeCurrent
 
@@ -23,6 +24,20 @@ DISCLAIMER = (
     "Decision support from a statistical model trained on synthetic data; "
     "not a prediction about any individual."
 )
+
+_CONTROL_SCHEMA = {
+    "workload_pct": {"min": -20, "max": 10, "step": 5, "default": 0},
+    "task_streams": {"min": 0, "max": 4, "step": 1, "default": 0},
+    "recognition_pct": {
+        "options": [0, 50, 100],
+        "default": 0,
+    },
+    "training_hours_month": {
+        "options": [0, 4, 8],
+        "default": 0,
+    },
+    "shared_on_call": {"default": False},
+}
 
 FEATURE_COLS = [
     "workload_index",
@@ -389,13 +404,7 @@ class HrSimulateMetaView(APIView):
         manager_allowed = bool(
             getattr(settings, "ALLOW_MANAGER_TEAM_SIMULATE", False)
         )
-        depts = list(Department.objects.order_by("name").values("id", "name"))
-        teams = list(
-            Team.objects.select_related("department")
-            .order_by("name")
-            .values("id", "name", "department_id", "department__name")
-        )
-        # Manager: only their managed teams if allowed
+        # Manager scopes differ per user — do not share the org-wide cache.
         if role == UserProfile.Role.MANAGER:
             if not manager_allowed:
                 return Response(
@@ -415,29 +424,50 @@ class HrSimulateMetaView(APIView):
             )
             if emp and emp.team_id:
                 managed.add(emp.team_id)
-            teams = [t for t in teams if t["id"] in managed]
-            depts = []
+            teams = list(
+                Team.objects.select_related("department")
+                .filter(id__in=managed)
+                .order_by("name")
+                .values("id", "name", "department_id", "department__name")
+            )
+            return Response(
+                {
+                    "allowed": True,
+                    "ask_hr": False,
+                    "manager_simulate_allowed": manager_allowed,
+                    "role": role,
+                    "default_levers": E.DEFAULT_LEVERS,
+                    "control_schema": _CONTROL_SCHEMA,
+                    "departments": [],
+                    "teams": [
+                        {
+                            "id": t["id"],
+                            "name": t["name"],
+                            "department_id": t["department_id"],
+                            "department": t.get("department__name"),
+                        }
+                        for t in teams
+                    ],
+                    "disclaimer": DISCLAIMER,
+                    "suppression_min": MIN_GROUP_SIZE,
+                    "estimated": True,
+                }
+            )
 
-        return Response(
-            {
+        def _build_org_meta() -> dict[str, Any]:
+            depts = list(Department.objects.order_by("name").values("id", "name"))
+            teams = list(
+                Team.objects.select_related("department")
+                .order_by("name")
+                .values("id", "name", "department_id", "department__name")
+            )
+            return {
                 "allowed": True,
                 "ask_hr": False,
                 "manager_simulate_allowed": manager_allowed,
                 "role": role,
                 "default_levers": E.DEFAULT_LEVERS,
-                "control_schema": {
-                    "workload_pct": {"min": -20, "max": 10, "step": 5, "default": 0},
-                    "task_streams": {"min": 0, "max": 4, "step": 1, "default": 0},
-                    "recognition_pct": {
-                        "options": [0, 50, 100],
-                        "default": 0,
-                    },
-                    "training_hours_month": {
-                        "options": [0, 4, 8],
-                        "default": 0,
-                    },
-                    "shared_on_call": {"default": False},
-                },
+                "control_schema": _CONTROL_SCHEMA,
                 "departments": depts,
                 "teams": [
                     {
@@ -452,6 +482,9 @@ class HrSimulateMetaView(APIView):
                 "suppression_min": MIN_GROUP_SIZE,
                 "estimated": True,
             }
+
+        return Response(
+            cached_aggregate(f"hr:simulate-meta:{role}", _build_org_meta)
         )
 
 

@@ -411,17 +411,13 @@ export function M04bTeamMemberProfile() {
                       <div
                         key={row.label}
                         className="flex items-center gap-3 text-xs"
-                        title={
-                          row.todo
-                            ? 'TODO: design placeholder — not in API'
-                            : undefined
-                        }
                       >
                         <span className="w-28 shrink-0 text-ink">
                           {row.label}
                           {row.todo ? (
                             <span className="ms-1 font-mono text-[9px] text-faint">
-                              TODO
+                              {/* design placeholder — not in API */}
+                              {t('common.notCollected')}
                             </span>
                           ) : null}
                         </span>
@@ -515,12 +511,12 @@ export function M04bTeamMemberProfile() {
                 <p className="text-[13px] text-muted">{t('m04b.pulseRange')}</p>
                 <div className="mt-4 flex flex-wrap items-end justify-between gap-3">
                   <div className="flex gap-3 ltr-nums text-[28px] font-semibold text-ink">
-                    {/* TODO: historical pulse averages not stored — design copy */}
-                    <span title="TODO">9.5</span>
-                    <span title="TODO">9.1</span>
-                    <span title="TODO">9.4</span>
-                    <span title="TODO">9.7</span>
-                    <span title="TODO">9.1</span>
+                    {/* historical pulse averages not stored — design copy */}
+                    <span title={t('common.notCollected')}>9.5</span>
+                    <span title={t('common.notCollected')}>9.1</span>
+                    <span title={t('common.notCollected')}>9.4</span>
+                    <span title={t('common.notCollected')}>9.7</span>
+                    <span title={t('common.notCollected')}>9.1</span>
                   </div>
                   <div>
                     <p className="font-mono text-[10px] tracking-wide text-muted">
